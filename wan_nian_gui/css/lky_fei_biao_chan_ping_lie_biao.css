@@ -1,0 +1,86 @@
+@CHARSET "UTF-8";
+.lky_main{width:1190px;margin:0 auto;}
+.lky_shang_ping_xin_xi{width:1190px;border:1px solid #fecbb6;border-top:0;margin-top:5px;}
+.lky_xin_xi_tiao_mu{clear:both;width:1190px;border:1px solid #fecbb6;min-height:45px;border-top:1px solid #fecbb6;border-bottom:0;}
+.lky_xin_xi_tiao_mu_left{font-weight:bold;font-size:14px;text-align:center;width:105px;border:0;min-height:45px;float:left;color:#ffffff;background-color:#eb875d}
+.lky_xin_xi_tiao_mu_right{line-height:24px;padding-left:15px;width:1069px;color:#474747;font-size:12px;border:0;min-height:45px;float:left;background-color:#fff1e7}
+.lky_xin_xi_tiao_mu_right span{margin-right:27px;}
+.lky_yi_xuna_xiang_qing{width:1190px;margin-top:15px;border:1px solid #d4d4d4;border-bottom:1px solid #f15010}
+.lky_yi_xuna_xiang_qing_title{height:35px;line-height:35px;padding-left:15px;width:1175px;border-bottom:1px solid #d4d4d4}
+.lky_yi_xuna_xiang_qing_title span{display:block;float:left;}
+.lky_da_zhe{margin-right:6px;color:#f36228;height:24px;line-height:24px;margin-top:4px;padding-left:7px;padding-right:4px;border:2px dashed #f36228;float:left;}
+.lky_da_zhe img{float:right;margin-top:8px;margin-left:7px;}
+.lky_xiang_qing{font-size:14px;font-family:微软雅黑;color:#f25010;width:140px;padding-left:35px;float:left;min-height:30px;background-color:#e5e5e5}
+.lky_span{margin-right:32px;line-height:30px;display:block;float:left;}
+.lky_small_tiao_mu{width:1190px;height:30px;}
+.lky_right{width:1000px;padding-left:14px;min-height:30px;float:left;}
+.lky_gen_duo{width:131px;height:36px;display:block;margin:0 auto;background:url(../images/lky-fei-gen-duo.png);}
+.lky_list_title{margin-top:16px;margin-bottom:5px;height:46px;width:1165px;border-bottom:3px solid #f15010;background-color:#f5f5f5;line-height:46px;padding-left:25px;}
+.lky_list_title span{font-size:16px;font-family:微软雅黑;margin-right:56px;}
+.lky_list_title a{color:#f15010;}
+.lky_list_element{width:1190px;height:192px;margin-bottom:17px;}
+.lky_list_element img{ float:left;}
+.lky_element_top{font-size:16px;font-family:微软雅黑;color:#ffffff;background-color:#d4d4d4;width:133px;height:28px;text-align:center;line-height:28px;}
+.lky_element_right{padding-top:10px;padding-left:20px;width:950px;height:153px;float:right;border:1px solid #d4d4d4; border-left:0;}
+.first_line{display:block;line-height:50px;font-size:16px;font-family:微软雅黑;font-weight:bold;}
+.lky_element_right span{}
+.lky_element_right_bottom{margin-left:-20px;margin-top:39px;height:46px;width:951px;border-top:1px solid #e2e2e2;line-height:46px;padding-left:20px;}
+.lky_big_red{font-family:微软雅黑;font-size:24px;line-height:24px;margin-top:9px;color:#f15010;min-width:30px;}
+.lky_red_16{font-family:微软雅黑;font-size:16px;color:#f15010;}
+.lky_zhong{margin-left:8px;margin-right:13px;}
+.lky_list_element .lky_element_right_bottom img{float:none;margin-top:10px;display:inline-block;}
+.lky_list_element .lky_element_right_bottom span{display:block;float:left;}
+.lky_list_element .lky_element_right_bottom a{float:left;display:block;}
+.lky_kuo_hao{margin-top:5px;}
+.lky_zhong_jian{background:url(../images/lky-zhong-jian-1.png);width:21px;height:18px;line-height:18px;margin-top:10px;border:0;float:left;}
+.lky_jian_hao{text-align:center;color:#474747;font-size:16px;line-height:18px;margin-top:10px;width:20px;height:18px;background:url(../images/lky-jia-jian.png);}
+.lky_he_ji{margin-left:18px;_margin-left:10px;margin-top:1px;}
+.lky_list_element .lky_element_right_bottom .xiang_xi_ye_mian{margin-top:10px;float:right;margin-right:6px;background:url(../images/lky-xiang-xi-ye.png);width:126px;height:24px;}
+.lky_list_element .lky_element_right_bottom .gou_wu_ce{margin-top:10px;float:right;background:url(../images/lky-fei-gou-wu-ce.png);margin-right:6px;width:106px;height:26px;}
+.lky_list_element .lky_element_right_bottom .gou_mai{margin-top:12px;float:right;background:url(../images/lky_gou_mai_a.png);margin-right:4px;width:59px;height:26px;}
+.lky_tiao{width:107px;height:25px;float:right;margin-left:30px;}
+.lky_tiao_input{text-align:center;width:25px;height:25px;border:1px solid #b2b2b2}
+.lky_que_din{width:41px;height:25px;float:right;display:block;background-image:url(../images/lky-fei-qu-ding.png)}
+.fen_yue {
+	
+	height:27px;
+	margin-top:23px;
+	float: right;
+}
+.fen_yue_an_niu {
+	width: 26px;
+	height: 25px;
+	border: 1px solid #aeaeae;
+	margin-left: 8px;
+	float: left;
+	line-height: 25px;
+	text-align: center;
+	vertical-align: middle;
+}
+.fen_yue_an_nv_1{
+	width:26px;
+	height:25px;
+	margin-left:8px;
+	float:left;
+	line-height:25px;
+	text-align: center;
+	vertical-align: middle;
+}
+.fen_yue_an_nv_2{
+	width: 66px;
+	height: 25px;
+	margin-left: 8px;
+	float: left;
+	line-height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #aeaeae;
+}
+.fen_yie_big{width:907px;height:68px;float:right;}
+
+
+
+
+
+
+

@@ -1,0 +1,481 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            //$(".peisong:checked").parent().parent().css("background-color","#FBDFD4");
+            $(".peisong").click(function () {
+
+                $(".peisong").parent().parent().css("background-color", "#F8F7F6");
+                $(this).parent().parent().css("background-color", "#FBDFD4");
+            })
+
+            $(".fapiao:checked").parent().css("background-color", "#FBDFD4");
+            $(".fapiao").click(function () {
+                $(".fapiao").parent().css("background-color", "#F8F7F6");
+                $(this).parent().css("background-color", "#FBDFD4");
+            })
+
+            $(".addressmessage ul li:first").addClass("libg");
+            $(".addressmessage ul li:first").children(".operate").children("a").css("display", "inline-block");
+            $(".addressmessage ul li").click(function () {
+                $(".addressmessage ul li").removeClass("libg");
+                $(".addressmessage ul li").children(".operate").children("a").css("display", "none");
+                $(this).addClass("libg");
+                $(this).children("p").first().children("a").css("display", "inline-block");
+            })
+
+            $(".butts").click(function () {
+                $(this).parent().parent().css("display", "none");
+                $(".dingdanxinxi").css("display", "block");
+            })
+            $(".butts2").click(function () {
+                $(this).parent().parent().css("display", "none");
+                $(".selectaddress").css("display", "block");
+            })
+
+            $(".button4").click(function () {
+                $(".forms").submit();
+            })
+
+
+            $(".xinxi2 dl").find("dt").css("height", $(".xinxi2 dl").height());
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <!--header的start-->
+
+    <!--top的start-->
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--header的end-->
+
+    <!--nav的start-->
+    <div class="nav">
+        <img src="images/nav1_03.gif" class="button" alt="" title="" width="673" height="49">
+    </div>
+    <!--nav的end-->
+
+    <!--content的start-->
+    <div class="content">
+        <div class="title">
+            <img src="images/but1_03.gif" title="" alt="" width="217" height="44"></div>
+        <ul class="dingdanxinxi" style="display: none;">
+            <li class="shouhuorenxinxi">收货人信息</li>
+            <li class="xiangxixinxi"><span class="xing">*</span>收货人姓名：<input type="text" class="username"><span class="shuoming">请填写中文姓名</span></li>
+            <li class="xiangxixinxi"><span class="xing">*</span>所在地区：
+            	<select name="" class="city">
+                    <option value="">请选择 </option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select name="" class="city">
+                    <option value="">请选择</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <select name="" class="city">
+                    <option value="">请选择</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+                <span class="shuoming">注：标"*"的为支持货到付款的地区。</span>
+            </li>
+            <li class="xiangxidizi">
+                <p class="address"><span class="xing">*</span>详细地址：</p>
+                <textarea name="" cols="73" rows="3" class="textarea">请直接填写街道等详细地址，省/市/区/不用填写</textarea></li>
+            <li class="xiangxixinxi"><span class="xing">*</span>联系方式：<input type="text" class="tel"><span class="shuoming">用于接收订单短信或送货前确认</span></li>
+            <li class="xiangxixinxi"><span class="xing">&nbsp;</span>电子邮箱：<input type="text" class="email"><span class="shuoming">用于接收订单状态提醒邮件</span></li>
+            <li>
+                <input type="checkbox" name="" class="checkbox">
+                设置为默认收货人</li>
+            <li class="buttons">
+                <input type="button" class="butts2"></li>
+        </ul>
+
+        <ul class="selectaddress">
+            <li class="selectaddresstitle"><span>地址选择</span></li>
+            <li class="addressmessage">
+                <ul>
+                    <li>
+                        <p class="operate"><a href="">修改</a><a href="">删除</a></p>
+                        <p>小红</p>
+                        <p class="add1">四川省成都市武侯区武侯大街4号</p>
+                        <p class="add2">武侯大街4号9216</p>
+                        <p>15208365596</p>
+                    </li>
+                    <li>
+                        <p class="operate"><a href="">修改</a><a href="">删除</a></p>
+                        <p>小红</p>
+                        <p class="add1">四川省成都市武侯区武侯大街4号</p>
+                        <p class="add2">武侯大街4号9216</p>
+                        <p>15208365596</p>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="newaddress">
+                <input type="button" class="butts"></li>
+        </ul>
+
+        <!-----配送信息--start-------->
+        <div class="peisongfanshi">
+            <div class="peisongfanshi_top">配送方式</div>
+            <ul class="peisongselect">
+                <li>
+                    <ul class="caption">
+                        <li class="select"><span>配送选择</span></li>
+                        <li class="totime"><span>预计到达时间</span></li>
+                        <li class="freight1"><span>详细运费</span></li>
+                        <li class="freight2"><span>运费标准</span></li>
+                        <li class="songjifen"><span>赠送积分</span><span class="jifenhaochu">（积分好处）</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="caption1">
+                        <li class="select">
+                            <input type="radio" name="peisong" class="peisong"><span>立即配送</span></li>
+                        <li class="totime"><span><span class="timer">11:00</span>前下单并完成付款，预计（4月18日）<span class="timer">14:00<span>前送达<span></li>
+                        <li class="freight1"><span>￥：5.00<span></li>
+                        <li class="freight2"><span>￥：5.00<span></li>
+                        <li class="songjifen"><span>&nbsp;<span></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="caption1 active">
+                        <li class="select">
+                            <input type="radio" name="peisong" class="peisong" checked="checked"><span>预约配送<span> </li>
+                        <li class="totime"><span>&nbsp;<span></li>
+                        <li class="freight1"><span>￥：5.00<span></li>
+                        <li class="freight2"><span>￥：5.00<span></li>
+                        <li class="songjifen"><span>10分<span></li>
+                    </ul>
+                </li>
+
+                <li class="peisongshijian"><span>配送时间：</span>
+                    <select name="">
+                        <option value="">2014</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    年
+                    <select name="">
+                        <option value="">2</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    月
+                    <select name="">
+                        <option value="">12</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    日
+                    <select name="">
+                        <option value="">9:00~11:00</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </li>
+                <li class="wenxintishi">温馨提示：</li>
+                <li class="wenxintishi">1、闲时配送将赠送积分，详见<span class="jifenhaochu"><a href="">积分好处</a></span></li>
+                <li class="wenxintishi">2、闲时配送时间段为：上午 9:00-11:00 ；  下午 14:00-16:00  晚上 19:00-21:00</li>
+                <li class="button2">
+                    <input type="button"></li>
+            </ul>
+        </div>
+        <!-----配送信息--end-------->
+
+        <!-----票据信息--start-------->
+        <div class="piaojuxinxi">
+            <ul>
+                <li class="piaojuxinxi_title">票据信息</li>
+                <li class="songhuodan active">
+                    <input type="radio" name="fapiao" class="fapiao" checked="checked"><span>送货单</span></li>
+                <li class="songhuodan">
+                    <input type="radio" name="fapiao" class="fapiao"><span>普通发票</span></li>
+                <li class="fapiaotaituo"><span>发票抬头：</span><input type="radio" name="" class="geren">
+                    <span>个人 </span>
+                    <input type="radio" name="" class="danwei"><span>  单位</span><input type="txet" class="text"></li>
+                <li class="button3">
+                    <input type="button"></li>
+
+            </ul>
+        </div>
+        <!-----票据信息--end-------->
+        <!-----shoplist--start-------->
+        <div class="shoplist">
+            <div class="shoplisttitle">商品清单</div>
+            <ul class="shoptable">
+                <li class="shopname"><span>商品</span></li>
+                <li class="shopinfo"><span>商品信息</span></li>
+                <li class="shopprice"><span>单价</span></li>
+                <li class="shopnum"><span>数量</span></li>
+                <li class="subtotal"><span>小计</span></li>
+                <li class="zhengsongjifen"><span>赠送积分</span></li>
+            </ul>
+            <div class="bordertop"></div>
+            <ul class="list1">
+                <li class="shopname1">
+                    <img src="images/pic1_03.gif" alt="" title="" width="133" height="99"><div class="description">
+                        惠氏 Wyeth S-26金装幼儿乐幼儿配方奶
+粉，新包装升级配方。
+                    </div>
+                </li>
+                <li class="shopinfo1"><span>400克</span></li>
+                <li class="shopprice1"><span>¥65.00</span></li>
+                <li class="shopnum1"><span>2</span></li>
+                <li class="subtotal1"><span>¥65.00</span></li>
+                <li class="zhengsongjifen1"><span>20</span></li>
+            </ul>
+            <ul class="list1">
+                <li class="shopname1">
+                    <img src="images/shop2_03.gif" alt="" title="" width="133" height="99"><div class="description">
+                        惠氏 Wyeth S-26金装幼儿乐幼儿配方奶
+粉，新包装升级配方。
+                    </div>
+                </li>
+                <li class="shopinfo1"><span>400克</span></li>
+                <li class="shopprice1"><span>¥65.00</span></li>
+                <li class="shopnum1"><span>2</span></li>
+                <li class="subtotal1"><span>¥65.00</span></li>
+                <li class="zhengsongjifen1"><span>20</span></li>
+            </ul>
+            <ul class="list1">
+                <li class="shopname1">
+                    <img src="images/pic1_03.gif" alt="" title="" width="133" height="99"><div class="description">
+                        惠氏 Wyeth S-26金装幼儿乐幼儿配方奶
+粉，新包装升级配方。
+                    </div>
+                </li>
+                <li class="shopinfo1"><span>400克</span></li>
+                <li class="shopprice1"><span>¥65.00</span></li>
+                <li class="shopnum1"><span>2</span></li>
+                <li class="subtotal1"><span>¥65.00</span></li>
+                <li class="zhengsongjifen1"><span>20</span></li>
+            </ul>
+            <ul class="list1">
+                <li class="shopname1">
+                    <img src="images/shop2_03.gif" alt="" title="" width="133" height="99"><div class="description">
+                        惠氏 Wyeth S-26金装幼儿乐幼儿配方奶
+粉，新包装升级配方。
+                    </div>
+                </li>
+                <li class="shopinfo1"><span>400克</span></li>
+                <li class="shopprice1"><span>¥65.00</span></li>
+                <li class="shopnum1"><span>2</span></li>
+                <li class="subtotal1"><span>¥65.00</span></li>
+                <li class="zhengsongjifen1"><span>20</span></li>
+            </ul>
+            <ul class="list1">
+                <li class="shopname1">
+                    <img src="images/shop2_03.gif" alt="" title="" width="133" height="99"><div class="description">
+                        惠氏 Wyeth S-26金装幼儿乐幼儿配方奶
+粉，新包装升级配方。
+                    </div>
+                </li>
+                <li class="shopinfo1"><span>400克</span></li>
+                <li class="shopprice1"><span>¥65.00</span></li>
+                <li class="shopnum1"><span>2</span></li>
+                <li class="subtotal1"><span>¥65.00</span></li>
+                <li class="zhengsongjifen1"><span>20</span></li>
+            </ul>
+            <div class="total">
+                <ul>
+                    <li class="yunfei"><span class="yun">运费：</span><span class="money">￥5.00</span></li>
+                    <li><span class="money moneys">￥330.00</span><span class="yun yuns">合计（含运费）：</span></li>
+                </ul>
+            </div>
+
+            <div class="contentfooter">
+                <div class="warp">
+                    <form action="dingdan.html" method="post" class="forms">
+                        <div class="di">
+                            <p><span class="fuhao">￥：</span><span>-5.00</span></p>
+                        </div>
+                        <div class="contentsel">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="checkbox1"><span>使用积分：<input type="text" class="val">
+                                        分</span><p>(剩余积分22分)</p>
+                                </li>
+
+                                <li>
+                                    <input type="checkbox" class="checkbox1"><span>使用金额：￥
+                                        <input type="text" class="val"></span><p>(可用余额￥20.00)</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="chongzhi"><a href="">
+                            <img src="images/chongzhi_03.gif" title="" alt="" width="87" height="31"></a><p><a href="">查看充值明细</a></p>
+                        </div>
+
+                        <div class="xinxiall">
+                            <div class="xinxi">
+                                <div class="xinxi2">
+                                    <p class="onetiao"><span class="style1">可获得积分：547.00分</span> <b>尚需付款：</b><span class="Y">￥</span><span class="style2">30.00</span></p>
+                                    <dl>
+                                        <dt><span>配送至：</span></dt>
+                                        <dd>四川省 绵阳市 涪城区 科创园街道科创园街道 园创园街道科创园街科创园街道科创科创园街道科创科创园街道科创</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tijiao">
+                            <a href="">
+                                <img src="images/huanhui_03.gif" width="127" height="22" alt="" title=""></a>
+                            <input type="button" class="button4">
+                        </div>
+                </div>
+                </form>
+                   
+            </div>
+        </div>
+
+
+
+        <!-----shoplist--end-------->
+
+
+
+    </div>
+    <!--content的end-->
+
+    <div class="footer_ad">
+        <a href="#" class="ad_1" style="background:url(images/banner2_03.gif) no-repeat center center;"></a>
+    </div>
+    <!--footer-start-->
+    <div class="footer">
+        <div class="footerall">
+            <div class="footermenu">
+                <div class="logo2">
+                    <img src="images/logo_1_06.gif" title="" alt="" width="216" height="83"></div>
+                <ul class="newfingerpost">
+                    <li class="menutitle1"></li>
+                    <li><a href="">会籍介绍</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">快购工具</a></li>
+                    <li><a href="">使用优惠券</a></li>
+                    <li><a href="">商品评论指南</a></li>
+                </ul>
+                <ul class="peisong">
+                    <li class="menutitle2"></li>
+                    <li><a href="">运费政策</a></li>
+                    <li><a href="">配送范围和时间</a></li>
+                    <li><a href="">特殊订单配送</a></li>
+                    <li><a href="">验货和签收</a></li>
+                </ul>
+                <ul class="zhifufangshi">
+                    <li class="menutitle3"></li>
+                    <li><a href="">在线支付</a></li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">其他支付方式</a></li>
+                    <li><a href="">发票制度</a></li>
+                </ul>
+                <ul class="shouhoufuwu">
+                    <li class="menutitle4"></li>
+                    <li><a href="">退换货服务</a></li>
+                    <li><a href="">安装及维修</a></li>
+                    <li><a href="">延保服务</a></li>
+                    <li><a href="">召回商品</a></li>
+                </ul>
+                <ul class="teisefuwu">
+                    <li class="menutitle5"></li>
+                    <li><a href="">增值服务</a></li>
+                    <li><a href="">订阅促销信息</a></li>
+                </ul>
+                <ul class="help">
+                    <li class="menutitle6"></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">订单查询</a></li>
+                    <li><a href="">忘记密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <ul class="footerlist">
+                <li class="footerlist1"></li>
+                <li class="footerlist2"></li>
+                <li class="footerlist3"></li>
+                <li class="footerlist4"></li>
+            </ul>
+            <div class="Copyright">
+                <p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+                <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+                <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+                <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-end-->
+</body>
+</html>

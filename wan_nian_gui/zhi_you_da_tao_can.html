@@ -1,0 +1,712 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/global.css"/>
+<link rel="stylesheet" type="text/css" href="css/shoplist.css"/>
+<link rel="stylesheet" type="text/css" href="css/zhi_you_da_tao_can.css"/>
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<title>自由搭套餐</title>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$(".lky_table").each(function(){
+		$(this).find(".lky_element_kuang").eq(4).css("margin-right","0");
+		});
+$(".lky_small_menu").hide();
+	$(".an_niu").click(function(){
+		$(".fen_yue_an_niu").css("border","1px solid #aeaeae");
+		$(this).parent().css("border","1px solid #f15010");
+	})
+	$(".lky_element").mouseover(function(){
+	
+		$(".lky_element").css("border","1px solid #e3e3e3");
+		$(".lky_element").find(".lky_element_foot").find("a").css("background-image","url(images/lky-jia-ru-tao-chan.png)");
+		$(this).find(".lky_element_foot").find("a").css("background-image","url(images/lky-jia-ru-tao-can-red.png)");
+		$(this).css("border","2px solid #f25e24");
+		//$(this).css("border-right","3px solid #f25e24");
+	
+		
+	})
+	$(".lky_main_element").mouseover(function(){
+	    $(".lky_main_element").removeClass("sx");
+		$(this).addClass("sx");
+	})
+	$(".lky_main_element").mouseleave(function(){
+		$(this).find(".lky_small_menu").hide();
+		
+	})
+	
+		$(".lky_main_element").click(function(){
+          if($(this).text()!="全部商品"){
+	    $(this).find(".lky_small_menu").css("left","-2px")
+		$(this).find(".lky_small_menu").show();
+		
+			}
+			
+	
+	})
+      if($(".he_ji_main").length>1){
+	$(".lky_jia_div").css("margin-top",$(".lky_he_ji").height()/2-70+"px");
+      }
+	
+	
+});
+</script>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--headermsg的end-->
+ <div class="navs">
+        <ul>
+            <li class="index"><a href="index.html">首页</a></li>
+            <li><a href="#" class="tag">商品类型</a></li>
+            <li><a href="shoplist.html" class="on">经营类别</a></li>
+            <li><a href="#" class="tag">经营方式</a></li>
+            <li><a href="mei_si_jiang_tang.html">美食讲堂</a></li>
+        </ul>
+    </div>
+ <div class="lky_title">
+ <a class="shou_ye" href="index.html"> </a>
+<span class="span_1"><a href="tao_can_sou_ye.html">套餐商品</a>&nbsp;&gt;&nbsp;<span>自由搭套餐</span></span>
+</div>
+<div class="lky_main">
+<div class="main_img">
+<img src="images/lky-tao-can-main-img.png" width="1190px" height="348px" />
+</div>
+<div class="lky_menu">
+<div class="lky_main_element sx">全部商品</div>
+<div class="lky_main_element">粮油
+<div class="lky_small_menu">
+<a href="#">大米</a><a href="#">大米</a><a href="#">大米</a><a href="#">大米</a><a href="#">大米</a><a href="#">大米</a>
+</div>
+</div>
+<div class="lky_main_element">
+蛋肉
+<div class="lky_small_menu">
+<a href="#">大米</a><a href="#">大米</a>
+</div>
+</div>
+
+<div class="lky_main_element">海鲜
+<div class="lky_small_menu">
+<a href="#">大米</a><a href="#">大米</a>
+</div>
+</div>
+<div class="lky_main_element">调料
+<div class="lky_small_menu">
+<a href="#">大米</a><a href="#">大米</a>
+</div>
+</div>
+</div>
+<div class="lky_table">
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="lky_table">
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="lky_table">
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="lky_table">
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+<div class="lky_table">
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+<div class="lky_element_kuang">
+<div class="lky_element">
+<img src="images/lky_shang_ping_test_11111.png" width="217px" height="164px"/>
+<div class="lky_element_text">
+来自韩国济州岛的大美虾2公斤装<span>肉质鲜嫩，营养丰富</span>
+</div>
+<div class="lky_element_foot">
+<span class="lky_float_left">
+<span class="lky_rmb">￥</span>
+<span class="lky_jin_e">390.00</span>
+</span>
+<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="fen_yie_big">
+<div class="fen_yue">
+<div class="fen_yue_an_nv_2"><a class="an_niu" href="javascript:void(0)">&lt;&lt;上一页</a></div>
+<div class="fen_yue_an_niu"><a class="an_niu" href="javascript:void(0)">1</a></div>
+<div class="fen_yue_an_niu"><a class="an_niu"  href="javascript:void(0)">2</a></div>
+<div class="fen_yue_an_niu"><a class="an_niu" href="javascript:void(0)">3</a></div>
+<div class="fen_yue_an_nv_1">...</div>
+<div class="fen_yue_an_niu"><a class="an_niu" href="javascript:void(0)">15</a></div>
+<div class="fen_yue_an_nv_2"><a href="javascript:void(0)">下一页<span>&gt;&gt;</span></a></div>
+</div>
+</div>
+</div>
+<!---->
+<div class="lky_he_ji">
+<div class="he_ji_main_div">
+<div class="he_ji_main">
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+</div>
+<div class="he_ji_main">
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+</div>
+<div class="he_ji_main">
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+<img class="lky_float_left" src="images/lky-big-jia-hao.png" width="45px" height="179px" />
+<div class="shang_ping_small_log">
+<img class="lky_img_log"src="images/lky-test-12.png" width="160px" height="120px"/>
+<a href="#" class="lky_ca_ca"><img src="images/lky-ca-ca-1.png"  width="19px" height="19px"/></a>
+<p>香脆苹果</p>
+<p><span>￥15555.00</span>元/盒</p>
+</div>
+</div>
+</div>
+<div class="lky_jia_div">
+<div class="xuan_yang_da_zhe_div">2拆</div>
+<img class="lky_float_left" src="images/lky-den-hao.png" width="19px" height="122px"/>
+<div class="lky_xiaO_qian_qian">
+<img  class="lky_float_left" height="31px" width="2px" src="images/lky-span-left-00.png"/>
+<span>￥99999</span>
+<img class="lky_float_left" height="31px" width="2px" src="images/lky-right-span-00.png"/>
+</div>
+<a href="#" class="lky_qu_jie_shuan"></a>
+<a class="lky_gou_wu_ce" href="#"></a>
+<p><s>原价：￥315</s></p>
+</div>
+
+</div>
+</div>
+<div class="footer">
+	<div class="footerall">
+    	<div class="footermenu">
+        	<div class="logo2"><img   src="images/logo_1_06.gif" title="" alt="" width="216" height="83"/></div>
+            <ul class="newfingerpost">
+            	<li class="menutitle1"></li>
+                <li><a href="">会籍介绍</a></li>
+                <li><a href="">购物流程</a></li>
+                <li><a href="">快购工具</a></li>
+                <li><a href="">使用优惠券</a></li>
+                <li><a href="">商品评论指南</a></li>
+            </ul>
+            <ul class="peisong">
+            	<li class="menutitle2"></li>
+                <li><a href="">运费政策</a></li>
+                <li><a href="">配送范围和时间</a></li>
+                <li><a href="">特殊订单配送</a></li>
+                <li><a href="">验货和签收</a></li>
+            </ul >
+            <ul class="zhifufangshi">
+           		<li class="menutitle3"></li>
+            	<li><a href="">在线支付</a></li>
+                <li><a href="">货到付款</a></li>
+                <li><a href="">其他支付方式</a></li>
+                <li><a href="">发票制度</a></li>
+            </ul >
+             <ul class="shouhoufuwu">
+            	<li class="menutitle4"></li>
+                <li><a href="">退换货服务</a></li>
+                <li><a href="">安装及维修</a></li>
+                <li><a href="">延保服务</a></li>
+                <li><a href="">召回商品</a></li>
+            </ul >
+            <ul class="teisefuwu">
+            <li class="menutitle5"></li>
+            	<li><a href="">增值服务</a></li>
+                <li><a href="">订阅促销信息</a></li>
+            </ul >
+             <ul class="help">
+            	<li class="menutitle6"></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">订单查询</a></li>
+                <li><a href="">忘记密码</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul >
+        </div>
+        
+        <ul class="footerlist">
+        	<li class="footerlist1"></li>
+            <li class="footerlist2"></li>
+            <li class="footerlist3"></li>
+            <li class="footerlist4"></li>
+        </ul>
+        <div class="Copyright">
+        	<p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+            <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+            <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+            <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+        </div>
+    </div>
+
+</div>
+<!--footer-end-->
+</body>
+</html>

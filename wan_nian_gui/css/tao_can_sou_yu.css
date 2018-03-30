@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+.main{width:1188px;margin:0 auto;margin-bottom:80px;}
+.tao_can{position:relative;float:left;margin-top:52px;width:373px;height:244px;margin-right:5px;}
+.lky_an_niu{top:200px;left:65px;color:#aaaaaa;font-family:微软雅黑;font-size:20px;position:absolute;width:236px;height:64px;line-height:64px;text-align:center;background-image:url(../images/lky-toa-can-an-lun-bai.png);}
+.lky_an_niu a{width:236px;color:#aaaaaa;height:64px;display:block;font-family:微软雅黑;font-size:20px;}
+.main:after{clear:both;display:block;content:"";}
+.fl{float:left;margin-left:2px;}
+.fr{float:right;margin-right:2px;}
+.zhong{margin-left:30px;}

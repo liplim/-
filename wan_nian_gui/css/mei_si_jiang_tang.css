@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+.lky_main{margin:0 auto;width:1188px;border:1px solid #d9d9d9;border-bottom:2px solid #d9d9d9;margin-top:13px;clear:both;}
+.lky_title{margin:0 auto;border-right:1px solid #d9d9d9; width:1189px;height:36px;background-image:url(../images/lky-mei-si-title.png);margin-top:26px;}
+.lky_title a{width:30px;height:15px;margin-left:10px;margin-top:9px;display:block;}
+.lky_mei_si_title{padding-left:27px;width:1162px;border-bottom:2px solid #f15010;height:47px;line-height:47px;color:#f15010;}
+.lky_mei_si_title span{font-size:14px;margin-right:9px;font-weight:bold;}
+.lky_cai_xi{line-height:24px;width:1115px;;height:125px;padding-top:24px;margin:0 auto;border-bottom:1px dashed #bbbbbb}
+.lky_cai_xi img{margin-right:5px;display:block;float:left;}
+.lky_cai_xi span{display:block;font-size:14px;color:#f15010;font-weight:bold;}
+.lky_mei_si_table{clear:both;width:1107px;margin:0 auto;margin-top:45px;}
+.lky_mei_si_tiao_mu{margin-bottom:28px;line-height:22px;width:533px;height:158px;border-bottom:1px dashed #bbbbbb;float:left;color:#737373}
+.lky_kong_div{margin-bottom:28px;height:158px;width:40px;float:left;}
+.lky_mei_si_tiao_mu img{margin-right:5px;display:block;float:left;}
+.lky_span{font-size:14px;color:#f15010;font-weight:bold;}
+.lky_span3{display:block;float:right;font-style:italic;}
+.lky_main:after{clear:both;display:block;content:"";}
+.lky_zhen_wen_text{width:324px;height:130px;float:right;overflow:hidden;text-overflow:ellipsis}
+.more{width:52px;height:15px;float:right;margin-right:27px;margin-top:12px;background-image:url(../images/lky-more-11.png);overflow:hidden;display:inline;}
+.more a{width:52px;height:15px;}
+.sy{width:55px;height:35px;float:left;display:block;}
+
+
+
+

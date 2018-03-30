@@ -1,0 +1,1107 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="js/CJL.0.1.min.js"></script>
+<script type="text/javascript" src="js/fangdajing.js"></script>
+<link rel="stylesheet" type="text/css" href="css/product.css"/>
+<link rel="stylesheet" type="text/css" href="css/global.css"/> 
+<title>无标题文档</title>
+<script type="text/javascript">
+	$(function(){
+		$(".jia").click(function(){
+			var res=$(this).next(".nums").val();
+			res++;
+			$(this).next(".nums").val(res);
+		})
+		$(".jian").click(function(){
+			var res=$(this).prev(".nums").val();
+			res--;
+			if(res<=0){
+				res=0;	
+			}
+			$(this).prev   (".nums").val(res);
+		})
+		$(".list1").mouseover(function(){
+			$(".list1").css("border","1px solid #e3e3e3");
+			$(this).css("border","2px solid #f15010");
+			$(".list1").children(".buttons1").children(".goumai").css("background","url(./images/goumaibutton4_03.gif) no-repeat 0 0");	
+			$(this).children(".buttons1").children(".goumai").css("background","url(./images/goumaibutton3_03.gif) no-repeat 0 0");
+			$(".list1").children(".buttons1").children(".carts").css("background","url(./images/cart4_03.gif) no-repeat 0 0");	
+			$(this).children(".buttons1").children(".carts").css("background","url(./images/cart5_03.gif) no-repeat 0 0");	
+			$(".list1").children(".buttons1").children(".duibi").css("background","url(./images/duibi2_03.png) no-repeat 0 0");	
+			$(this).children(".buttons1").children(".duibi").css("background","url(./images/duibi_03.png) no-repeat 0 0");	
+			
+		})
+		
+		/*-------排行榜中所用到的js-----------------*/
+		$(".sel").click(function(){
+			var index="products"+($(".sel").index(this)+1);
+			$(".display").css("display","none");
+			$("."+index).css("display","block");
+			$(".sel").css("background","url(./images/tongleibg_07.gif) no-repeat 0 0")
+			$(this).css("background","url(./images/tongleiactive_07.gif) no-repeat 0 0")
+			
+		})
+		/*---------------产品描述中所用到的js------------------------*/
+		$(".promessagetitle li a").click(function(){
+			var index="message"+($(".promessagetitle li a").index(this)+1);
+			$(".hide").css("display","none");
+			$("."+index).css("display","block");
+			$(".promessagetitle li a").removeClass("actives");
+			$(this).addClass("actives");
+			
+				
+		})
+		
+		/*---------包装，口味，购买数量所用到的js----------------*/
+		$(".prev").click(function(){
+			var res=$(".num").val();
+			res++;
+			$(".num").val(res);
+		})
+		$(".next").click(function(){
+			var res=$(".num").val();
+			res--;
+			if(res<=0){
+				res=0;
+			}
+			$(".num").val(res);
+		})
+		$('.baozhangtitle').nextAll("span").click(function(){
+			$(this).addClass("baozhangactive").siblings("span").removeClass("baozhangactive");
+		})
+		
+		
+		var tops=$(".promessagetitle").offset().top;
+		 $(window).scroll(function(){
+			if($(this).scrollTop()>tops){
+				$(".promessagetitle").css({"top":eval(document.documentElement.scrollTop)-tops});
+			}else{
+				$(".promessagetitle").css({"top":0})	
+			}	
+		})
+		
+		//--------产品图片放大-----
+		$(".warppic li").clone().prependTo($(".warppic"));
+			var len=$(".warppic li").length;
+			$(".warppic ").width($(".warppic li").width()*len);
+			var left=$(".warppic li").width();
+			$(".leftbutton").click(function(){
+				if(-$(".warppic").position().left>=$(".warppic ").width()/2){
+					$(".warppic").css("left",-$(".warppic").width()/2+"px");
+				}else{
+					$(".warppic").animate({left:'+='+'-'+(left+'px')},"slow");
+				}
+			})
+			
+			$(".rightbutton").click(function(){
+					if($(".warppic").position().left==0){
+						$(".warppic").css("left","0");
+					}else{
+						$(".warppic").animate({left:'+='+(left+'px')},"slow");
+					}
+			})
+			$(".warppic li").click(function(){
+				var srcs=$(this).children("a").attr("rel");	
+				$("#idImage").attr("src",srcs);
+				$("#idViewer").children("img").attr("src",srcs);
+				
+				$(".warppic li").children("a").children("img").removeClass("actives");
+				$(this).children("a").children("img").addClass("actives");
+			})
+		
+		
+			$(".lijigoumai").click(function(){
+				window.location.href="dingdanqueren.html";
+			})
+			$(".but1").click(function(){
+				history.go(-1);
+			})
+			
+			/*--------评论选项卡效果--------------------*/
+			$(".pingluncount li").click(function(){
+				var num =$(this).index();
+				$(".pingluncount li a").css("color","#474747");
+				$(".pingluncount li a").css("background","url(./images/promessageborder_03.gif) no-repeat 0 0");
+				$(this).children("a").css("color","#ffffff");
+				$(this).children("a").css("background","url(./images/pinglunbg_03.gif) no-repeat 0 0")
+				$(".box1").hide();
+				$(".box1").eq(num).show();
+			})
+			
+			
+	})
+</script>
+
+</head>
+
+<body>
+ <!--header的start-->
+
+    <!--top的start-->
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--header的end-->
+ <!--nav的start-->
+ <div class="navs" >
+ 	<ul>
+    	<li class="index"><a href="index.html">首页</a></li>
+        <li><a href="" class="tag">商品类型</a></li>
+        <li><a href="shoplist.html" class="tag">经营类别</a></li>
+        <li><a href="shoplist.html" class="tag">经营方式</a></li>
+        <li><a href="mei_si_jiang_tang.html" >美食讲堂</a></li>
+    </ul>
+ </div>
+ <!--nav的end-->
+ 
+ <div class="main">
+ 
+ 	<div class="tops">
+    	<div class="topleft">
+            <div class="position">
+                <ul class="positionleft">
+                    <li class="position_index"><a href="">首页</a></li>
+                    <li><a href="">热卖推荐</a>></li>
+                    <li><a href="">水果</a>></li>
+                    <li><a href="">新鲜水果</a>></li>
+                    <li><a href="">葡萄类</a>></li>
+                    <li><a href="" class="productnum">产品编号：APP-MJQ-715_172</a></li>
+                </ul>
+                <p class="but">
+                <input type="button" class="but1"><a href="" class="car">您的购物车里有<span>1</span>件商品</a>
+               </p> 
+             </div>
+             <div class="clear"></div>
+             <!----------产品图片--start---------->
+             <div class="produpic" >
+                    <div class="container" > 
+                            <img id="idImage" class="izImage"  src="images/product1_04.gif" / alt="" title="" width="450" height="338">
+                            <img src="images/search1_07.gif" alt="" title="" width="24" height="24" class="fangdajing">
+                            <div id="idViewer" class="izViewer" ></div>
+                    </div>
+                            
+                        
+                    <div class="smallpic">
+                        <div class="rightbutton"><a href="javascript:void(0);"><img src="images/butonright_03.gif" width="26" height="90" alt="" title=""></a></div>
+                        <div class="leftbutton"><a href="javascript:void(0);"><img src="images/buttonleft_03.gif" width="26" height="90" alt="" title=""></a></div>
+                        <div class="allwarppic">
+                            <ul class="warppic">
+                                
+                                <li><a href="javascript:void(0);" rel="images/product1_04.gif"><img src="images/smallpic4_07.gif" alt="" title="" width="80" height="60" class="actives"/></a></li>
+    
+                                <li><a href="javascript:void(0);" rel="images/bigpic1_07.gif"><img src="images/smallpic1_07.gif" alt="" title="" width="80" height="60"/></a></li>
+                                <li><a href="javascript:void(0);" rel="images/bigpic2_07.gif"><img src="images/smallpic2_07.gif" alt="" title="" width="80" height="60"/></a></li>
+                                <li><a href="javascript:void(0);" rel="images/bigpic3_07.gif"><img src="images/smallpic3_07.gif" alt="" title="" width="80" height="60"/></a></li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+                     <div id="preview" class="spec-preview">
+                        <a class="jqzoom">
+                        
+                        </a>
+                    </div>
+             </div>
+             <!----------产品图片--end---------->
+             <!----------产品信息--start---------->
+             <div class="productright" >
+                    <div class="producttitle">
+                        <h2>新鲜水果葡萄 4斤装  产品编号：APP-MJQ-715_172<img src="images/taocan_03.gif" alt="" title="" width="39" height="29"/></h2>
+                        <p>新鲜无添加剂 新疆乌鲁木齐发货 原生态 无污染 满59包邮</p>
+                    </div>
+                    <div class="price">
+                        <span class="pricefont1">快乐价：</span>
+                        <span class="pricefont2">￥</span>
+                       <span class="pricefont3"> 28.00</span>
+                         <span class="pricefont1">元/袋</span>    
+                        <span class="pricefont4">参考价：<span>￥30.00元/袋</span></span>
+                         <span class="pricefont5">  降价通知</span>
+                    </div>
+                    <p class="jinghanliang"><span>净含量</span>2kg</p>
+                    <ul class="productmessage">
+                        <li><p class="number">62</p><p class="xiaoliang">月销量</p></li>
+                        <li class="pingjia"><p class="number">89</p><p class="xiaoliang">累计评价</p></li>
+                        <li><p class="number">14</p><p class="xiaoliang">赠送积分</p></li>
+                    </ul>
+                    
+                    <ul class="productxixin">
+                        <li class="baozhang"><span class="baozhangtitle">包&nbsp;&nbsp;&nbsp;&nbsp;装</span><span class="baozhangactive">4斤装</span><span>4斤装</span><span>4斤装</span><span>4斤装</span><span>4斤装</span></li>
+                        <li class="baozhang"><span class="baozhangtitle">口&nbsp;&nbsp;&nbsp;&nbsp;味</span><span class="baozhangactive">酸</span><span>甜</span><span>甜</span></li>
+
+                        <li class="goumaishuliang">
+                            <span class="baozhangtitle">购买数量</span>
+                            <input type="text" class="num" value="2">
+                            <p class="next_prev"><input type="button" class="prev"><input type="button" class="next"></p>				<span class="jians">件</span>
+                         <span >库存：26袋</span><span class="songhuoshijian">可3小时送达<a href="">（配送标准请查阅）</a></span>
+                        </li>
+                    </ul>
+                    <div class="butss">
+                        <input type="button" class="lijigoumai">
+                        <input type="button" class="savecar">
+                        <input type="button" class="jiaruqingdan">
+                     </div>
+                </div>
+                 <!----------产品信息--end---------->
+                 
+                <!-----bottoms-start-------------->
+              <div class="bottoms" >
+                 <div class="productbottomleft">
+                    <a href="javascript:void(0);" class="jiaruduibi"><input type="checkbox"/> <span>加入对比</span></a>
+                    <div class="fenxiang">
+                        <div class="fenxiangbut"></div>
+                        <span>分享到：</span>
+                        <a href=""><img src="images/sina_03.gif" title="" alt="" width="16" height="18"/></a>                 
+                        <a href=""><img src="images/qq_03.gif" title="" alt="" width="16" height="18"/></a>
+                        <a href=""><img src="images/aa_03.gif" title="" alt="" width="16" height="18"/></a>
+                        <a href=""><img src="images/bb_03.gif" title="" alt="" width="16" height="18"/></a>
+                        <a href=""><img src="images/renren_03.gif" title="" alt="" width="16" height="18"/></a>
+                        <a href=""><img src="images/xingxing_03.gif" title="" alt="" width="16" height="18"/></a>
+                        <a href=""><img src="images/duo_03.gif" title="" alt="" width="16" height="18"/></a>
+                        
+                    </div>
+                </div>
+                 <div class="productbottomright">
+                            <p class="wenxintishi">温馨提示：</p><p class="tishixixin"><span>会员请在登录网站后点击一键购买，简单快捷，一键购买只能买单一产品哦~
+                  如有疑问请致电:400-888-8888</span></p>
+                </div>
+         	</div>
+            <!-----bottoms-end-------------->
+            
+            </div>
+         <div class="topright">
+                <h2>你可能还需要</h2>
+                <dl>
+                    <dt><a href=""><img src="images/productimg1_03.gif" alt="" title="" width="156" height="117"/></a></dt>
+                    <dd>￥138.00</dd>
+                </dl>
+                <dl>
+                    <dt><a href=""><img src="images/productimg2_03.gif" alt="" title="" width="156" height="117"/></a></dt>
+                    <dd>￥138.00</dd>
+                </dl>
+                <dl>
+                    <dt><a href=""><img src="images/productimg3_03.gif" alt="" title="" width="156" height="117"/></a></dt>
+                    <dd>￥138.00</dd>
+                </dl>
+                <p>更多商品</p>
+           </div>
+    </div>
+    
+     <div class="sideleft" >
+    	 <!----排行榜--start------>
+    	<div class="sidelefttop">
+            <h2><img src="images/paihangbang1_03.gif"/></h2>
+            <ul class="productclass">
+                <li><a href="javascript:void(0);" class="sel">同类另</a></li>
+                <li><a href="javascript:void(0);" class="sel sel2">同类另</a></li>
+                <li><a href="javascript:void(0);" class="sel activess">同价位</a></li>
+            </ul>
+            <div class="products1 display">
+                <dl>
+                    <dt ><a href=""><img src="images/productimg4_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg5_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+               <dl>
+                    <dt ><a href=""><img src="images/productimg6_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg7_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                
+            </div>
+            <div class="products2 display">
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                
+            </div>
+             <div class="products3 display">
+                <dl>
+                    <dt ><a href=""><img src="images/productimg4_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg5_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+               <dl>
+                    <dt ><a href=""><img src="images/productimg6_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg7_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                
+            </div>
+        </div>
+         <!----排行榜--end------>
+        
+        <!----最近浏览记录--start------> 
+        <div  class="liulanjilu">
+        	<div class="sideleftbottom">
+                <h2><img src="images/liulanjilu_03.gif"/></h2>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+                <dl>
+                    <dt ><a href=""><img src="images/productimg8_03.gif" alt="" width="68" height="52" title=""/></a></dt>
+                    <dd class="title">果香清新悠长 进口葡萄500G</dd>
+                    <dd><span class="fuhao">￥</span><span class="money">13.80</span></dd>
+                </dl>
+            </div>
+        </div>
+        <!----最近浏览记录--end------> 
+    </div>
+    
+    <div class="content">
+    <!----商品的选择搭配--start------> 
+    	<div class="xuanzedapei">
+        	<h2><img src="images/xuanzedapei_03.gif"/></h2>
+        	<div class="dapeicontent">
+            	<div class="selects">
+                	<dl class="mainpic">
+                    	<dt><img src="images/productimg9_03.gif"/></dt>
+                        <dd>香脆苹果</dd>
+                        <dd>￥15.00元/盒</dd>
+                    </dl>
+                    <p class="total">
+                        <a href="" class="all">全部（16）</a>
+                        <a href="">梨子（3）</a>
+                        <a href="">果汁（4）</a>
+                        <a href="">糖（2）</a>
+                        <a href="">其它（7）</a>
+                   </p>
+                   <div class="dapeis">
+                   		
+                       <div class="warpdapeis">
+                        <dl class="dapeisdl">
+                            	<dt><img src="images/productimg10_06.gif"/></dt>
+                                <dd class="checkboxs"><input type="checkbox"><span>香脆苹果</span></dd>
+                                <dd><span class="pric">￥15.00</span><span class="danjia">元/盒</span></dd>
+                         </dl>
+                         
+                         <dl class="dapeisdl">
+                            	<dt><img src="images/productimg10_06.gif"/></dt>
+                                <dd class="checkboxs"><input type="checkbox"><span>香脆苹果</span></dd>
+                                <dd><span class="pric">￥15.00</span><span class="danjia">元/盒</span></dd>
+                         </dl>
+                         <dl class="dapeisdl">
+                            	<dt><img src="images/productimg10_06.gif"/></dt>
+                                <dd class="checkboxs"><input type="checkbox"><span>香脆苹果</span></dd>
+                                <dd><span class="pric">￥15.00</span><span class="danjia">元/盒</span></dd>
+                         </dl>
+                         <dl class="dapeisdl">
+                            	<dt><img src="images/productimg10_06.gif"/></dt>
+                                <dd class="checkboxs"><input type="checkbox"><span>香脆苹果</span></dd>
+                                <dd><span class="pric">￥15.00</span><span class="danjia">元/盒</span></dd>
+                         </dl>
+                         <dl class="dapeisdl">
+                            	<dt><img src="images/productimg10_06.gif"/></dt>
+                                <dd class="checkboxs"><input type="checkbox"><span>香脆苹果</span></dd>
+                                <dd><span class="pric">￥15.00</span><span class="danjia">元/盒</span></dd>
+                         </dl>
+                         
+                        </div>
+                   </div>
+                </div>
+                <div class="dapeicontentbottom">
+                	<input type="button" class="button1">
+                    <p>已选择<span>0</span>件搭配 <em>|</em>  参考价：￥60.00 <em>|</em> 套餐价：<span>￥55.00</span></p>
+                </div>
+            </div>
+        </div>
+        <!----商品的选择搭配--end------> 
+      <!----商品的参数--start------>    
+        <div class="promessage">
+        	<ul class="promessagetitle">
+            	<li><a href="javascript:void(0);" class="actives">产品描述</a></li>
+                <li><a href="javascript:void(0);">规格参数</a></li>
+                <li><a href="javascript:void(0);">包装信息</a></li>
+                <li><a href="javascript:void(0);">保修条款</a></li>
+                <li><a href="javascript:void(0);">品牌信息</a></li>
+                <li><a href="javascript:void(0);">评价</a></li>
+            </ul>
+            <div class="message1 hide">
+            	<img src="images/productimg15_03.gif" title="" alt="" width="984" height="4135">
+            </div>
+            <div class="message2 hide">
+            	规格参数的内容</br>
+                规格参数的内容</br>
+                规格参数的内容</br>
+                规格参数的内容</br>
+                规格参数的内容</br>
+                规格参数的内容</br>
+                规格参数的内容</br>
+            </div>
+            <div class="message3 hide">
+            	包装信息的内容</br>
+                包装信息的内容</br>
+                包装信息的内容</br>
+                包装信息的内容</br>
+                包装信息的内容</br>
+                包装信息的内容</br>
+                包装信息的内容</br>
+            </div>
+            <div class="message4 hide">
+            	保修条款的内容</br>
+                保修条款的内容</br>
+                保修条款的内容</br>
+                保修条款的内容</br>
+                保修条款的内容</br>
+                保修条款的内容</br>
+                保修条款的内容</br>
+            </div>
+            <div class="message5 hide">
+            	品牌信息的内容</br>
+                品牌信息的内容</br>
+                品牌信息的内容</br>
+                品牌信息的内容</br>
+                品牌信息的内容</br>
+                品牌信息的内容</br>
+                品牌信息的内容</br>
+            </div>
+        </div>
+       <!----商品的参数--end------>
+       
+    <!----购买了当前商品的用户还购买了--start------>    
+         <div class="userproduct">
+        	<h2>购买当前商品的用户还买了</h2>
+            <div class="product_list">
+            	<div class="list1">
+                	<a href="productcontent.html"><img src="images/productimg19_03.gif" tite="" width="232" height="174" alt=""></a>
+                	<p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+					<p class="productprices">
+                    	<span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2"/><input type="button" class="jian"/></span>
+                    </p>
+                    <p class="buttons1">
+                    	<input type="button" class="goumai">
+                     	<input type="button" class="carts">
+                        <input type="button" class="duibi">
+                    </p>
+                </div>
+                
+                <div class="list1">
+                	<a href="productcontent.html"><img src="images/productimg16_03.gif" tite="" width="232" height="174" alt=""></a>
+                	<p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+					<p class="productprices">
+                    	<span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2"/><input type="button" class="jian"/></span>
+                    </p>
+                    <p class="buttons1" >
+                    	<input type="button" class="goumai">
+                     	<input type="button" class="carts">
+                        <input type="button" class="duibi">
+                    
+                    </p>
+                </div>
+            
+            	<div class="list1">
+                	<a href="productcontent.html"><img src="images/productimg17_03.gif" tite="" width="232" height="174" alt=""></a>
+                	<p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+					<p class="productprices">
+                    	<span class="fuhao">￥</span>
+                        <span class="money">39.00</span>
+                        <span class="numbutton">
+                            <input type="button" class="jia" />
+                            <input type="button" class="nums" value="2"/>
+                            <input type="button" class="jian"/>
+                        </span>
+                    </p>
+                    <p class="buttons1">
+                    	<input type="button" class="goumai">
+                     	<input type="button" class="carts">
+                        <input type="button" class="duibi">
+                    </p>
+                </div>
+                
+                <div class="list1 listleft">
+                	<a href="productcontent.html"><img src="images/productimg18_03.gif" tite="" width="232" height="174" alt=""></a>
+                	<p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+					<p class="productprices">
+                    	<span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2"/><input type="button" class="jian"/></span>
+                    </p>
+                    <p class="buttons1">
+                    	<input type="button" class="goumai">
+                     	<input type="button" class="carts">
+                        <input type="button" class="duibi">
+                    </p>
+                </div>
+            </div>
+        </div>
+     <!----购买了当前商品的用户还购买了--end------> 
+  <!----用户评论--start------>
+        <div class="pinglun">
+        	<ul class="pingluncount">
+            	<li  class="first"><a href="javascript:void(0);" >全部用户品论（10）</a></li>
+                <li ><a href="javascript:void(0);">很好（9）</a></li>
+                <li><a href="javascript:void(0);">较好（1） </a></li>
+                <li><a href="javascript:void(0);">一般（0）  </a></li>
+                <li><a href="javascript:void(0);">较差（0）</a></li>
+                <li><a href="javascript:void(0);">很差（0）</a></li>
+            </ul>
+            
+            <!---------------全部用户品论---------->
+            <div class="box1 shows">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+                         <li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>
+                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>送货速度快</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+ 						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+ 						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+ 						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>
+              
+            </div>
+            
+            <!-----------------很好评论--------------------->
+            <div class="box1">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+ 						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+              
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>              
+            </div>
+            
+             <!-----------------较好评论--------------------->
+             <div class="box1">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+							<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li> 
+                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+              
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>              
+            </div>
+            <!-----------------一般评论--------------------->
+            <div class="box1">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                          <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+              
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>              
+            </div>
+            <!-----------------较差评论--------------------->
+            <div class="box1">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+							<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                              <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            
+              
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>              
+            </div>
+            <!-----------------很差评论--------------------->
+             <div class="box1">
+                <div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+						<li class="dengji">
+                         	<span>2014-04-02</span> 
+                            <img src="images/pinglunxing_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+							<img src="images/pinglunxing2_07.gif" alt="" title="" width="17" height="16"/>
+
+                          </li>                              <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+            	<div class="pingluncontent1">
+                    <div class="usermessage">
+                        <img src="images/touxinag_03.gif" titlt="" alt="" width="54" height="48"/>
+                        <p>aiwenshuo01</p>
+                        <p class="menberdengji">中级会员</p>
+                    </div>
+                    <ul class="pinglunmain">
+                        <img  class="tag3" src="images/tag3_03.gif" alt="" title="" width="7" height="8"/>
+                         <li class="dengji"><span>2014-04-02</span> <img src="images/xing2_03.gif" alt="" title="" width="97" height="16"/></li>
+                         <li class="tag4"><span>标&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;签：</span><div class="tagbg"><div class="tagrightbg"><p>便宜实惠</p></div></div></li>
+                         <li class="xingde"><span>心&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;得：</span>送货的速度非常快，商品也非常好，准备下次还来！</li>
+                         <li><span>购买日期：</span>2014-2-28</li>
+                    </ul>
+                   
+                </div>
+              
+            
+                <div class="fenye">
+                    <a href="" class="prev1">上一页</a>
+                    <a href="" class="yema">1</a>
+                    <a href="" class="yema">2</a>
+                    <a href="" class="yema">3</a>
+                       ...
+                    <a href="" class="yema">15</a>
+                    <a href="" class="next1">下一页</a>
+                    <span >到<input type="text"  class="tiaozhuang">页 <input type="button" value="确定"></span>
+                </div>              
+            </div>
+        </div>
+ <!----用户评论--end------>
+ 
+    </div>
+    
+ </div>
+ 
+ <!--footer-start-->
+<div class="footer">
+	<div class="footerall">
+    	<div class="footermenu">
+        	<div class="logo2"><img   src="images/logo_1_06.gif" title="" alt="" width="216" height="83"></div>
+            <ul class="newfingerpost">
+            	<li class="menutitle1"></li>
+                <li><a href="">会籍介绍</a></li>
+                <li><a href="">购物流程</a></li>
+                <li><a href="">快购工具</a></li>
+                <li><a href="">使用优惠券</a></li>
+                <li><a href="">商品评论指南</a></li>
+            </ul>
+            <ul class="peisong">
+            	<li class="menutitle2"></li>
+                <li><a href="">运费政策</a></li>
+                <li><a href="">配送范围和时间</a></li>
+                <li><a href="">特殊订单配送</a></li>
+                <li><a href="">验货和签收</a></li>
+            </ul >
+            <ul class="zhifufangshi">
+           		<li class="menutitle3"></li>
+            	<li><a href="">在线支付</a></li>
+                <li><a href="">货到付款</a></li>
+                <li><a href="">其他支付方式</a></li>
+                <li><a href="">发票制度</a></li>
+            </ul >
+             <ul class="shouhoufuwu">
+            	<li class="menutitle4"></li>
+                <li><a href="">退换货服务</a></li>
+                <li><a href="">安装及维修</a></li>
+                <li><a href="">延保服务</a></li>
+                <li><a href="">召回商品</a></li>
+            </ul >
+            <ul class="teisefuwu">
+            <li class="menutitle5"></li>
+            	<li><a href="">增值服务</a></li>
+                <li><a href="">订阅促销信息</a></li>
+            </ul >
+             <ul class="help">
+            	<li class="menutitle6"></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">订单查询</a></li>
+                <li><a href="">忘记密码</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul >
+        </div>
+        
+        <ul class="footerlist">
+        	<li class="footerlist1"></li>
+            <li class="footerlist2"></li>
+            <li class="footerlist3"></li>
+            <li class="footerlist4"></li>
+        </ul>
+        <div class="Copyright">
+        	<p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+            <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+            <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+            <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+        </div>
+    </div>
+
+</div>
+						<div style="display:none;">
+                            <input id="idStop" value="暂停" type="button">
+                            <input id="idHide" value="取消隐藏" type="button">
+                            <input id="idRange" value="指定范围" type="button">
+                            <input id="idMouse" value="鼠标缩放" type="button">
+                            <select id="idScale">
+                                <option value="0">按大图放大</option>
+                                <option value="2" >放大2倍</option>
+                                <option value="5" >放大5倍</option>
+                                <option value="10" selected="selected">放大10倍</option>
+                            </select>
+                        </div>
+<!--footer-end-->
+<script type="text/javascript">
+
+var iz = new ImageZoom( "idImage", "idViewer", { onLoad: function(){ $$("idStop").value = "暂停"; } } );
+
+$$("idScale").onchange = function(){ iz.reset({ scale: this.value | 0 }); }
+
+$$("idChange").onclick = function(){
+	iz.reset({ scale: 5, originPic: $$("idChangeOrigin").value, zoomPic: $$("idChangeZoom").value });
+	$$("idScale").selectedIndex = 2;
+}
+
+$$("idChangeReturn").onclick = function(){
+	iz.reset({ originPic: "http://www.cnblogs.com/images/cnblogs_com/cloudgamer/143727/o_vivian.jpg", zoomPic: "" });
+}
+
+$$("idRange").onclick = function(){
+	if ( this.value == "指定范围" ) {
+		iz.reset({ rangeWidth: 40, rangeHeight: 40 });
+		this.value = "自动范围";
+	} else {
+		$$D.setStyle( $$("idViewer"), { width: "", height: "" } );
+		iz.reset({ rangeWidth: 0, rangeHeight: 0 });
+		this.value = "指定范围";
+	}
+}
+
+$$("idHide").onclick = function(){
+	if ( this.value == "自动隐藏" ) {
+		iz.autoHide = true;
+		this.value = "取消隐藏";
+	} else {
+		iz.autoHide = false;
+		iz._viewer.style.display = "block";
+		this.value = "自动隐藏";
+	}
+}
+
+$$("idMouse").onclick = function(){
+	if ( this.value == "鼠标缩放" ) {
+		iz.mouse = true;
+		this.value = "取消缩放";
+	} else {
+		iz.mouse = false;
+		iz.reset({ scale: $$("idScale").value | 0 });
+		this.value = "鼠标缩放";
+	}
+}
+
+$$("idStop").onclick = function(){
+	if ( this.value == "暂停" ) {
+		iz.stop(); this.value = "继续";
+	} else {
+		iz.start(); this.value = "暂停";
+	}
+}
+</script>
+</body>
+</html>

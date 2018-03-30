@@ -1,0 +1,166 @@
+@CHARSET "UTF-8";
+.right {
+    width:987px;border:1px solid #e5e5e5;overflow:hidden;float:right;
+}
+.hl_rightform {
+    width:auto;margin-top:27px;margin-left:40px;
+}
+.hl_rightfooter {
+    width:905px;margin-top:37px;margin-left:40px;
+}
+.hl_rightformbiaoti {
+    width:auto;height:30px;margin:0 auto;font-size:20px;font-weight:bold;
+}
+.hl_rightformtext1 {
+    width:auto;height:35px;margin:0 auto;overflow:hidden;
+}
+.hl_rightformtext1tishi div{
+    float:left;
+}
+.hl_diqubitian {
+    line-height:50px;color:red;
+}
+.hl_diqu {
+    line-height:50px;
+}
+.hl_diquselect {
+    width:155px;height:20px;border:1px solid #7f9db9;margin-top:14px;color:#919191;
+}
+.hl_rightformtext2 {
+    clear:both;width:auto;overflow:hidden;height:75px;
+}
+.hl_rightformtext2 div{
+    float:left;
+}
+.hl_xiangxidizhibitian {
+    color:red;line-height:50px;
+}
+.hl_xiangxidizhitext {
+    width:405px;height:60px;margin-top:12px;border:1px solid #dadada;
+}
+.hl_xiangxidizhi {
+    line-height:50px;   
+}
+.hl_rightformtext3 {
+    height:38px;width:auto;clear:both;overflow:hidden;margin:0 auto;
+}
+.hl_nametext {
+    border:1px solid #dadada;width:145px;height:25px;margin-top:10px;line-height:25px;
+}
+.hl_rightformtext3 div {
+    float:left;
+}
+.hl_shouhuonamebitian {
+    line-height:50px;color:red;
+}
+.hl_shouhuoname {
+    line-height:50px;
+}
+.hl_shouhuonameerror {
+    line-height:48px;margin-left:5px;color:#919191;
+}
+.hl_phonetext {
+    height:25px;width:172px; margin-top:10px;border:1px solid #dadada;line-height:25px;
+}
+.hl_mail {
+    height:25px;width:215px; margin-top:10px;border:1px solid #dadada;line-height:25px;
+}
+.hl_mailhidd {
+    line-height:50px;color:red;visibility:hidden;
+}
+.hl_checkboxdefault {
+    margin-left:72px;height:13px;width:13px;margin-top:8px;margin-right:3px;
+}
+.hl_check {
+    width:auto;height:22px;margin:0 auto;overflow:hidden;line-height:30px;
+}
+.hl_check div {
+    float:left;
+}
+.hl_baocun {
+    height:52px;width:auto;overflow:hidden;margin:0 auto;
+}
+.hl_imgBtn {
+    height:30px;width:180px;cursor:pointer;
+}
+.hl_divBtn {
+    margin-left:36px;margin-top:20px;
+}
+.hl_yibaocun {
+    width:auto;height:25px;font-size:16px;font-weight:bold;color:#f3773a;overflow:hidden;
+}
+.hl_title {
+    height:35px;width:auto;overflow:hidden;margin:0 auto;background-color:#f15b20;
+}
+.hl_title ul li {
+    float:left;
+}
+.hl_titlename {
+    height:32px;width:100px;overflow:hidden;margin:0 auto;text-align:center;line-height:32px;color:#ffffff;
+}
+.hl_titleaddress {
+    height:32px;width:165px;overflow:hidden;margin:0 auto;text-align:center;line-height:32px;color:#ffffff;
+}
+.hl_titlejiedao {
+    height:32px;width:190px;overflow:hidden;margin:0 auto;text-align:center;line-height:32px;color:#ffffff;
+}
+.hl_titlephone {
+    height:32px;width:130px;overflow:hidden;margin:0 auto;text-align:center;line-height:32px;color:#ffffff;
+}
+.hl_titleyoubian {
+    height:32px;width:77px;overflow:hidden;margin:0 auto;text-align:center;line-height:32px;color:#ffffff;
+}
+.hl_titlecaozuo {
+    height:32px;width:98px;overflow:hidden;margin:0 auto;padding-left:142px;line-height:32px;color:#ffffff;
+}
+.hl_addresscontent {
+    height:60px;width:auto;overflow:hidden;margin:0 auto;background-color:#fbdfd4;
+}
+    .hl_addresscontent ul {
+    width:100%;height:auto;overflow:hidden;
+    }
+.hl_addresscontentcolor {
+    height:60px;width:auto;overflow:hidden;margin:0 auto;background-color:#ffffff;border-bottom:1px solid #fcdac9;border-left:1px solid #fcdac9;border-right:1px solid #fcdac9;
+}
+.hl_addresscontentcolor ul li {
+     float:left;   
+}
+.hl_addresscontent ul li {
+     float:left;   
+}
+.minde {
+    display:table-cell;vertical-align:middle;width:100%;height:auto;overflow:hidden;
+}
+.hl_xinxiconent1 {
+    height:60px;width:100px;overflow:hidden;margin:0 auto;text-align:center;line-height:60px;
+}
+.hl_xinxiconent2 {
+    height:60px;width:165px;overflow:hidden;margin:0 auto;text-align:center;line-height:60px;
+}
+.hl_xinxiconent3 {
+    height:60px;width:190px;line-height:20px;display:table;
+}
+.hl_xinxiconent4 {
+    height:60px;width:130px;overflow:hidden;margin:0 auto;text-align:center;line-height:60px;
+}
+.hl_xinxiconent5 {
+    height:60px;width:77px;overflow:hidden;margin:0 auto;text-align:center;line-height:60px;
+}
+.hl_xinxiconent6 {
+    height:60px;width:240px;overflow:hidden;margin:0 auto;line-height:60px;
+}
+.hl_xinxiconent6 span {
+    color:#84c011;
+}
+.hl_caozuospan {
+   margin-right:58px;
+   display:block;
+   float:right;
+/*    border:1px solid red;*/
+}
+.hl_contentfooter {
+    margin-top:7px;
+}
+.hl_setupdefault {
+    visibility:hidden;
+}

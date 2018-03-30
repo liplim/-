@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+.right {
+  padding-left:14px;  width:973px;height:512px;border:1px solid #e5e5e5;overflow:hidden;margin:0 auto;float:right;
+}
+.hl_righttop {
+    width:auto;height:15px;margin-left:20px;margin-top:35px;font-weight:bold;overflow:hidden;
+}
+.hl_bankbangding {
+    width:auto;height:17px;overflow:hidden;margin-left:20px;margin-top:35px;font-weight:bold;color:#f25011;font-size:16px;
+}
+.hl_bank {
+    width:auto;overflow:hidden;margin-left:35px;
+}
+.hl_bank div {
+    float:left;    
+}
+.hl_userbank {
+    height:176px;width:297px;background-image:url(../images/hl_bankadd.gif);background-repeat:no-repeat;margin-right:15px;margin-top:15px;
+}
+.hl_userbankadd {
+    height:176px;width:275px;background-image:url(../images/hl_bankbangding.gif);background-repeat:no-repeat;margin-right:15px;margin-top:15px;padding-left:20px;overflow:hidden;background-position-x:-2px;
+}
+.hl_userbanktop {
+    height:50px;width:265px;overflow:hidden;margin-top:7px;background-color:#f1f1f1;border:1px solid #f1f1f1;
+}
+.hl_userbankcenter {
+    height:47px;width:290px;overflow:hidden;background-color:#ced2d5;margin-left:-17px;
+}
+.hl_userbankcenter div {
+    float:left;
+}
+.hl_userbankfooter {
+    height:50px;width:265px;overflow:hidden;background-color:#f1f1f1;
+}
+.hl_bankname {
+    margin-top:15px;font-size:15px;overflow:hidden;margin-left:5px;
+}
+.hl_bankweihao {
+    margin-top:17px;font-size:13px;margin-left:5px;overflow:hidden;
+}
+.hl_bankimg {
+    height:25px;width:25px;
+}
+.hl_bankdivimg {
+    margin-top:8px;
+}
+.hl_banktypeimg {
+    margin-top:10px;margin-left:10px;
+}
+.hl_kuaijiezhifuimg {
+    width:83px;height:25px;
+}
+.hl_kuaijiezhifudivimg {
+    margin-left:20px;margin-top:10px;overflow:hidden;
+}
+.hl_kaitong {
+    margin-top:20px;margin-left:23px;
+}
+.hl_guanli {
+    margin-top:19px;font-weight:bold;margin-left:72px;color:#f25011;
+}
+.hl_zhangdan {
+    float:left;margin-top:27px;margin-left:5px;width:40px;
+}
+.hl_zhangdanselect {
+    float:right;margin-top:27px;color:#f25011;padding-left:133px;
+}
+.yin_hang_ka {
+	margin-left:20px;
+	margin-top:15px;
+	width: 293px;
+	height: 172px;
+	background-image: url(../images/lky-ying-hang-ka.png);
+	float: left;
+}
+.yin_hang_ka_26{
+	margin-left: 20px;
+	margin-top: 15px;
+	width: 293px;
+	height: 172px;
+	background-image: url(../images/lky-tian-jia-ka.png);
+	float: left;
+}

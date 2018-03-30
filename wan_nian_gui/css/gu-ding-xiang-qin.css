@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+.lky_title{color:#010000;margin:0 auto;border-right:1px solid #d9d9d9; width:1189px;height:36px;line-height:36px;background-image:url(../images/lky-title-title.png);margin-top:26px;}
+.lky_title span{color:#f15010;}
+.span_1 a{color:#474747}
+.lky_title .tao_can{color:#010000 }
+.span_1{margin-left:80px;}
+.img_div{margin: 0 auto;width:1189px;margin-top:7px;}
+.shang_ping{width:1188px;margin: 0 auto;border:1px solid #e6e6e6;margin-top:14px;}
+.shang_ping_xiang_tu{display:inline;float:left;text-align:center;margin-top:30px;margin-left:30px;margin-right:25px;width:162px;height:180px;}
+.shang_ping_xiang_tu img{display:block;margin-bottom:5px;}
+.shang_ping_xiang_tu p{font-family:鰴软雅黑;font-size:14px;text-align:center;line-height:20px;}
+.shang_ping_xiang_tu span{font-family:鰴软雅黑;font-size:12px;text-align:center;line-height:20px;color:#f05213}
+.fl{display:inline-block;float:left;margin-top:50px;}
+.gou_wu{position:relative; width:392px;height:103px;margin-left:410px;}
+.shang_ping:after{clear:both;display:block;content:"";}
+.tiao_mu1{width:1190px;height:230px;}
+.tiao_mu:after1{clear:both;display:block;content:"";}
+.xian_jia{margin-top:4px;font-family:微软雅黑;font-size:16px;color:#ffffff;text-align:center;width:158px;height:31px;line-height:31px;background-image:url(../images/xian-jian.png);float:right;}
+.gou_wu_ce{width:155px;height:39px;background-image:url(../images/lky-gou-wu-ce-33.png);float:left;}
+.gou_wu_ce a{dispaly:block;margin-left:55px;font-family:微软雅黑;font-size:16px;color:#ffffff;width:155px;height:39px;line-height:31px;display:block;}
+.xiang_xi{text-align:center;line-height:31px;width:77px;height:31px;background-image:url(../images/xiang_xi.png);float:left;margin-top:5px;margin-right:7px;}
+.xiang_xi a{font-family:微软雅黑;font-size:16px;color:#ffffff;width:77px;height:31px;display:block;}
+.qu_jie_shuan{text-align:center;width:77px;height:31px;background-image:url(../images/xiang_xi.png);float:right;margin-right:5px;margin-top:5px;line-height:31px;}
+.qu_jie_shuan a{text-align:center;font-family:微软雅黑;font-size:16px;color:#ffffff;}
+.da_zhe{top:-30px;left:-30px;width:62px;height:45px;background:url(../images/lky-da-zhe-21.png);position:absolute;}
+.gou_wu s{display:block;widht:300px;margin-top:30px;color:#9e9e9e;font-family:微软雅黑;font-size:12px;}
+.fan_hu{display:inline;background-color:#f17c4d;height:30px;width:88px;float:right;font-family:微软雅黑;line-height:36px;height:36px;font-size:16px;color:#ffffff;text-align:center;}
+.fan_hu a{font-family:宋体;color:#ffffff;font-size:12px;}
+
+
+

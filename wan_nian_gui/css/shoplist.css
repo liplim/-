@@ -1,0 +1,167 @@
+/* CSS Document */
+
+/*-------rightnav-start-------------------*/
+.leftnav{position:absolute;width:38px;height:400px;z-index:9999;top:375px !important;position:fixed; _position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-(this.offsetHeight+100)));}
+.leftnav a{width:38px;color:#ffffff;font-family:微软雅黑;display:block;background-color:#f15010;margin-bottom:2px}
+.returntop{height:40px;background:url(../images/top_03.gif) no-repeat 0 0;}
+.return1F,.return2F,.return3F,.return4F,.return5F{height:34px;text-align:center;}
+.moress{height:35px;background:url(../images/more1_03.gif) no-repeat 0 0;}
+.returnfooter{height:39px;background:url(../images/footer_03.gif) no-repeat 0 0;}
+.cartss{height:44px;background:url(../images/cart3_03.gif) no-repeat 0 0;}
+
+
+.rightnav{display:block;width:20px;height:130px;background:#f15010;font-size:14px;color:#fefefe;font-weight:bold;text-align:center;line-height:18px;padding-top:6px;position:absolute;right:16px;z-index:9999;top:375px;position:fixed; _position:absolute; _top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-(this.offsetHeight+100)));}
+/*-------rightnav-end-------------------*/
+/*----navs--导航start-------*/
+.navs{height:44px;width:1190px;margin:0 auto;position:relative;z-index:99999;}
+.navs_con
+{
+    height:44px;width:1190px;background:#f15010;margin:0 auto;position:relative;z-index:99999;
+}
+.navs ul li{float:left;background:  url(../images/nav_bg_03.gif) no-repeat left 0;height:44px;}
+.navs ul li a{font-size:16px;font-weight:bolder;color:#ffffff;width:264px;height:44px;text-align:center;line-height:44px;display:block;background:url(../images/nav_bg_03.gif) no-repeat left 0;}
+
+.navs ul li.index a{width:132px;line-height:44px;background:url(../);letter-spacing:18px;} 
+.navs ul li.index{background:url(../);} 
+.navs ul li a.tag{background:url(../images/tag_03.gif) no-repeat 176px center;}
+    .navs ul li .on
+    {
+        background:url(../images/tag_03.jpg) no-repeat 176px center #eb875d;margin-left:2px;
+    }
+/*----navs--导航end-------*/
+ /*----------position的start-----------*/
+.positions{width:1190px;height:30px;margin:10px auto 0;line-height:30px;color:#474747;border-bottom:1px solid #fec5ae;}
+.positions .return{float:right;}
+.positions .return span,.positions .return a{color:#f25010;}
+.positions .return a{margin-left:14px;}
+.positions  .position_nav,.positions .position_nav a{color:#474747;}
+ /*----------position的end-----------*/
+
+
+.menu{width:1190px;border:1px solid #FECBB6;margin:0 auto;zoom:1;border-top:0;background-color:#fff1e7;}
+.menu .jingyungleibei{width:1190px;height:auto;border-bottom:1px solid #fec5ae;position:relative;}
+.menu .jingyungleibei:after{clear:both;display:block;content:'';}
+.menu .jingyungleibei dt{height:auto;line-height:44px;float:left;width:82px;padding-left:24px;background:#eb875d;font-weight:bolder;}
+.menu .jingyungleibei dt a{color:#ffffff;font-size:14px;}
+.menu .jingyungleibei dd.titlecontents{float:left;width:1000px;height:auto;line-height:44px;}
+.menu .jingyungleibei dd.titlecontents a{margin-right:15px;margin-left:15px;white-space: nowrap;color:#474747;}
+.menu .jingyungleibei dd.gengduo{width:74px;height:auto;float:right;text-align:center;margin-right:2px;}
+.menu .jingyungleibei dd.gengduo a{margin-top:15px;display:inline-block;width:42px;background:url(../images/gengduo1_03.gif) no-repeat 36px center;color:#474747;padding-right:10px;}
+ /*------main--start-----------------------*/
+ .main{width:1190px;height:auto;margin:24px auto 0;}
+ .f1title{height:46px;width:1190px;background:url(../images/shoplistbg_03.gif) no-repeat 0 0;border-bottom:3px solid #f15010;}
+ .titleright{float:right;width:30%;text-align:right;line-height:46px;}
+ .titleright a{color:#2f3031;}
+ .titleright span{font-size:14px;color:#f25010;margin-right:10px;margin-left:10px;}
+.titleleft{float:left;width:68%;height:46px;line-hegiht:46px;position:relative;overflow:hidden;}
+.titleleft .loucheng{margin-top:6px;font-size:24px;font-family:微软雅黑;color:#f15010;font-weight:bolder;margin-left:10px;float:left;}
+.titleleft .fenlei{color:#1a1c1c;font-size:18px;font-family:微软雅黑;margin-right:15px;margin-top:9px;display:inline-block;}
+.titleleft a{display:inline-block;width:70px;height:12px;line-height:12px;text-align:center;border-left:1px solid #9E9E9E;margin:0;}
+.moren img{position:absolute;top:12px;}
+ .tiaojian{margin-left:60px;}
+ .tiaojian a{color:#303030;}
+ .xiaoliang,.jiage{background:url(../images/xia_03.gif) no-repeat 50px center;}
+ .renqi,.zuixing{background:url(../images/shang_03.gif) no-repeat 50px center;}
+ 
+ .f1content{width:1190px;height:608px;padding-top:16px;position:relative;}
+ .roll_images{width:260px;height:582px;float:left;}
+ .roll_images li{width:260px;height:582px;display:none;}
+ .roll_images li img{width:260px;height:582px;}
+.roll_images .active{display:block;}
+.menuclassbg{width:259px;height:94px;background:#ece4d6;position:absolute;top:504px;left:0;filter:alpha(opacity=30); -moz-opacity:0.3; -khtml-opacity: 0.3;opacity: 0.3;z-index:10;}
+.menuclass{width:188px;height:76px;position:absolute;top:504px;left:0;padding-left:36px;padding-right:36px;padding-top:18px;z-index:30;}
+ .menuclass a{line-height:30px;color:#000001;}
+ .menuclass a.gengduo{color:#f15010;}
+ 
+ /*------产品列表--start---------*/
+ .list{width:918px;height:582px;float:right;}
+ .list .list1{width:214px;height:286px;float:left;margin-right:20px;margin-bottom:0px;margin-bottom:13px;}
+.listcontent{height:282px;width:212px;border:1px solid #e2e2e2;position:relative;}
+.list li.delmarginright{margin-right:0;}
+ .productdescript{line-height:22px;width:186px;border-bottom:1px solid #e3e3e3;margin:0 auto ;color:#919191;}
+ .productdescript span a{font-size:14px;font-family:微软雅黑;color:#474747;font-weight:bold;}
+.productprices{width:190px;height:26px;margin:2px auto 0;overflow:hidden;}
+ .numbutton{float:right;margin-top:6px;display:inline;}
+ .numbutton input{float:left;margin:0 0 0 2px;}
+ .productprices .fuhao{font-size:16px;float:left;padding-top:10px;height:16px;}
+  .productprices .money{font-size:24px;float:left;height:26px;}
+ .productprices .money, .productprices .fuhao{color:#f15010;font-family:微软雅黑;font-weight:bold;}
+ 
+.jia{width:20px;height:18px;background:url(../images/jia_03.gif) no-repeat 0 0;border:none;}
+.nums{width:27px;height:18px;background:url(../images/inputbg_03.gif) no-repeat 0 0;border:none;}
+.jian{width:20px;height:18px;background:url(../images/jian_03.gif) no-repeat 0 0;border:none;}
+.buttons1{width:186px;height:26px;margin:10px auto 0;}
+.productprices input,.buttons1 input{cursor:pointer;}
+.buttons1 .goumai{width:58px;height:26px;background:url(../images/goumaibutton2_03.gif) no-repeat 0 0;float:left;border:0;}
+.buttons1 .carts{width:104px;height:26px;background:url(../images/cart2_03.gif) no-repeat 0 0;float:right;border:0;}
+.duibi{position:absolute;width:212px;height:31px;background:white;top:0;left:0;filter:alpha(opacity=50) -moz-opacity:0.5; -khtml-opacity: 0.5;opacity: 0.5;display:none;z-index:10;}
+.jiaruduibi{position:absolute;width:212px;height:31px;text-align:center;line-height:31px;top:0;left:10;z-index:30;display:none;}  
+.jiaruduibi a{color:#f15010;font-size:14px;font-family:微软雅黑;}
+ /*------产品列表--end---------*/
+ 
+ .fenye{height:25px;width:984px;float:right;text-align:right;line-height:25px;}
+  .fenye a{display:inline-block;width:25px;height:25px;border:1px solid #b8b8b8;line-height:25px;color:#919191;margin-left:6px;}
+.fenye .prev1,.fenye .next1{height:25px;}
+.fenye .prev1{background:url(../images/prev1_03.gif) no-repeat 8px center #fff;width:58px;padding-right:10px;}
+.fenye .next1{background:url(../images/next1_03.gif) no-repeat 48px center #fff;width:44px;padding-right:24px;}
+.yema{text-align:center;}
+.fenye span{margin-left:28px;}
+
+ /*------------------------------shoplist2页面的css----------------------------------*/
+ .shangpingzhonglei{border-bottom:0;border-top:1px solid #FECBB6}
+ .shouqi2{width:50px;height:19px;background:url(../images/shouqi_03.gif) no-repeat;border:0;position:absolute;right:20px;cursor:pointer;display:none;z-index:100;}
+ .shopclass{position:relative;}
+
+.shangpingzhonglei dd.gengduo{float:right;background:url(../images/gengduo1_03.gif) no-repeat 55px center;margin-right:7px;}
+.shangpingzhonglei dd.gengduo a{color:#474747;}
+.shangpingxiangxi{width:1190px;height:auto;border:1px solid #d6d6d6;margin:13px auto 0;border-bottom:1px solid #f15010;position:relative;}
+.shangpingxiangxi .shangpingxiangxititle{hegiht:35px;border-bottom:1px solid #d4d4d4;}
+.clearnull{float:right;margin-right:22px;line-height:35px;}
+.clearnull a{color:#474747;}
+.tilte1{height:35px;padding-left:15px;color:#474747;}
+
+.tilte1 a{color:#f15010;display:inline-block;text-align:center;padding:6px;margin-top:4px;}
+.shops{color:#f15010;}
+.tilte1 a.shopleibei, .changdi{border:1px dashed #f36228;margin-right:4px;color:#f36228;width:70px;}
+.tilte1 span{float:left;margin-top:10px;}
+.tilte1 a.shopleibei img{margin-left:7px;}
+.tilte1 a.changdi img{margin-left:7px;}
+
+.messagelist{width:1190px;background:#eeeeee;height:auto;}
+.messagelist dl{border-bottom:1px  dashed #feffff;;height:auto;max-height:108px;overflow:hidden;}
+.messagelist dl:after{clear:both;display:block;content:'';width:90%;}
+.messagelist dl dt{width:150px;background:#e5e5e5;line-height:36px;text-align:left;padding-left:25px;float:left;}
+.messagelist dl dt a{font-size:14px;color:#f25010;font-family:微软雅黑;}
+.messagelist dl dd.titlecontents{float:left;width:900px;height:auto;letter-spacing:2px;padding-left:10px;line-height:36px;}
+.messagelist dl dd.titlecontents a{margin-right:10px;margin-left:10px;white-space: nowrap;color:#474747;}
+.messagelist dl dd.caozuo1{width:100px;float:right;}
+.messagelist dl dd.caozuo1 input{width:42px;height:21px;background:url(../images/duoxuan_03.gif) no-repeat;border:0;cursor:pointer;margin-top:8px;float:left;}
+.messagelist dl dd.caozuo1 a{background:url(../images/xia1_03.gif) no-repeat right center;color:#474747;margin-top:12px;display:inline-block;width:42px;letter-spacing:1px;margin-left:8px;}
+.messagelist dl.lastdl{border:0;}
+.xuanze{width:1190px;height:44px;margin:0 auto;position:relative;}
+.shaixuanxiang{position:absolute;top:0px;left:532px;width:130px;height:29px;background:url(../images/shaixuanxiang_03.gif) no-repeat 0 0;border:0;cursor:pointer;}
+.xuanze .on{position:absolute;top:0px;left:532px;width:130px;height:29px;background:url(../images/sxon.jpg) no-repeat 0 0;border:0;cursor:pointer;}
+
+.content{width:1190px;height:auto;margin:0 auto 0;}
+
+.contentitle{height:46px;width:1190px;background:url(../images/shoplistbg_03.gif) no-repeat 0 0;border-bottom:3px solid #f15010;margin-bottom:26px;}
+.tiaozhuang{width:24px;height:20px;margin:0 4px;}
+.sub{width:40px;height:25px;cursor:pointer;}
+.countshop{font-size:14px;color:#f15010;}
+.yema {color:#f15010;}
+.title_left{height:30px;width:400px;position:absolute;padding-top:17px;}
+.titlemessage a{color:#303030;display:inline-block;width:70px;height:12px;line-height:12px;text-align:center;border-left:1px solid #9E9E9E;margin:0;}
+.titlemessage{margin-left:76px}
+.title_left img{position:absolute;top:12px;left:16px;}
+
+
+.shoplists{width:1190px;height:auto;}
+ 
+.shoplists .list1{width:221px;height:293px;float:left;margin-right:21px;margin-bottom:18px;}
+.list1content{height:289px;width:217px;border:1px solid #e2e2e2;position:relative;margin-left:1px;}
+
+.productdescript1{line-height:23px;width:190px;border-bottom:1px solid #e3e3e3;margin:0 auto ;color:#919191;}
+.productdescript1 span a{font-size:14px;font-family:微软雅黑;color:#474747;font-weight:bold;}
+
+.shoplists li.delmarginright{margin-right:0;}
+.duibi{width:217px}

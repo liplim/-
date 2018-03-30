@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";
+div {
+    overflow: hidden;
+}
+
+.right{width:986px;float:right;border:1px solid #E2E2E2;}
+.right_top{width:986px;height:45px;background-color:#f1f1f1;}
+.right_top a{width:109px;height:30px;margin-top:6px;display:block;float:right}
+.right_top div{cursor:pointer;height:45px;padding-right:34px;padding-left:35px;line-height:45px;
+float:left;font-size:16px;font-family:微软雅黑;}
+.ca_xun{width:986px;height:46px;background-color:#f1f1f1;border-top:1px solid #E2E2E2;}
+.ca_xun div{width:225px;height:23px;margin-top:12px;float:right;background:url(../images/lky-wo-de-din-dang-shu-ru-kuan.png);}
+.ca_xun div input{
+	width:220px;
+	height:22px;
+	border:1px solid #e2e2e2;
+	border-left:2px solid #e2e2e2;
+	border-top:2px solid #e2e2e2;
+	padding-left:5px;
+	line-height:22px;
+	
+	
+	}
+.ca_xun_input{width:51px;height:23px;margin-right:18px;margin-left:8px;float:right;margin-top:12px;background:url(../images/lky-ca-xun-ca.png);
+	border:0;}
+.tou_su_title{width:985px;height:31px;background-image:url(../images/lky-tou-su-title.png); }
+.tou_su_title select{margin-left:687px;margin-top:6px;border:1px solid #7f9db9;}
+.tou_su_element{width:985px;border-bottom:1px solid #E2E2E2;}
+.din_dan_bian_hao{width:144px;
+text-align:center;
+color:#f15010;float:left;
+border-right:1px solid #E2E2E2;
+}
+.shang_ping_lei_rong{
+width:493px;
+border-right:1px solid #E2E2E2;
+float:left;
+}
+.shang_ping_lei_rong img{
+margin-top:16px;
+margin-left:15px;
+}
+.qu_bu_shi_jian{
+width:160px;
+float:left;
+border-right:1px solid #E2E2E2;
+text-align:center;
+color:#919191;
+}
+.qu_bu_shi_jian span{
+margin-top:50px;
+display:block;
+color:#919191;
+}
+.cao_zuo{
+width:185px;
+float:left;
+height:83px;
+text-align:center;
+}
+.cao_zuo a{
+width:88px;
+height:24px;
+background-image:url(../images/lky-wo-yao-tou-su.png);
+display:block;
+margin-left:47px
+}
+.fen_yue {
+	width: 330px;
+	height: 27px;
+	margin-top: 23px;
+	margin-right: 16px;
+	float: right;
+}
+.fen_yue_an_niu {
+	min-width: 26px;
+	height: 25px;
+	border: 1px solid #aeaeae;
+	margin-left: 8px;
+	float: left;
+	line-height: 25px;
+	text-align: center;
+	vertical-align: middle;
+}
+.fen_yue_an_nv_1{
+	min-width:26px;
+	height:25px;
+	margin-left:8px;
+	float:left;
+	line-height:25px;
+	text-align: center;
+	vertical-align: middle;
+}
+.fen_yue_an_nv_2{
+	width: 66px;
+	height: 25px;
+	margin-left: 8px;
+	float: left;
+	line-height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #aeaeae;
+}
+.fen_yie_big{
+width:950px;
+height:68px;
+float:right;
+}

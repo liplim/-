@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+.right {width: 985px;float: right;border: 1px solid #E2E2E2;}
+.top_title{
+background-image:url(../images/lky-chang-gou-qi-dang-top.png);
+width:932px;height:44px;}
+.right_main{
+margin-left:27px;
+margin-top:13px;
+}
+.select_div{
+width:933px;
+height:44px;
+border-bottom:1px solid #d3d3d3;
+}
+.select_div select{
+margin-right:13px;
+margin-top:15px;
+border:1px solid #7f9eba
+}
+.chang_gou_tiao_mu{
+height:173px;
+width:933px;
+border-top:1px solid #e2e2e2;
+}
+.chang_gou_tiao_mu img{
+margin-top:29px;
+float:left;
+margin-right:12px;
+}
+.shang_ping_miao_su{
+width:420px;
+height:106px;
+margin-top:36px;
+float:left;
+font-size:14px;
+font-family:宋体;
+color:#474747;
+font-weight:bold;
+}
+.shang_ping_miao_su div{margin-top:10px;font-weight:normal;}
+.shang_ping_miao_su div span{margin-left:9px;margin-right:25px;font-size:16px;color:#f36027;}
+.shang_ping_miao_su div s{color:#919191;}
+.tiao_mu_right{width:126px;height:170px;float:right;text-align:center;}
+.tiao_mu_right a{display:block;margin-top:35px;margin-bottom:15px;text-align:center;}
+.tiao_mu_right img a{width:20px;height:10px;text-align:center;display:block}
+.img_a{display:block;width:128px;height:28px;margin-top:35px;margin-bottom:12px;}

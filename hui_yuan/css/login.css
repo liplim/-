@@ -1,0 +1,248 @@
+﻿@CHARSET "UTF-8";
+.top {
+	height: 64px;
+	background-image: url(../images/header.jpg);
+}
+
+.shouhou {
+	margin-top: 29px;
+	width: 100%;
+	background-image: url(../images/lky-di-3.png);
+	height: 169px;
+}
+
+.log-img {
+	width: 274px;
+	height: 208px;
+	background-image: url(../images/lky-login.png);
+	display: inline;
+	float: left;
+}
+
+.second {
+	height: 208px;
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.ji_fen {
+	height: 95px;
+	width: 109px;
+	float: left;
+	display: inline;
+	font-size: 12px;
+}
+.shou_suo_image {
+	background-image: url(../images/lky-shou-sho-img.png);
+	width: 500px;
+	height: 155px;
+	float: left;
+	display: inline;
+}
+.chong_zhi {
+	width: 80px;
+	height: 150px;
+	display: inline;
+	float: left;
+	font-size: 12px;
+	padding-top:115px;
+}
+.info_span {
+	margin-top: 15px;
+	float: right;
+	font-size:14px;
+	color:#333333;
+}
+.login {
+	width: 1190px;
+	height: 465px;
+	margin: 0 auto;
+	border: 1px solid #e6e6e6;
+}
+.font1 {
+	font-size: 12px;
+	color: #696a6c;
+}
+.font2 {
+	font-size: 28px;
+	font-family: 微软雅黑;
+	color: #696a6c;
+	display:block;
+	margin-bottom:24px;
+}
+
+.font3 { /*密码名用用户*/
+	font-size: 14px;
+	font-family: 宋体;
+	color: #333333;
+}
+.font4 { /*用于协议*/
+	font-size: 12px;
+	font-family: 宋体;
+	color: #333333;
+}
+
+.font5 { /*新手指南标题*/
+	font-size: 14px;
+	font-family: 微软雅黑;
+	color: #5c5e5e;
+	margin-top: 21px;
+	line-height: 40%;
+}
+.zu_ce_form {
+	margin-top: 54px;
+	margin-left: 178px;
+	border: 2px solid red; /*测试代码*/
+	width: 100px;
+	height: 400px;
+	display: inline;
+}
+
+.font7 {
+	font-size: 10px;
+	font-family: 微软雅黑;
+	color: #5c5e5e;
+	line-height: 40%;
+}
+.yi_you_zhang_hao {
+	margin-top: 178px;
+	margin-left: 63px;
+	width: 200px;
+	float: left;
+}
+
+.input_submit {
+	background-image: url(../images/lky-zu-ce.png);
+	height: 39px;
+	width: 222px;
+	background-color: transparent;
+	border: none;
+}
+.text {
+	font-size: 14px;
+	font-family: 宋体;
+	color: #333333;
+}
+
+.form_div {
+	width: 600px;
+	display: inline;
+	float: left;
+	margin-left: 157px;
+	margin-top:54px;
+}
+.input_div { 
+	width: 550px;
+	height: 56px;
+}
+
+.input {
+	float: left;
+	width: 225px;
+	height: 38px;
+	background-image: url(../images/lky-mi-ma-kuang.png);
+	margin-top: 7px;
+}
+.user1 {
+	float: left;
+	width: 225px;
+	height: 40px;
+	background-image: url(../images/lky-yong-hu-ming.png);
+	margin-top: 7px;
+}
+
+.user_info {
+	width: 195px;
+	height: 24px;
+	float: right;
+	border: 0px;
+	margin-right: 2px;
+	margin-top: 10px;
+	line-height: 24px;
+	
+	vertical-align: middle;
+}
+.input_log { /*输入框字符标签*/
+	display: inline;
+	width: 80px;
+	height: 56px;
+	float: left;
+	margin-right:5px;
+}
+
+.yan_zhen_ma_div {
+	display: inline;
+	float: left;
+	width: 118px;
+	height: 40px;
+	background: url(../images/lky-yan-zhen-ma.png);
+	margin-top: 7px;
+}
+.shou_suo_kuan {
+	height: 39px;
+	width: 250px;
+	margin-left: 30px;
+	background-color: transparent;
+	border:none;
+	line-height: 220%;
+	font-size: 22px
+}
+.yan_zhen_ma_kuan {
+	width:80px;
+	height:30px;
+	float:left;
+	border:0px;
+	margin-left:30px;
+	margin-top:5px;
+	line-height:24px;
+}
+
+.checkbox {
+	margin-left:90px;
+	margin-top:1px;
+	margin-right:5px;
+	display:block;
+	float:left;
+}
+.shou_suo_button {
+	height: 38px;
+	width: 120px;
+	margin-left: 0pX;
+	background-color: transparent;
+	border: none;
+}
+
+.cheng_shi {
+	height: 38px;
+	width: 70px;
+	margin-left: 0pX;
+	background-color: transparent;
+	border: none;
+}
+
+.ti_shi{
+float:left;
+margin-top:20px;
+font-size:12px;
+color:#787878;
+margin-left:5px;
+}
+.ti_shi_1{
+float:left;
+margin-top:20px;
+font-size:12px;
+color:#787878;
+margin-left:5px;
+margin-top:10px;
+width:190px;
+height:33px;
+}
+	.yan_zheng_ma{
+	float:left;
+	width:80px;
+	margin-top:20px;
+	margin-left:10px;
+	}
+	
+.xx{margin-top:5px;}
+	

@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+.right {
+    width:997px;overflow:hidden;margin:0 auto;float:left;
+}
+.hl_newzhinan {
+    width:auto;overflow:hidden;margin:0 auto;height:35px;line-height:35px;background-color:#eeeeee;padding-left:50px;color:#f15a1e;font-size:16px;font-family:微软雅黑;
+}
+.hl_lianjie {
+    height:auto;width:924px;overflow:hidden;padding-left:45px;padding-bottom:15px;
+}
+.hl_lianjie a,.hl_lianjie span {
+    float:left;margin-top:17px;padding-left:5px;padding-right:5px;white-space:nowrap;width:auto;height:24px;line-height:24px;display:inline-block;color:#474747;font-family:'Microsoft YaHei';font-size:14px;
+}
+.hl_left_elment {
+	border: 1px solid #e5e5e5;height: 36px;width: 188px;background-color: #d4d4d4;color: #ffffff;font-size: 14px;
+}
+.hl_fonta {
+    font-size:14px;font-family:'Microsoft YaHei';color:#474747;
+}
+.hl_lianjie span
+{
+    color:#ababab;white-space:nowrap;
+}
+.hl_newzhinans {
+    font-size:16px;font-family:'Microsoft YaHei';color:#f16b43;font-family:微软雅黑;
+    width:auto;overflow:hidden;margin:0 auto;height:35px;line-height:35px;background-color:#eeeeee;padding-left:50px;
+}
+.head_7 {
+	width: 678px;
+	height: 100px;
+	margin-left: 382px;
+}

@@ -1,0 +1,67 @@
+@CHARSET "UTF-8";
+.right {width:985px;border:1px solid #e5e5e5;overflow:hidden;}
+.lfx_righttop{height:152px;overflow:hidden;width:906px;margin:0 auto;margin-top:30px;}
+.lfx_righttopup{float:left;padding-top:3px;height:67px;width:904px;background-color:#ffebe3;border:1px solid #fcc0a9;}
+.ke_yong_yu_e{float:left;margin-left:37px;text-align:center;line-height:67px;}
+.chong_zhi{float:right;height:23px;margin:22px 25px 0 0;text-align:center;line-height:23px;}
+.chong_zhi1{float:left;height:23px;margin-right:7px}
+.chong_zhi2{float:left;height:23px;margin-right:11px}
+.chong_zhi3 {float:left;height:23px;}
+.chong_zhi3 a{color:#84c011}
+.chong_zhi_sumbit{cursor:pointer;}
+.ti_xian_sumbit{cursor:pointer;}
+.lfx_righttopdown {float:left;overflow :hidden;}
+.lfx_yesterday_jifen {height:66px;width:442px;float:left;margin-top:12px;margin-right:18px;overflow:hidden;background-color:#ffebe3;border:1px solid #fcc0a9;text-align:center;line-height:66px;}
+.lfx_total_jifen {height:66px;width:442px;float:left;margin-top:12px;overflow:hidden;background-color:#ffebe3;border:1px solid #fcc0a9;text-align:center;line-height:66px;}
+.lfx_rightcontent {width:906px;margin:0 auto;overflow:hidden;height:auto;}
+.lfx_contentmenu{width:906px;height:71px;margin-top:17px;}
+.lfx_contentmenu1{width:192px;height:36px;margin-right:5px;float:left;text-align:center;vertical-align:middle;color:#ffffff;font-size:15px;font-family:微软雅黑;line-height:36px;background-image:url(../images/lfx-menu-background1.gif);background-repeat:no-repeat;}
+.lfx_contentmenu2{width:192px;height:36px;float:left;text-align:center;vertical-align:middle;color:#777777;font-size:15px;font-family:微软雅黑;line-height:36px;background-image:url(../images/lfx-menu-background2.gif);background-repeat:no-repeat;}
+.hr{float:left;height:2px;background:#f46832;width:906px;}
+.lfx_contentmenu3{float:left;width:904px;height:31px;background:#eeeeee;border:1px solid #e2e2e2;}
+.lfx_contenttitle1{float:left;width:304px;height:31px;text-align:center;line-height:31px;}
+.lfx_contenttitle2{float:left;width:200px;height:31px;text-align:center;line-height:31px;}
+.yu_e_element{width:904px;height:83px;overflow:hidden;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;}
+.yu_e_time{float:left;width:304px;text-align:center;line-height:83px;}
+.yu_e_cunru, .yu_e_zhichu, .yu_e_bei_zu{float:left;width:200px;text-align:center;line-height:83px;}
+.fen_ye {float:left;width:330px;height:42px;padding:17px 0 0 574px;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;border-bottom:1px solid #e2e2e2;border-bottom:0;}
+.fen_ye_an_nv_1{min-width: 26px;height: 25px;margin-left: 8px;float: left;line-height: 25px;text-align: center;vertical-align: middle;}
+.fen_ye_an_nv_2{width: 66px;height: 25px;margin-left: 8px;float: left;line-height: 25px;text-align: center;vertical-align: middle;border: 1px solid #aeaeae;}
+.fen_ye_an_niu {min-width: 26px;height: 25px;border: 1px solid #aeaeae;margin-left: 8px;float: left;line-height: 25px;text-align: center;vertical-align: middle;}
+.lfx_right_jiaoyi{height:321px;overflow:hidden;width:985px;margin:0 auto;}
+.jiaoyi_title{height:38px;overflow:hidden;width:985px;background-color:#e4e2e2;}
+.jiaoyi_title_content{float:left;height:38px;width:180px;text-align:center;line-height:38px;}
+.jiaoyi_title_time{float:right;height:38px;width:200px;text-align:center;line-height:38px;background:url(../images/lfx_jiaoyi_title_time.gif) no-repeat;background-position:180px 16px;}
+.jiaoyi_detail{height:283px;overflow:hidden;width:985px;margin:0 auto;}
+.jiaoyi_detail_pay{float:left;height:253px;width:536px;overflow:hidden;padding:15px 27px 15px 27px;}
+.pay_title{height:27px;width:535px;overflow:hidden;margin-bottom:11px;}
+.pay_detail{height:215px;width:497px;overflow:hidden;background-color:#f1f1f1;margin-bottom:11px;padding-left:38px;}
+.pay_detail_title{float:left;width:498px;height:43px;}
+.pay_detail_title1{float:left;width:111px;height:43px;text-align:center;vertical-align:middle;line-height:43px;color:#474747;}
+.pay_detail_title2{float:left;width:276px;height:43px;text-align:center;vertical-align:middle;line-height:43px;color:#474747;}
+.pay_detail_content{float:left;width:498px;}
+.pay_detail_content_type, .pay_detail_content_price{float:left;width:111px;height:27px;background-color:#fff;text-align:center;vertical-align:middle;font-size:12px;font-family:微软雅黑;line-height:27px;color:#777777;}
+.pay_detail_content_goods{float:left;width:276px;height:27px;text-align:center;vertical-align:middle;font-size:12px;font-family:微软雅黑;line-height:27px;color:#777777;}
+.jiaoyi_detail_income{float:left;height:283px;width:395px;position:relative;background:url(../images/lfx_jiaoyi_detail_income.gif) no-repeat;}
+.jiaoyi_detail_income1{margin:110px 0 0 182px;font-size:25px;}
+.lfx_right_shouyi{height:233px;overflow:hidden;width:985px;margin:0 auto;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;}
+.shouyi_title{height:50px;overflow:hidden;width:985px;}
+.shouyi_title_content{float:left;height:15px;width:30px;margin:20px 0 0 28px;}
+.shouyi_title_share{float:right;height:27px;width:258px;margin:18px 15px 0 0;}
+.shouyi_detail{float:left;height:183px;width:985px;position:relative;background:url(../images/lfx_shouyi.gif) no-repeat;background-position:254px 11px;}
+.shouyi_detail_content{height:80px;width:400px;margin:57px 0 0 417px;}
+.shouyi_detail_sum{float:left;height:40px;width:400px;}
+.shouyi_detail_chongzhi{float:left;height:40px;width:400px;}
+.lfx_right_zoushi{height:395px;overflow:hidden;width:985px;margin:0 auto;}
+.zoushi_title{height:43px;overflow:hidden;width:985px;}
+.zoushi_title_content{float:left;height:15px;width:60px;margin:20px 0 0 28px;}
+.zoushi_title_share{float:right;height:27px;width:109px;margin:16px 164px 0 0;}
+.font_12{font-size:12px;font-family:微软雅黑;}
+.font_14{font-size:14px;font-family:微软雅黑;}
+.font_14r{font-size:14px;font-family:微软雅黑;color:#f66d38}
+.font_14b{font-size:14px;font-family:微软雅黑;font-weight:bold;color:#f15010;}
+.font_16{font-size:16px;font-family:微软雅黑;}
+.font_16b{font-size:16px;font-family:微软雅黑;font-weight:bold;color:#f15010;}
+.font_24{font-size:24px;font-family:微软雅黑;color:#f15010;}
+.font_26{font-size:30px;font-family:微软雅黑;color:#f25011;}
+.font_30{font-size:30px;font-family:微软雅黑;color:#f3773a;}

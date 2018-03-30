@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/zhi_fu.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#zhang_wu_tiao_mu").hide();
+            $("#din_dan_zhong_xin").hide();
+            $("#ke_hu_fu_wu").hide();
+            $("#din_dan").click(function () {
+                if ($("#din_dan_zhong_xin").css("display") == "none") {
+                    $("#din_dan_zhong_xin").show();
+
+                    $("#din_dian_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#din_dan_zhong_xin").hide();
+                    $("#din_dian_tu_pian").attr("src", "images/lky-da-kai.png");
+                }
+            });
+            $("#ke_hu").click(function () {
+
+                if ($("#ke_hu_fu_wu").css("display") == "none") {
+                    $("#ke_hu_fu_wu").show();
+                    $("#ke_hu_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#ke_hu_fu_wu").hide();
+                    $("#ke_hu_tu_pian").attr("src", "images/lky-da-kai.png");
+                }
+            });
+            $("#zhang_wu").click(function () {
+                if ($("#zhang_wu_tiao_mu").css("display") == "none") {
+                    $("#zhang_wu_tiao_mu").show();
+                    $("#zhang_wu_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#zhang_wu_tiao_mu").hide();
+                    $("#zhang_wu_tu_pian").attr("src", "images/lky-da-kai.png")
+                }
+            });
+            $(".font_a").click(function () {
+                $(".font_a").css("color", "#474747");
+                $(".font_a").css("text-decoration", "");
+                $(this).css("color", "red");
+                $(this).css("text-decoration", "underline");
+            });
+        });
+
+    </script>
+    <title>快捷支付</title>
+</head>
+<body>
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <form action="" method="get">
+                <div class="head_7">
+                    <div class="head_8">
+                        <input class="shou_suo_kuang_9" type="text" />
+                    </div>
+                    <input class="shou_suo_an_nv_10" type="submit" value="" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="frist">
+        <div class="my_1">我的全城快乐购</div>
+        <div class="ge_ren_zhu_yie_2">&gt;&nbsp;快捷支付</div>
+        <div class="qu_zhu_ce_4">
+            <div class="ge_ren_zu_yie_you_5"><a class="font_2" href="ge_ren_zu_ye.html">个人主页</a></div>
+            <div class="ge_ren_zu_yie_you_5">
+                <a class="font_2" href="setup_zhanghu_xinxi.html">帐户设置
+                    <img src="images/lky-zhang-hu-she-zhi.png" />
+                </a>
+            </div>
+            <div class="ge_ren_zu_yie_you_5"><a class="font_2" href="xiao_xi.html">消息</a></div>
+            <div class="qu_zhu_ce_3"><span><a class="font_3" href="gou_wu_ce.html">去购物车结算(1) </a></span></div>
+        </div>
+    </div>
+    <div>
+        <!-- 分隔线  ---------------------------------------->
+        <div class="main_body_12">
+            <div class="left">
+                <div class="hui_yuan_12">
+                    <img src="images/tou-xiang.png"
+                        class="tou_xiang_13" width="130px" height="129px" />
+                    <div class="hui_yuan_xin_xi">
+                        <p><span>昵称：&nbsp;</span><span>万年龟</span></p>
+                    </div>
+                    <div class="hui_yuan_xin_xi">
+                        <span>会员等级：</span>
+                        <span class="hui_yuan_deng_ji_14">中级会员</span>
+                    </div>
+                    <div class="hui_yuan_xin_xi">
+                        <div class="wo_de_yu_e_17">
+                            <span>我的余额:</span>
+                            <span class="hui_yuan_deng_ji_14">￥200000.00</span>
+                        </div>
+                        <a class="chong_zhi_16" href="#">
+                            <img width="44px" height="22px" src="images/lky-chong-zhi.png" />
+                        </a>
+                    </div>
+
+                    <div class="hui_yuan_xin_xi">
+                        <p><span>我的积分:</span> <span class="hui_yuan_deng_ji_14">510</span></p>
+                    </div>
+                    <div class="hui_yuan_xin_xi">
+                        <div class="zhang_hu_an_quan_19">账户安全:</div>
+                        <img class="yan_zhen_tu_pian_20" src="images/yan_zheng_ok.png"
+                            width="15" height="15" />
+                        <div class="zhang_hu_an_quan_19">手机验证</div>
+                    </div>
+
+                    <div class="hui_yuan_xin_xi_21">
+                        <img src="images/yan_zheng_no.png" class="yan_zhen_tu_pian_20" width="15" height="15" />
+                        <div class="zhang_hu_an_quan_19">手机验证</div>
+                    </div>
+                </div>
+                <!-- ----------------------- -->
+                <div class="left_elment">
+                    <img class="left_img"
+                        id="din_dian_tu_pian" src="images/lky-da-kai.png" width="11"
+                        height="11" />
+                    <a id="din_dan" class="font_1"
+                        href="javascript:void(0)">订单中心</a>
+                </div>
+                <!-- ------ -->
+                <div id="din_dan_zhong_xin">
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-wo-de-din-dan.png" width="16px" height="16px" />
+                        <a
+                            href="wo_de_din_dan.html" class="font_a">我的订单</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-wo-de-gou-wu-ce_1.png" width="16px" height="16px" />
+                        <a
+                            href="gou_wu_ce.html" class="font_a">我的购物车</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-chang-gou-qin-dan.png" width="16px" height="16px" />
+                        <a
+                            href="chang_gou_qin_dan.html" class="font_a">我的常购清单</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-liu-lan-li-shi.png" width="16px" height="16px" />
+                        <a
+                            href="liu_nan_li_shi.html" class="font_a">浏览历史</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-you-jian-ding-yue.png" width="16px" height="16px" />
+                        <a
+                            href="you_jia_din_yue.html" class="font_a">邮件订阅</a>
+                    </div>
+                </div>
+                <!--  -->
+
+                <div class="left_elment">
+                    <img class="left_img" id="ke_hu_tu_pian"
+                        src="images/lky-da-kai.png" width="11" height="11" />
+                    <a id="ke_hu"
+                        href="javascript:void(0);" class="font_1">客户服务 </a>
+                </div>
+                <!--客户服务  -->
+                <div id="ke_hu_fu_wu">
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-fan-xiu-tui-huo.png" width="16px" height="16px" />
+                        <a
+                            href="tui_huo.html" class="font_a">返修/退货</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-wo-de-tou-shu.png" width="16px" height="16px" />
+                        <a
+                            href="wo_de_tou_su.html" class="font_a">我的投诉</a>
+                    </div>
+                </div>
+                <!--账务条目  -->
+                <div class="left_elment">
+                    <img class="left_img"
+                        id="zhang_wu_tu_pian" src="images/lky-da-kai.png" width="11"
+                        height="11" />
+                    <a id="zhang_wu" class="font_1"
+                        href="javascript:void(0)">帐务中心 </a>
+                </div>
+
+                <div id="zhang_wu_tiao_mu">
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-zhang-hu-xing-xi.png" />
+                        <a href="setup_zhanghu_xinxi.html"
+                            class="font_a">账户信息</a>
+                    </div>
+
+
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-zhang-hu-an-quan.png" width="16" height="16" />
+                        <a
+                            href="setup_zhanghu_anquan.html" class="font_a">账户安全</a>
+                    </div>
+
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-zhang-hu-yu-e.png" width="16" height="16" />
+                        <a
+                            href="setup_zhanghu_yue.html" class="font_a">账户余额</a>
+                    </div>
+
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-wo-yao-chong-zhi.png" width="16" height="16" />
+                        <a
+                            href="wo_yao_cong_zhi_1.html" class="font_a">我要充值</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-luo_gou_ka.png" width="16" height="16" />
+                        <a
+                            href="luo_gou_ka_cong_zhi.html" class="font_a">乐购卡充值</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-xiao-fei-ji-lu.png" width="16" height="16" />
+                        <a
+                            href="xiao_fei_ji_lu.html" class="font_a">消费记录</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-wo-de-ji-fen.png" width="16" height="16" />
+                        <a
+                            href="wo_de_ji_fen.html" class="font_a">我的积分</a>
+                    </div>
+
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-kuai-jie-zi-fu.png" width="16" height="16" />
+                        <a
+                            class="global_a_red" href="kuai_jie_zhi_fu.html">快捷支付</a>
+                    </div>
+                    <div class="elment_1">
+                        <img class="log_image_small"
+                            src="images/lky-shou-huo-di-zhi.png" width="16" height="16" />
+                        <a
+                            class="font_a" href="shou_huo_di_zhi.html">收货地址</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="main_small">
+                <div class="yin_hang_ka">
+
+                    <div class="yin_hang_ka_1">
+                        <div class="yin_hang_ka_11">
+                            <img
+                                src="images/lky-ying-hang-biao-zhi.png" width="23" height="23"
+                                class="yin_hang_bai_zhi_tu_pian" />
+                        </div>
+
+                        <div class="ying-haing-ming">中国农业银行&nbsp;<span>尾号5058888</span></div>
+                        <div class="ying-hang-ming-1">
+                            <img src="images/lky-ka-biao-zhi.png" width="62px" height="24px">
+                        </div>
+
+
+                    </div>
+
+                    <div class="kuai_jie_zi_fu">
+                        <img
+                            src="images/lky-kuai-jie-zi-fu-big.png"
+                            class="yin_hang_bai_zhi_tu_pian" width="82" height="20" />
+                        <div class="yi_kai_tong">已开通111111</div>
+
+                        <div class="guan_li"><a class="font_5" href="#"><b>管理</b></a></div>
+
+
+                    </div>
+
+
+                    <div class="zhang_dan">
+                        <div style="float: left">
+                            <a class="font_5" href="#"><span>账单</span></a>
+                        </div>
+                        <div class="kai_tong_zhang_dan">
+                            <a class="font_5" href="#">开通账单查询</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="yin_hang_ka">
+
+                    <div class="yin_hang_ka_1">
+                        <div class="yin_hang_ka_11">
+                            <img
+                                src="images/lky-ying-hang-biao-zhi.png"
+                                class="yin_hang_bai_zhi_tu_pian" />
+                        </div>
+
+                        <div class="ying-haing-ming">中国农业银行&nbsp;<span>尾号5058888</span></div>
+                        <div class="ying-hang-ming-1">
+                            <img
+                                src="images/lky-chu-xv-ka.png" />
+                        </div>
+
+
+                    </div>
+
+                    <div class="kuai_jie_zi_fu">
+                        <img
+                            src="images/lky-kuai-jie-zi-fu-big.png"
+                            class="yin_hang_bai_zhi_tu_pian" />
+                        <div class="yi_kai_tong">已开通111111</div>
+
+                        <div class="guan_li"><a class="font_5" href="#"><b>管理</b></a></div>
+
+
+                    </div>
+
+
+                    <div class="zhang_dan">
+                        <div style="float: left">
+                            <a class="font_5" href="#"><span>账单</span></a>
+                        </div>
+                        <div class="kai_tong_zhang_dan">
+                            <a class="font_5" href="#">开通账单查询</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="yin_hang_ka_26">
+                    <a class="tian_jia_ka_1" href="#">添加银行卡
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footerall">
+            <div class="footermenu">
+                <div class="logo2">
+                    <img src="images/logo_1_06.gif" title="" alt="" width="216" height="83">
+                </div>
+                <ul class="newfingerpost">
+                    <li class="menutitle1"></li>
+                    <li><a href="">会籍介绍</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">快购工具</a></li>
+                    <li><a href="">使用优惠券</a></li>
+                    <li><a href="">商品评论指南</a></li>
+                </ul>
+                <ul class="peisong">
+                    <li class="menutitle2"></li>
+                    <li><a href="">运费政策</a></li>
+                    <li><a href="">配送范围和时间</a></li>
+                    <li><a href="">特殊订单配送</a></li>
+                    <li><a href="">验货和签收</a></li>
+                </ul>
+                <ul class="zhifufangshi">
+                    <li class="menutitle3"></li>
+                    <li><a href="">在线支付</a></li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">其他支付方式</a></li>
+                    <li><a href="">发票制度</a></li>
+                </ul>
+                <ul class="shouhoufuwu">
+                    <li class="menutitle4"></li>
+                    <li><a href="">退换货服务</a></li>
+                    <li><a href="">安装及维修</a></li>
+                    <li><a href="">延保服务</a></li>
+                    <li><a href="">召回商品</a></li>
+                </ul>
+                <ul class="teisefuwu">
+                    <li class="menutitle5"></li>
+                    <li><a href="">增值服务</a></li>
+                    <li><a href="">订阅促销信息</a></li>
+                </ul>
+                <ul class="help">
+                    <li class="menutitle6"></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">订单查询</a></li>
+                    <li><a href="">忘记密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <ul class="footerlist">
+                <li class="footerlist1"></li>
+                <li class="footerlist2"></li>
+                <li class="footerlist3"></li>
+                <li class="footerlist4"></li>
+            </ul>
+            <div class="Copyright">
+                <p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+                <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+                <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+                <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

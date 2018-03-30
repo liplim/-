@@ -1,0 +1,15 @@
+
+.right{width:986px;float:right;border:1px solid #e3e3e3;overflow:hidden;}
+.right div{margin-top:72px;margin-left:84px;line-height:40px;}
+.right div input{width:151px;height:21px;border:1px solid #c3c3c3;margin-left:12px;margin-right:4px;}
+select{width:154px;height:21px;border:1px solid #c3c3c3;margin-left:12px;margin-right:5px;text-align:center;color:#474747;line-height:21px;}
+
+.xia_yi_bu{display:block;width:82px;height:29px;background-image:url(../images/lky-wo-yao-xia-yi-bu.png);margin-left:0px;}
+.yu_dao_wen_ti{ line-height:30px; width:986px;height:472px;border:1px solid #e3e3e3;float:right;}
+.title{font-size:14px;font-family:宋体;margin-left:88px;color:#474747;font-weight:bold;line-height:50px;}
+.wen{margin-left:105px;font-weight:bold;}
+.da{margin-left:105px;}
+.right a{color:#239dd0}
+.right .yu_dao_wen_ti{line-height:25px;}
+.ma_shang{display:block;margin-left:90px;margin-top:5px;}
+.hui{color:#919191;}

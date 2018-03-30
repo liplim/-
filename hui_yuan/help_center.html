@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link rel="stylesheet" type="text/css" href="css/help_center.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <title>帮助中心</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#zhang_wu_tiao_mu").hide();
+            $("#din_dan_zhong_xin").hide();
+            $("#ke_hu_fu_wu").hide();
+            $("#shouhoufuwu").hide();
+            $("#tesefuwu").hide();
+            $("#helpzhongxin").hide();
+            $("#din_dan").click(function () {
+                if ($("#din_dan_zhong_xin").css("display") == "none") {
+                    $("#din_dan_zhong_xin").show();
+
+                    $("#din_dian_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#din_dan_zhong_xin").hide();
+                    $("#din_dian_tu_pian").attr("src", "images/lky-da-kai.png");
+                }
+            });
+            $("#ke_hu").click(function () {
+
+                if ($("#ke_hu_fu_wu").css("display") == "none") {
+                    $("#ke_hu_fu_wu").show();
+                    $("#ke_hu_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#ke_hu_fu_wu").hide();
+                    $("#ke_hu_tu_pian").attr("src", "images/lky-da-kai.png");
+                }
+            });
+            $("#zhang_wu").click(function () {
+                if ($("#zhang_wu_tiao_mu").css("display") == "none") {
+                    $("#zhang_wu_tiao_mu").show();
+                    $("#zhang_wu_tu_pian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#zhang_wu_tiao_mu").hide();
+                    $("#zhang_wu_tu_pian").attr("src", "images/lky-da-kai.png")
+                }
+            });
+            $("#shouhou").click(function () {
+                if ($("#shouhoufuwu").css("display") == "none") {
+                    $("#shouhoufuwu").show();
+                    $("#shouhoutupian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#shouhoufuwu").hide();
+                    $("#shouhoutupian").attr("src", "images/lky-da-kai.png")
+                }
+            })
+            $("#tese").click(function () {
+                if ($("#tesefuwu").css("display") == "none") {
+                    $("#tesefuwu").show();
+                    $("#tesefuwutupian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#tesefuwu").hide();
+                    $("#tesefuwutupian").attr("src", "images/lky-da-kai.png")
+                }
+            })
+            $("#help").click(function () {
+                if ($("#helpzhongxin").css("display") == "none") {
+                    $("#helpzhongxin").show();
+                    $("#helpzhongxintupian").attr("src", "images/lky-shou-qi.png");
+                } else {
+                    $("#helpzhongxin").hide();
+                    $("#helpzhongxintupian").attr("src", "images/lky-da-kai.png")
+                }
+            })
+            $(".title_a").click(function () {
+                $(".title_a").css("background-color", "#f1f1f1");
+                $(".title_a").css("color", "#474747");
+                $(".title_a").parent().css("background-color", "#f1f1f1");
+                $(this).parent().css("background-color", "#f6723e");
+                $(this).css("background-color", "#f6723e");
+                $(this).css("color", "#ffffff");
+                if ($(this).text() == "申请退回商品") {
+                    alert("申请退回商品");
+                }
+                if ($(this).text() == "申请换商品") {
+                    alert("申请换商品");
+                }
+                if ($(this).text() == "查看退回记录") {
+                    alert("查看退回记录");
+                }
+                if ($(this).text() == "申请换商品记录") {
+                    alert("申请换商品记录");
+                }
+                if ($(this).text() == "查看退款记录") {
+                    alert("查看退款记录");
+                }
+            });
+
+            $(".an_niu").click(function () {
+                $(".fen_yue_an_niu").css("border", "1px solid #aeaeae");
+                $(this).parent().css("border", "1px solid #f15010");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <form action="" method="get">
+                <div class="head_7">
+                    <div class="head_8">
+                        <input class="shou_suo_kuang_9" type="text" />
+                    </div>
+                    <input class="shou_suo_an_nv_10" type="submit" value="" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="frist">
+        <div class="my_1">帮助中心</div>
+    </div>
+    <!--头部结束-->
+    <div class="main">
+        <div class="left">
+            <!-- ----------------------- -->
+            <div class="hl_left_elment">
+                <img class="left_img"
+                    id="din_dian_tu_pian" src="images/lky-da-kai.png" width="11"
+                    height="11" />
+                <a id="din_dan" class="font_1"
+                    href="javascript:void(0)">新手指南</a>
+            </div>
+            <!-- ------ -->
+            <div id="din_dan_zhong_xin">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_.zhanghuguanli.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">账户管理</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_gouwuche.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">购物流程</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_gongju.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">快购工具</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_jifen.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">积分规则</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_pinglun.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">商品评论指南</a>
+                </div>
+            </div>
+            <!--  -->
+
+            <div class="hl_left_elment">
+                <img class="left_img" id="ke_hu_tu_pian"
+                    src="images/lky-da-kai.png" width="11" height="11" />
+                <a id="ke_hu"
+                    href="javascript:void(0);" class="font_1">配送服务 </a>
+            </div>
+            <!--客户服务  -->
+            <div id="ke_hu_fu_wu">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_yunfei.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">运费政策</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_peisong.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">配送范围和时间</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_teshudingdan.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">特殊订单配送</a>
+                </div>
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_yanhuo.gif" width="16px" height="16px" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">验货和签收</a>
+                </div>
+            </div>
+            <!--账务条目  -->
+            <div class="hl_left_elment">
+                <img class="left_img"
+                    id="zhang_wu_tu_pian" src="images/lky-da-kai.png" width="11"
+                    height="11" />
+                <a id="zhang_wu" class="font_1"
+                    href="javascript:void(0)">支付方式 </a>
+            </div>
+
+            <div id="zhang_wu_tiao_mu">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_yu_e.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">快购余额</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_bankzhifu.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">银行卡支付</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_kuaijiezhifutupian.gif" width="16" height="16" />
+                    <a
+                        href="kuai_jie_zhi_fu.html" class="font_a">快捷支付</a>
+                </div>
+            </div>
+            <!--售后服务  -->
+            <div class="hl_left_elment">
+                <img class="left_img"
+                    id="shouhoutupian" src="images/lky-da-kai.png" width="11"
+                    height="11" />
+                <a id="shouhou" class="font_1"
+                    href="javascript:void(0)">售后服务 </a>
+            </div>
+
+            <div id="shouhoufuwu">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_tuihuo.gif" width="16" height="16" />
+                    <a
+                        href="tui_huo.html" class="font_a">退货服务</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_huanhuo.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">换货服务</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_tousu.gif" width="16" height="16" />
+                    <a
+                        href="wo_de_tou_su.html" class="font_a">投诉维权</a>
+                </div>
+            </div>
+            <!--售后服务  -->
+            <div class="hl_left_elment">
+                <img class="left_img"
+                    id="tesefuwutupian" src="images/lky-da-kai.png" width="11"
+                    height="11" />
+                <a id="tese" class="font_1"
+                    href="javascript:void(0)">特色服务 </a>
+            </div>
+
+            <div id="tesefuwu">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_zengzhi.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">增值服务</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_youjiandinyue.gif" width="16" height="16" />
+                    <a
+                        href="you_jia_din_yue.html" class="font_a">邮件订阅</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_kuaigouka.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">快购卡</a>
+                </div>
+            </div>
+            <!--售后服务  -->
+            <div class="hl_left_elment">
+                <img class="left_img"
+                    id="helpzhongxintupian" src="images/lky-da-kai.png" width="11"
+                    height="11" />
+                <a id="help" class="font_1"
+                    href="javascript:void(0)">帮助中心 </a>
+            </div>
+
+            <div id="helpzhongxin">
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_changjianwenti.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">常见问题</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_dingdanchaxun.gif" width="16" height="16" />
+                    <a
+                        href="wo_de_din_dan.html" class="font_a">订单查询</a>
+                </div>
+
+                <div class="elment_1">
+                    <img class="log_image_small"
+                        src="images/hl_lianxiwomen.gif" width="16" height="16" />
+                    <a
+                        href=" javascript:void(0)" class="font_a">联系我们</a>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------右侧部分----------------------------------------------->
+        <div class="right">
+            <div class="hl_newzhinans">
+                新手指南
+            </div>
+            <div class="hl_lianjie">
+                <a href="#">账户管理</a>
+                <span>|</span>
+                <a href="#">购物流程</a>
+                <span>|</span>
+                <a href="#">快购工具</a>
+                <span>|</span>
+                <a href="#">积分规则</a>
+                <span>|</span>
+                <a href="#">商品评论指南</a>
+            </div>
+            <div class="hl_newzhinan">
+                配送服务
+            </div>
+            <div class="hl_lianjie">
+                <a href="#">运费政策</a>
+                <span>|</span>
+                <a href="#">配送范围和时间</a>
+                <span>|</span>
+                <a href="#">特殊订单配送</a>
+                <span>|</span>
+                <a href="#">验货和签收</a>
+            </div>
+            <div class="hl_newzhinan">
+                支付方式
+            </div>
+            <div class="hl_lianjie">
+                <a href="#">快购余额</a>
+                <span>|</span>
+                <a href="#">银行卡支付</a>
+                <span>|</span>
+                <a href="kuai_jie_zhi_fu.html">快捷支付</a>
+            </div>
+            <div class="hl_newzhinan">
+                售后服务
+            </div>
+            <div class="hl_lianjie">
+                <a href="tui_huo.html">退货服务</a>
+                <span class="hl_fonta">|</span>
+                <a href="#">换货服务</a>
+                <span class="hl_fonta">|</span>
+                <a href="wo_de_tou_su.html">投诉维权</a>
+            </div>
+            <div class="hl_newzhinan">
+                特色服务
+            </div>
+            <div class="hl_lianjie">
+                <a href="#">增值服务</a>
+                <span>|</span>
+                <a href="you_jia_din_yue.html">邮件订阅</a>
+                <span>|</span>
+                <a href="#">快购卡</a>
+            </div>
+            <div class="hl_newzhinan">
+                帮助中心
+            </div>
+            <div class="hl_lianjie">
+                <a href="#">常见问题</a>
+                <span>|</span>
+                <a href="wo_de_din_dan.html">订单查询</a>
+                <span>|</span>
+                <a href="#">联系我们</a>
+            </div>
+        </div>
+        <!-- 右侧部分结束 -->
+    </div>
+    <div class="footer">
+        <div class="footerall">
+            <div class="footermenu">
+                <div class="logo2">
+                    <img src="images/logo_1_06.gif" title="" alt="" width="216" height="83" /></div>
+                <ul class="newfingerpost">
+                    <li class="menutitle1"></li>
+                    <li><a href="">会籍介绍</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">快购工具</a></li>
+                    <li><a href="">使用优惠券</a></li>
+                    <li><a href="">商品评论指南</a></li>
+                </ul>
+                <ul class="peisong">
+                    <li class="menutitle2"></li>
+                    <li><a href="">运费政策</a></li>
+                    <li><a href="">配送范围和时间</a></li>
+                    <li><a href="">特殊订单配送</a></li>
+                    <li><a href="">验货和签收</a></li>
+                </ul>
+                <ul class="zhifufangshi">
+                    <li class="menutitle3"></li>
+                    <li><a href="">在线支付</a></li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">其他支付方式</a></li>
+                    <li><a href="">发票制度</a></li>
+                </ul>
+                <ul class="shouhoufuwu">
+                    <li class="menutitle4"></li>
+                    <li><a href="">退换货服务</a></li>
+                    <li><a href="">安装及维修</a></li>
+                    <li><a href="">延保服务</a></li>
+                    <li><a href="">召回商品</a></li>
+                </ul>
+                <ul class="teisefuwu">
+                    <li class="menutitle5"></li>
+                    <li><a href="">增值服务</a></li>
+                    <li><a href="">订阅促销信息</a></li>
+                </ul>
+                <ul class="help">
+                    <li class="menutitle6"></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">订单查询</a></li>
+                    <li><a href="">忘记密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <ul class="footerlist">
+                <li class="footerlist1"></li>
+                <li class="footerlist2"></li>
+                <li class="footerlist3"></li>
+                <li class="footerlist4"></li>
+            </ul>
+            <div class="Copyright">
+                <p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+                <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+                <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+                <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

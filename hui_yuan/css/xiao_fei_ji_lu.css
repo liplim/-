@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+.right{width:985px;float:right;border:1px solid #e3e3e3;}
+.big_title{background-image:url(../images/lky-xiao-fei-ji-lu-title.png);width:986px;height:44px;border-bottom:1px solid #e1e1e1;background-color:#f1f1f1}
+.big_menu{cursor:pointer;border-right:1px solid #e3e3e3;float:left;font-size:18px;font-family:微软雅黑;line-height:45px;text-align:center;width:120px;height:43px;}
+.menu_right{font-size:14px;font-family:微软雅黑; height:45px;line-height:45px;width:351px;float:right;}
+.menu_right select{margin-right:5px;border:1px solid #7f9db9}
+.menu_right span{color:#f1866a;font-size:14px;font-family:微软雅黑;}
+.small_menu{border-bottom:1px solid #e1e1e1;width:985px;height:32px;background-image:url(../images/lky-xfju-small-title.png);}
+.small_menu select{margin-left:46px;margin-top:8px;border:1px solid #7f9db9}
+
+.tiao_mu{width:985px;border-bottom:1px solid #e1e1e1;height:47px;}
+.tiao_mu div{height:47px;text-align:center;line-height:47px;float:left;}
+.shi_jian{width:170px;color:#919191;border-right:1px solid #e1e1e1;}
+.ding_dan_bian_hao{width:148px;color:#474747;border-right:1px solid #e1e1e1;}
+.xiao_fei_e_kou_jian{width:191px;color:#474747;border-right:1px solid #e1e1e1;}
+.xiao_fei_e_zen_jia{width:193px;color:#007ec5;border-right:1px solid #e1e1e1;}
+.bei_zu{width:279px;color:#474747;}
+.fen_yue {width:330px;height:27px;margin-top:23px;margin-right:16px;float: right;}
+.fen_yue_an_niu {min-width: 26px;height: 25px;border: 1px solid #aeaeae;margin-left: 8px;float: left;line-height: 25px;text-align: center;vertical-align: middle;}
+.fen_yue_an_nv_1{min-width:26px;height:25px;margin-left:8px;float:left;line-height:25px;text-align: center;vertical-align: middle;}
+.fen_yue_an_nv_2{width: 66px;height: 25px;margin-left: 8px;float: left;line-height: 25px;text-align: center;vertical-align: middle;border: 1px solid #aeaeae;}
+.fen_yie_big{width:907px;height:68px;float:right;}

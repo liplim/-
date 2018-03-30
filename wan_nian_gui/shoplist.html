@@ -1,0 +1,1349 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/shoplist.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/JQ_UPFLOAT.js"></script>
+    <title>无标题文档</title>
+
+    <script type="text/javascript">
+        $(function () {
+            JqUpFloat("#upfloat");
+            $(".jia").click(function () {
+                var res = $(this).next(".nums").val();
+                res++;
+                $(this).next(".nums").val(res);
+            })
+            $(".jian").click(function () {
+                var res = $(this).prev(".nums").val();
+                res--;
+                if (res <= 1) {
+                    res = 1;
+                }
+                $(this).prev(".nums").val(res);
+            })
+            $(".list").children(".list1").mouseover(function () {
+                $(".list").children(".list1").children(".listcontent").css("border", "1px solid #e3e3e3");
+                $(this).children(".listcontent").css("border", "2px solid #f15010");
+                $(".list").children(".list1").children(".listcontent").children(".buttons1").children(".goumai").css("background", "url(./images/goumaibutton2_03.gif) no-repeat 0 0");
+                $(this).children(".listcontent").children(".buttons1").children(".goumai").css("background", "url(./images/goumaibutton1_03.gif) no-repeat 0 0");
+                $(".list").children(".list1").children(".listcontent").children(".buttons1").children(".carts").css("background", "url(./images/cart2_03.gif) no-repeat 0 0");
+                $(this).children(".listcontent").children(".buttons1").children(".carts").css("background", "url(./images/cart1_03.gif) no-repeat 0 0");
+                $(".list").children(".list1").children(".listcontent").children(".duibi").css("display", "none");
+                $(this).children(".listcontent").children(".duibi").css("display", "block");
+                $(".list").children(".list1").children(".listcontent").children(".jiaruduibi").css("display", "none");
+                $(this).children(".listcontent").children(".jiaruduibi").css("display", "block");
+            })
+            /*----左侧导航用到的js----------*/
+            $(".returntop").hide();
+            var left = ($(window).width() - 1190) / 2;
+            $(".leftnav").css("left", (left - 38) + "px");
+            $(".rightnav").css("left", (left + 1190) + "px");
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > $(window).height()) {
+                    $(".returntop").show();
+                } else {
+                    $(".returntop").hide();
+                }
+            })
+            //回顶部
+            $(".returntop").click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 500);
+            })
+            //回底部
+            $(".returnfooter").click(function () {
+                var f = $(".footer").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回1f
+            $(".return1F").click(function () {
+                var f = $("#first").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+
+            //回2f
+            $(".return2F").click(function () {
+                var f = $("#second").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回3f
+            $(".return3F").click(function () {
+                var f = $("#three").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回4f
+            $(".return4F").click(function () {
+                var f = $("#four").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回5f
+            $(".return5F").click(function () {
+                var f = $("#five").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+
+            //去掉商品列表中第4个第8个商品的右边距;便宜循环取数据
+            var lens = $(".list").length;
+            for (var i = 0; i < lens; i++) {
+                $(".list").eq(i).children("li").filter(".list1").eq(3).addClass("delmarginright");
+                $(".list").eq(i).children("li").filter(".list1").eq(7).addClass("delmarginright");
+            }
+
+
+            $(".goumai").click(function () {
+                window.location.href = "dingdanqueren.html";
+            })
+            $(".carts").click(function () {
+                window.location.href = "../hui_yuan/gou_wu_ce.html";
+            })
+
+            /*---------商品基本信息所用到的js-------*/
+
+            $(".jingyungleibei ").each(function () {
+                $(this).find("dt").css("height", $(this).height());
+                $(this).find(".shouqi2").css("bottom", "0px");
+                $(this).find(".gengduo").css("height", $(this).height());
+                if ($(this).children(".titlecontents").height() == 44) {
+                    $(this).children(".gengduo").hide();
+                }
+            })
+            $(".menu dl.jingyungleibei").css("height", "44px")
+            $(".menu dl.jingyungleibei").css("overflow", "hidden")
+            $(".shouqi2").click(function () {
+                $(this).parent().css("height", "44px")
+                $(this).parent().css("overflow", "hidden")
+                $(this).prev(".gengduo").show();
+                $(this).prevAll(".titlecontents").css("width", "1000px")
+                $(this).hide();
+            })
+            $(".gengduo a").click(function () {
+                var h2 = $(this).parent().prev("dd").css("height");
+                $(this).parent().parent().css("height", h2)
+                $(this).parent().next(".shouqi2").show();
+                $(this).parent().hide();
+                $(this).parent().prev("dd").css("width", "1080px")
+            })
+
+            
+
+        })
+
+
+    </script>
+
+</head>
+
+<body>
+    <div class="leftnav">
+        <a href="javascript:void(0);" class="returntop"></a>
+        <a href="javascript:void(0);" class="return1F">1F<br />
+            粮食</a>
+        <a href="javascript:void(0);" class="return2F">2F<br />
+            肉蛋</a>
+        <a href="javascript:void(0);" class="return3F">3F<br />
+            海鲜</a>
+        <a href="javascript:void(0);" class="return4F">4F<br />
+            调料</a>
+        <a href="javascript:void(0);" class="return5F">5F<br />
+            熟食</a>
+        <a href="javascript:void(0);" class="moress"></a>
+        <a href="javascript:void(0);" class="returnfooter"></a>
+        <a href="javascript:void(0);" class="cartss"></a>
+    </div>
+
+    <a href="javascript:void(0);" class="rightnav">请教我们做服务</a>
+    <!--header的start-->
+
+    <!--top的start-->
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--headermsg的end-->
+
+    <!--nav的start-->
+    <div class="navs">
+        <div class="navs_con" id="upfloat">
+        <ul>
+            <li class="index"><a href="index.html">首页</a></li>
+            <li><a href="#" class="tag">商品类型</a></li>
+            <li><a href="shoplist.html" class="on">经营类别</a></li>
+            <li><a href="#" class="tag">经营方式</a></li>
+            <li><a href="mei_si_jiang_tang.html">美食讲堂</a></li>
+        </ul>
+        </div>
+    </div>
+    <!--nav的end-->
+
+    <!--position的start-->
+    <div class="positions">
+        <p class="return">购物车<span>3</span>件 <a href="">返回上页</a></p>
+        <p class="position_nav">商品基本信息（请选择） ： <a href="index.html">首页</a> > <a href="shoplist.html">特卖商品</a></p>
+    </div>
+    <!--position的end-->
+
+    <div class="menu">
+
+        <dl class="jingyungleibei">
+            <dt><a href="">经营方式</a></dt>
+            <dd class="titlecontents">
+                <a href="shoplist.html">全部商品</a>
+                <a href="shoplist.html">正价商品</a>
+                <a href="shoplist.html">每日特价</a>
+                <a href="shoplist.html">积分商品</a>
+                <a href="shoplist.html">折扣特价</a>
+                <a href="shoplist.html">套餐商品</a>
+            </dd>
+            <dd class="gengduo"><a href="javascript:void(0);">更多</a></dd>
+            <dd class="shouqi2"></dd>
+
+        </dl>
+        <dl class="shopclass jingyungleibei">
+            <dt><a href="shoplist.html">商品类型</a></dt>
+            <dd class="titlecontents">
+                <a href="shoplist2.html">油类</a>
+                <a href="shoplist2.html">蛋肉</a>
+                <a href="shoplist2.html">蔬菜</a>
+                <a href="shoplist2.html">海鲜</a>
+                <a href="shoplist2.html">活鲜</a>
+                <a href="shoplist2.html">调料</a>
+                <a href="shoplist2.html">干货</a>
+                <a href="shoplist2.html">熟食</a>
+                <a href="shoplist2.html">水果</a>
+                <a href="shoplist2.html">速冻食品</a>
+                <a href="shoplist2.html">零食干粮</a>
+                <a href="shoplist2.html">饮品冲调</a>
+                <a href="shoplist2.html">糖烟酒茶</a>
+                <a href="shoplist2.html">营养保健</a>
+                <a href="shoplist2.html">儿童母婴</a>
+                <a href="shoplist2.html">家务用品</a>
+                <a href="shoplist2.html">纸品</a>
+                <a href="shoplist2.html">洗护用品</a>
+                <a href="shoplist2.html">小家电</a>
+                <a href="shoplist2.html">文体用品</a>
+                <a href="shoplist2.html">成人用品</a>
+                <a href="shoplist2.html">针织用品</a>
+                <a href="shoplist2.html">宠物用品</a></dd>
+            <dd class="gengduo"><a href="javascript:void(0);">更多</a></dd>
+            <dd class="shouqi2"></dd>
+        </dl>
+
+    </div>
+
+    <div class="main">
+
+        <!----1F--start-------->
+        <div class="f1title" id="first">
+            <p class="titleright">
+                <a href="">红富士</a>
+                <a href="">海天</a>
+                <a href="">思念水饺</a>
+                <a href="">福临门</a>
+                <span>共45件商品</span>
+            </p>
+            <div class="titleleft">
+                <span class="loucheng">1F</span>
+                <span class="fenlei">粮食</span>
+                <span class="moren">
+                    <img src="images/moren_03.gif" alt="" title="" width="39" height="24" /></span>
+                <span class="tiaojian">
+                    <a href="" class="xiaoliang">销量</a>
+                    <a href="" class="renqi">人气</a>
+                    <a href="" class="jiage">价格</a>
+                    <a href="" class="zuixing">最新</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="f1content">
+            <ul class="roll_images">
+                <li class="active">
+                    <img src="images/shopimg/shopbigimg_03.gif" title="" width="259" height="582" alt="" />
+                </li>
+                <li>
+                    <img src="images/bannerimg2_03.gif" />
+                </li>
+            </ul>
+            <p class="menuclassbg"></p>
+            <div class="menuclass">
+                <a href="">水饺</a>|
+            <a href="">水果</a>|
+            <a href="">大米</a>|
+            <a href="">酸奶</a>|
+            <a href="">鲜奶</a>|
+            <a href="">梨类</a>
+                <a href="">叶菜</a>|
+            <a href="">猪肉</a>|
+            <a href="">牛肉</a>|
+            <a href="">禽类</a>|
+            <a href="">鲜蛋</a>|
+            <a href="" class="gengduo">更多</a>
+
+            </div>
+            <ul class="list">
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg1_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">3109.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg2_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg3_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg4_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg5_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg6_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg7_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg8_03.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <!----1F--end-------->
+
+
+
+        <!----2F--start-------->
+
+        <div class="f1title" id="second">
+            <p class="titleright">
+                <a href="">红富士</a>
+                <a href="">海天</a>
+                <a href="">思念水饺</a>
+                <a href="">福临门</a>
+                <span>共45件商品</span>
+            </p>
+            <div class="titleleft">
+                <span class="loucheng">2F</span>
+                <span class="fenlei">肉蛋</span>
+                <span class="moren">
+                    <img src="images/moren_03.gif" alt="" title="" width="39" height="24" /></span>
+                <span class="tiaojian">
+                    <a href="" class="xiaoliang">销量</a>
+                    <a href="" class="renqi">人气</a>
+                    <a href="" class="jiage">价格</a>
+                    <a href="" class="zuixing">最新</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="f1content">
+            <ul class="roll_images">
+                <li class="active">
+                    <img src="images/shopimg/shopbigimg2_07.gif" title="" width="259" height="582" alt="" />
+                </li>
+                <li>
+                    <img src="images/bannerimg2_03.gif" />
+                </li>
+            </ul>
+            <p class="menuclassbg"></p>
+            <div class="menuclass">
+                <a href="">水饺</a>|
+            <a href="">水果</a>|
+            <a href="">大米</a>|
+            <a href="">酸奶</a>|
+            <a href="">鲜奶</a>|
+            <a href="">梨类</a>
+                <a href="">叶菜</a>|
+            <a href="">猪肉</a>|
+            <a href="">牛肉</a>|
+            <a href="">禽类</a>|
+            <a href="">鲜蛋</a>|
+            <a href="" class="gengduo">更多</a>
+
+            </div>
+            <ul class="list">
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg9_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg10_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg11_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg12_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg13_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg14_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg15_07.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg16_10.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+        <!----2F--end-------->
+
+
+        <!-----3F-start-------------->
+        <div class="f1title" id="three">
+            <p class="titleright">
+                <a href="">红富士</a>
+                <a href="">海天</a>
+                <a href="">思念水饺</a>
+                <a href="">福临门</a>
+                <span>共45件商品</span>
+            </p>
+            <div class="titleleft">
+                <span class="loucheng">3F</span>
+                <span class="fenlei">海鲜</span>
+                <span class="moren">
+                    <img src="images/moren_03.gif" alt="" title="" width="39" height="24" /></span>
+                <span class="tiaojian">
+                    <a href="" class="xiaoliang">销量</a>
+                    <a href="" class="renqi">人气</a>
+                    <a href="" class="jiage">价格</a>
+                    <a href="" class="zuixing">最新</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="f1content">
+            <ul class="roll_images">
+                <li class="active">
+                    <img src="images/shopimg/shopbigimg3_11.gif" title="" width="259" height="582" alt="" />
+                </li>
+                <li>
+                    <img src="images/bannerimg2_03.gif" />
+                </li>
+            </ul>
+            <p class="menuclassbg"></p>
+            <div class="menuclass">
+                <a href="">水饺</a>|
+            <a href="">水果</a>|
+            <a href="">大米</a>|
+            <a href="">酸奶</a>|
+            <a href="">鲜奶</a>|
+            <a href="">梨类</a>
+                <a href="">叶菜</a>|
+            <a href="">猪肉</a>|
+            <a href="">牛肉</a>|
+            <a href="">禽类</a>|
+            <a href="">鲜蛋</a>|
+            <a href="" class="gengduo">更多</a>
+
+            </div>
+            <ul class="list">
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg17_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg18_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg19_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg20_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg21_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg22_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg23_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg24_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+        <!----------3F-start----------------->
+
+
+        <!-----4F-start-------------->
+        <div class="f1title" id="four">
+            <p class="titleright">
+                <a href="">红富士</a>
+                <a href="">海天</a>
+                <a href="">思念水饺</a>
+                <a href="">福临门</a>
+                <span>共45件商品</span>
+            </p>
+            <div class="titleleft">
+                <span class="loucheng">4F</span>
+                <span class="fenlei">调料</span>
+                <span class="moren">
+                    <img src="images/moren_03.gif" alt="" title="" width="39" height="24" /></span>
+                <span class="tiaojian">
+                    <a href="" class="xiaoliang">销量</a>
+                    <a href="" class="renqi">人气</a>
+                    <a href="" class="jiage">价格</a>
+                    <a href="" class="zuixing">最新</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="f1content">
+            <ul class="roll_images">
+                <li class="active">
+                    <img src="images/shopimg/shopbigimg4_11.gif" title="" width="259" height="582" alt="" />
+                </li>
+                <li>
+                    <img src="images/bannerimg2_03.gif" />
+                </li>
+            </ul>
+            <p class="menuclassbg"></p>
+            <div class="menuclass">
+                <a href="">水饺</a>|
+            <a href="">水果</a>|
+            <a href="">大米</a>|
+            <a href="">酸奶</a>|
+            <a href="">鲜奶</a>|
+            <a href="">梨类</a>
+                <a href="">叶菜</a>|
+            <a href="">猪肉</a>|
+            <a href="">牛肉</a>|
+            <a href="">禽类</a>|
+            <a href="">鲜蛋</a>|
+            <a href="" class="gengduo">更多</a>
+
+            </div>
+            <ul class="list">
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg25_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg26_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg27_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg28_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg29_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg30_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg31_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg32_10.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript">
+                            <span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤
+装</a></span>  肉质鲜嫩，营养丰富
+                        </p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+        <!----------4F-start----------------->
+
+
+
+        <!-----5F-start-------------->
+        <div class="f1title" id="five">
+            <p class="titleright">
+                <a href="">红富士</a>
+                <a href="">海天</a>
+                <a href="">思念水饺</a>
+                <a href="">福临门</a>
+                <span>共45件商品</span>
+            </p>
+            <div class="titleleft">
+                <span class="loucheng">5F</span>
+                <span class="fenlei">熟食</span>
+                <span class="moren">
+                    <img src="images/moren_03.gif" alt="" title="" width="39" height="24" /></span>
+                <span class="tiaojian">
+                    <a href="" class="xiaoliang">销量</a>
+                    <a href="" class="renqi">人气</a>
+                    <a href="" class="jiage">价格</a>
+                    <a href="" class="zuixing">最新</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="f1content">
+            <ul class="roll_images">
+                <li class="active">
+                    <img src="images/shopimg/shopbigimg5_11.gif" title="" width="259" height="582" alt="" />
+                </li>
+                <li>
+                    <img src="images/bannerimg2_03.gif" />
+                </li>
+            </ul>
+            <p class="menuclassbg"></p>
+            <div class="menuclass">
+                <a href="">水饺</a>|
+            <a href="">水果</a>|
+            <a href="">大米</a>|
+            <a href="">酸奶</a>|
+            <a href="">鲜奶</a>|
+            <a href="">梨类</a>
+                <a href="">叶菜</a>|
+            <a href="">猪肉</a>|
+            <a href="">牛肉</a>|
+            <a href="">禽类</a>|
+            <a href="">鲜蛋</a>|
+            <a href="" class="gengduo">更多</a>
+
+            </div>
+            <ul class="list">
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg33_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg34_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg35_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg36_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg37_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg38_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg39_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+                <li class="list1">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg40_11.gif" tite="" width="212" height="159" alt=""></a>
+                        <p class="productdescript"><span><a href="productcontent.html">来自韩国济州岛的大美虾2公斤装</a></span>  肉质鲜嫩，营养丰富</p>
+                        <p class="productprices">
+                            <span class="fuhao">￥</span><span class="money">39.00</span><span class="numbutton"><input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="buttons1">
+
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                        </p>
+                        <p class="duibi"></p>
+                        <p class="jiaruduibi"><a href="">加入对比</a></p>
+                    </div>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+
+        <!----------5F-end----------------->
+
+        <div class="fenye">
+            <a href="" class="prev1">上一页</a>
+            <a href="" class="yema">1</a>
+            <a href="" class="yema">2</a>
+            <a href="" class="yema">3</a>
+            ...
+            <a href="" class="yema">15</a>
+            <a href="" class="next1">下一页</a>
+        </div>
+    </div>
+
+    <!--footer-start-->
+    <div class="footer">
+        <div class="footerall">
+            <div class="footermenu">
+                <div class="logo2">
+                    <img src="images/logo_1_06.gif" title="" alt="" width="216" height="83"></div>
+                <ul class="newfingerpost">
+                    <li class="menutitle1"></li>
+                    <li><a href="">会籍介绍</a></li>
+                    <li><a href="">购物流程</a></li>
+                    <li><a href="">快购工具</a></li>
+                    <li><a href="">使用优惠券</a></li>
+                    <li><a href="">商品评论指南</a></li>
+                </ul>
+                <ul class="peisong">
+                    <li class="menutitle2"></li>
+                    <li><a href="">运费政策</a></li>
+                    <li><a href="">配送范围和时间</a></li>
+                    <li><a href="">特殊订单配送</a></li>
+                    <li><a href="">验货和签收</a></li>
+                </ul>
+                <ul class="zhifufangshi">
+                    <li class="menutitle3"></li>
+                    <li><a href="">在线支付</a></li>
+                    <li><a href="">货到付款</a></li>
+                    <li><a href="">其他支付方式</a></li>
+                    <li><a href="">发票制度</a></li>
+                </ul>
+                <ul class="shouhoufuwu">
+                    <li class="menutitle4"></li>
+                    <li><a href="">退换货服务</a></li>
+                    <li><a href="">安装及维修</a></li>
+                    <li><a href="">延保服务</a></li>
+                    <li><a href="">召回商品</a></li>
+                </ul>
+                <ul class="teisefuwu">
+                    <li class="menutitle5"></li>
+                    <li><a href="">增值服务</a></li>
+                    <li><a href="">订阅促销信息</a></li>
+                </ul>
+                <ul class="help">
+                    <li class="menutitle6"></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">订单查询</a></li>
+                    <li><a href="">忘记密码</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </div>
+
+            <ul class="footerlist">
+                <li class="footerlist1"></li>
+                <li class="footerlist2"></li>
+                <li class="footerlist3"></li>
+                <li class="footerlist4"></li>
+            </ul>
+            <div class="Copyright">
+                <p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+                <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+                <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+                <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-end-->
+</body>
+</html>

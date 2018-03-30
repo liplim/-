@@ -1,0 +1,125 @@
+@CHARSET "UTF-8";
+.right {
+    height:550px;width:987px;border:1px solid #e5e5e5;overflow:hidden;float:right;
+}
+.hl_righttop{
+    height:58px;overflow:hidden;width:906px;margin:0 auto;margin-top:30px;
+}
+.hl_righttopleft {
+    float:left;padding-top:3px;
+}
+.hl_righttopright {
+    height:40px;float:left;position:relative;
+}
+.hl_progressbar {
+    width:366px;overflow:hidden;background-color:#fdc6b1;
+}
+.hl_rightcontent {
+    width:754px;margin:0 auto;overflow:hidden;height:auto;position:relative;
+}
+.hl_progressbar1 {
+    height:20px;width:200px;background-color:red;float:left;
+}
+.hl_tishi {
+    clear:both;
+    line-height:25px;
+}
+.hl_contentform {
+    width:auto;height:26px;line-height:26px;overflow:hidden;margin-top:18px;
+}
+.hl_contentform2 {
+    clear:both;width:auto;height:28px;overflow:hidden;margin-top:15px;
+}
+.hl_uname {
+    text-align:right;width:60px;float:left;
+}
+.hl_uname divv {
+    text-align:right;width:60px;float:left
+}
+.hl_name {
+    text-align:right;width:60px;float:left;height:24px;line-height:26px;
+}
+.hl_usertext {
+    height:24px;width:164px;border:1px solid #dbdbdb;margin:0 auto;line-height:24px;
+}
+.hl_sex {
+    float:left;line-height:26px;
+}
+.hl_contentform3 {
+    clear:both;width:auto;height:28px;overflow:hidden;margin-top:15px;line-height:28px;
+}
+.hl_imgBtn {
+    width:62px;height:24px;margin:0 auto;cursor:pointer;
+}
+.hl_addresstext {
+    height:24px;width:415px;border:1px solid #dbdbdb;line-height:24px;
+}
+.hl_youtext {
+    height:24px;width:130px;border:1px solid #dbdbdb;line-height:24px;
+}
+.hl_date {
+    float:left;height:24px;line-height:24px;
+}
+.hl_select {
+    margin:0 auto;width:74px;height:23px;border:1px solid #dbdbdb;line-height:23px;
+}
+.hl_sumbit {
+    width:62px;height:24px;margin:0 auto;cursor:pointer;
+}
+.hl_log {
+    position:absolute;right:70px;top:70px;
+}
+.hl_imglog {
+    width:152px;height:152px;background-color:#ffffff;
+}
+.hl_a {
+    text-decoration:underline;color:red;
+}
+.hl_phone {
+    float:left;
+}
+.hl_phoneimgBtn {
+    float:left;margin-left:5px;margin-top:2px;
+}
+.hl_phonetishi {
+    float:left;margin-left:5px;line-height:28px;
+}
+.hl_p {
+    text-align:center;margin-top:5px;
+}
+.hl_baifenbi {
+    height:29px;
+    width:40px;
+    background-image:url(../images/hl_baifenbis.gif);
+    position:absolute;
+    top:22px;
+    margin-left:185px;
+}
+.hl_baifenbijindu {
+    width:30px;
+    height:15px;
+    margin-top:10px;
+    margin-left:6px;
+    text-align:center;
+    color:#f3773a;
+    line-height:15px;
+}
+.hl_rongqiimg {
+    width:162px;height:162px;
+    padding-top:5px;
+    padding-left:4px;
+    background-repeat:no-repeat;
+    background-image:url(../images/hl_biankuang.gif)
+}
+   .radio_div{
+            height:22px;
+            width:200px;
+            line-height:22px;
+            float:left;
+            margin-top:5px;
+            *margin-top:2px;
+  }
+#Radio3{margin-right:1px;margin-left:5px;*margin-right:-5px;}
+#Radio2{margin-right:1px;margin-left:2px;*margin-right:-5px;}
+#Radio1{margin-right:1px;*margin-right:-5px;}
+option{line-height:23px;}

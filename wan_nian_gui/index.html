@@ -1,0 +1,2375 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="js/JQ_UPFLOAT.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            JqUpFloat("#upfloat");
+            $(".returntop").hide();
+            var left = ($(window).width() - 1190) / 2;
+            $(".leftnav").css("left", (left - 38 - 2) + "px");
+            $(".rightnavs").css("left", (left + 1190 + 2) + "px");
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > $(window).height()) {
+                    $(".returntop").show();
+                } else {
+                    $(".returntop").hide();
+                }
+                //打开头部浮动
+                if ($(window).scrollTop() > 160) {
+                    $(".top_search").show();
+                }
+                else {
+                    $(".top_search").hide();
+                }
+            })
+            //回顶部
+            $(".returntop").click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 500);
+            })
+            //回底部
+            $(".returnfooter").click(function () {
+                var f = $(".footer").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回1f
+            $(".return1F").click(function () {
+                var f = $("#first").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回2f
+            $(".return2F").click(function () {
+                var f = $("#second").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回3f
+            $(".return3F").click(function () {
+                var f = $("#three").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回4f
+            $(".return4F").click(function () {
+                var f = $("#four").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+            //回5f
+            $(".return5F").click(function () {
+                var f = $("#five").offset().top + "px";
+                $('body,html').animate({ scrollTop: f }, 500);
+            })
+
+
+            /*---------左边导航-------------*/
+            $(".columnleft li").mouseover(function () {
+                $(this).css("background", "url(images/indexnavbg_03.gif) no-repeat 0 0");
+                $(this).css("height", "39px");
+                $(this).children(".subnavleft").show();
+                $(this).children("a").children("p").show();
+                //$(this).css("line-height","39px");
+            })
+            $(".columnleft li").mouseout(function () {
+                $(this).css("background", "#f1f1f1");
+                $(this).css("height", "34px");
+                $(this).children(".subnavleft").hide();
+                $(this).children("a").children("p").hide();
+            })
+
+            /*-----------轮播图----------------*/
+            var len = $(".roll_images li").length;
+            var index = 0;
+            $(".roll_index li").click(function () {
+                index = $(this).index();
+
+                play(index);
+            })
+
+            function play(index) {
+                $(".roll_images li").hide();
+                $(".roll_index li").removeClass("roll_index_hover");
+                //$(".roll_title li").hide();
+                $(".roll_images li").eq(index).fadeIn("slow");
+                $(".roll_index li").eq(index).addClass("roll_index_hover");
+                //$(".roll_title li").eq(index).show();
+            }
+            function autoPlay() {
+                setInterval(function () { play((index + 1) % len); index = (index + 1) % len; }, 2000);
+            }
+            autoPlay();
+
+
+
+            $(".menu li").mouseover(function () {
+                $(".menu li").css("background", "");
+                $(this).css("background", "white");
+                $(".menu li").children("a").css("color", "#f0f1ee");
+                $(this).children("a").css("color", "#5e5e5e");
+                $('.menu li').children(".secondmenu").hide();
+                $(this).children(".secondmenu").show();
+            })
+
+            $(".menu li").mouseout(function () {
+                $(this).css("background", "");
+                $(this).children(".secondmenu").hide();
+                $(this).children("a").css("color", "#f0f1ee");
+                $(".menu li").last().css("background", "url(./images/border11_031.gif) no-repeat right 0");
+
+            })
+            $(".menu li").children("a").mouseover(function () {
+                $(this).css("color", "red");
+            })
+
+
+            /*-----------单击商品加边框-------------*/
+            $(".listcontent").mouseover(function () {
+                $(".listcontent").css("border", "2px solid #e0e2e3");
+
+
+                $(this).css("border", "2px solid #f15010");
+                $(".listcontent").children(".bottom").show();;
+                $(this).children(".bottom").hide();
+                $(".listcontent").children(".button2").hide();
+                $(this).children(".button2").show();
+            })
+            $(".jia").click(function () {
+                var res = $(this).next(".nums").val();
+                res++;
+                $(this).next(".nums").val(res);
+            })
+            $(".jian").click(function () {
+                var res = $(this).prev(".nums").val();
+                res--;
+                if (res <= 1) {
+                    res = 1;
+                }
+                $(this).prev(".nums").val(res);
+            })
+
+
+           
+
+
+            $(".menu li").last().css("background", "url(./images/border11_031.gif) no-repeat right 0");
+
+            //去掉商品列表中第三个第六个商品的右边距;便宜循环取数据
+            var lens = $(".firstlist").length;
+            for (var i = 0; i < lens; i++) {
+                $(".firstlist").eq(i).children("div").filter(".alllist").eq(2).addClass("lastlist");
+                $(".firstlist").eq(i).children("div").filter(".alllist").eq(6).addClass("lastlist");
+            }
+
+
+            $(".goumai").click(function () {
+                window.location.href = "dingdanqueren.html";
+            })
+
+
+
+            $(".secondmenu dl").each(function () {
+                $(this).find("dt").css("height", $(this).height());
+            })
+            $(".secondmenu").hide();
+
+
+        })
+
+
+    </script>
+    <title>无标题文档</title>
+</head>
+
+<body>
+    <div class="leftnav">
+        <a href="javascript:void(0);" class="returntop"></a>
+        <a href="javascript:void(0);" class="return1F">1F<br />
+            粮食</a>
+        <a href="javascript:void(0);" class="return2F">2F<br />
+            肉蛋</a>
+        <a href="javascript:void(0);" class="return3F">3F<br />
+            海鲜</a>
+        <a href="javascript:void(0);" class="return4F">4F<br />
+            调料</a>
+        <a href="javascript:void(0);" class="return5F">5F<br />
+            熟食</a>
+        <a href="javascript:void(0);" class="moress"></a>
+        <a href="javascript:void(0);" class="returnfooter"></a>
+        <a href="javascript:void(0);" class="cartss"></a>
+    </div>
+
+    <!--<a href="javascript:void(0);" class="rightnav">请教我们做服务</a>-->
+    <div class="rightnavs">
+        <a href="javascript:void(0);" class="fuwu">请教我们做服务</a>
+        <a href="javascript:void(0);" class="returntop"></a>
+    </div>
+    <!--header的start-->
+
+    <!--top的start-->
+    <div class="top" >
+        <div class="top_con" id="upfloat">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu.html">消息</a></li>
+                   <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="top_search">
+            <a href="#" class="f_logo"></a>
+            <div class="f_search">
+                <div class="f_search_input">
+                    <input type="text" class="f_search_text" /></div>
+                <input type="submit" class="f_search_btn" value="" />
+            </div>
+        </div>
+       </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--headermsg的end-->
+
+    <!--nav的start-->
+    <div class="nav">
+        <div class="sidebarleft">
+            <div class="sidebarleft1">
+                <h2 class="navclass menufont">经 营 类 别</h2>
+                <ul class="columnleft">
+                    <li class="allshop"><a href="shoplist.html" class="titles">全 部 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>全部商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观</a>
+                            </div>
+                    </li>
+                    <li class="everyday"><a href="shoplist.html" class="titles">每 日 限 量<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>每日限量</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="newproduct"><a href="shoplist.html" class="titles">新 品 上 市<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>新品上市</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bargainprice"><a href="shoplist.html" class="titles">特 卖 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>特卖商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="starshop"><a href="shoplist.html" class="titles">明 星 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>明星商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="entershop"><a href="shoplist.html" class="titles">进 口 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>进口商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nativeshop"><a href="shoplist.html" class="titles">特 产 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>特产商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="jijie"><a href="shoplist.html" class="titles">季 节 时 鲜<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>季节时鲜</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="yushou"><a href="shoplist.html" class="titles">预 售 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>预售商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="daigou"><a href="shoplist.html" class="titles">代 购 商 品<p class="blocks"></p>
+                    </a>
+                        <div class="subnavleft">
+                            <div class="subnavlefttitle"><span>代购商品</span></div>
+
+                            <div class="second">
+                                <a href="shoplist2.html">粮食</a>
+                                <a href="shoplist2.html">速冻食品</a>
+                                <a href="shoplist2.html">水果</a>
+                                <a href="shoplist2.html">橄榄油</a>
+                                <a href="shoplist2.html">零食干粮</a>
+                                <a href="shoplist2.html">香蕉</a>
+                                <a href="shoplist2.html">油类</a>
+                                <a href="shoplist2.html">饮料冲调</a>
+                                <a href="shoplist2.html">活鲜</a>
+                                <a href="shoplist2.html">宠物用品</a>
+                                <a href="shoplist2.html">糖烟酒茶</a>
+                                <a href="shoplist2.html">蛋肉</a>
+                                <a href="shoplist2.html">鸡蛋</a>
+                                <a href="shoplist2.html">葡萄酒</a>
+                                <a href="shoplist2.html">纸品</a>
+                                <a href="shoplist2.html">蔬菜</a>
+                                <a href="shoplist2.html">营养保健</a>
+                                <a href="shoplist2.html">小家电</a>
+                                <a href="shoplist2.html">干货</a>
+                                <a href="shoplist2.html">婴儿湿纸巾</a>
+                                <a href="shoplist2.html">海鲜</a>
+                                <a href="shoplist2.html">香肠/腊肉</a>
+                                <a href="shoplist2.html">儿童母婴</a>
+                                <a href="shoplist2.html">熟食</a>
+                                <a href="shoplist2.html">家务用品</a>
+                                <a href="shoplist2.html">调料</a>
+                                <a href="shoplist2.html">调味粉</a>
+                                <a href="shoplist2.html">干海产</a>
+                                <a href="shoplist2.html">针织用品</a>
+                                <a href="shoplist2.html">洗护用品</a>
+                                <a href="shoplist2.html">成人用品</a>
+                                <a href="shoplist2.html">文体用品</a>
+                                <a href="shoplist2.html">铁观音</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebarleft2">
+                <h2 class="navclass2 menufont">经 营 方 式</h2>
+                <ul class="columnleft2">
+                    <li class="zhengjiashop"><a href="#">正价商品</a></li>
+                    <li class="everyday2"><a href="#">每日特价</a></li>
+                    <li class="jifenshop"><a href="#">积分商品</a></li>
+                    <li class="zhekou"><a href="#">折扣特价</a></li>
+                    <li class="taocan"><a href="tao_can_sou_ye.html">套餐商品</a></li>
+                </ul>
+            </div>
+            <div class="sidebarleft3">
+                <h2 class="navclass3 menufont">美 食 讲 堂</h2>
+            </div>
+
+        </div>
+        <div class="nav_right">
+            <div class="cloumn">
+                <div class="cloumns">
+                    <h2 class="navclass4 menufont">商品类型</h2>
+                    <ul class="menu">
+                        <li><a href="shoplist.html">粮 食</a><a href="shoplist.html">油 类</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">粮 食</a></dt>
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">油 类</a></dt>
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">蛋 肉</a><a href="shoplist.html">蔬 菜</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">蛋 肉</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">蔬 菜</a></dt>
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                        </li>
+                        <li><a href="shoplist.html">海 鲜</a><a href="shoplist.html">活 鲜</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">海 鲜</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">活 鲜</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">调 料</a><a href="shoplist.html">干 货</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">调 料</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">干 货</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">熟 食</a><a href="shoplist.html">水 果</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">熟 食</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">水 果</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">速冻食品</a><a href="shoplist.html">零食干粮</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">速冻食品</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">零食干粮</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">饮料冲调</a><a href="shoplist.html">糖烟酒茶</a>
+                            <div class="secondmenu">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">饮料冲调</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">糖烟酒茶</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">营养保健</a><a href="shoplist.html">儿童母婴</a>
+                            <div class="secondmenu secondmentleft">
+                                <dl class="bottomborder">
+
+                                    <dt><a href="shoplist.html">营养保健</a></dt>
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+
+                                </dl>
+
+                                <dl>
+
+
+                                    <dt><a href="shoplist.html">儿童母婴</a></dt>
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">家务用品</a><a href="shoplist.html">洗护用品</a>
+                            <div class="secondmenu secondmentleft">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">家务用品</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">洗护用品</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">纸  品</a><a href="shoplist.html">文体用品</a>
+                            <div class="secondmenu secondmentleft">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;纸  品</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">文体用品</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">小家电</a><a href="shoplist.html">成人用品</a>
+                            <div class="secondmenu secondmentleft">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">&nbsp;&nbsp;&nbsp;小家电</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">成人用品</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                        <li><a href="shoplist.html">针织用品</a><a href="shoplist.html">宠物用品</a>
+                            <div class="secondmenu secondmentleft">
+                                <dl class="bottomborder">
+                                    <dt><a href="shoplist.html">针织用品</a></dt>
+
+                                    <dd>
+                                        <a href="shoplist.html">大米</a>
+                                        <a href="shoplist.html">面粉</a>
+                                        <a href="shoplist.html">大豆</a>
+                                        <a href="shoplist.html">绿豆</a>
+                                        <a href="shoplist.html">玉米</a>
+                                        <a href="shoplist.html">高粱</a>
+                                        <a href="shoplist.html">番薯</a>
+                                        <a href="shoplist.html">土豆</a>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><a href="shoplist.html">宠物用品</a></dt>
+
+
+                                    <dd>
+                                        <a href="shoplist.html">花生油</a>
+                                        <a href="shoplist.html">调和油</a>
+                                        <a href="shoplist.html">玉米油</a>
+                                        <a href="shoplist.html">山茶油</a>
+                                        <a href="shoplist.html">葵花籽油</a>
+                                        <a href="shoplist.html">芥花籽油</a>
+                                        <a href="shoplist.html">芥花油</a>
+                                        <a href="shoplist.html">大豆油</a>
+                                        <a href="shoplist.html">葡萄籽油</a>
+                                        <a href="shoplist.html">葵花仁油</a>
+                                        <a href="shoplist.html">亚麻籽油</a>
+                                        <a href="shoplist.html">菜籽油</a>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="banners">
+                <ul class="roll_images">
+                    <li class="active">
+                        <img src="images/banner1_03.gif" width="735" height="361" alt="" title="" />
+                    </li>
+                    <li>
+                        <img src="images/banner1_03.gif" width="735" height="361" alt="" title="" />
+                    </li>
+                    <li>
+                        <img src="images/banner1_03.gif" width="735" height="361" alt="" title="" />
+                    </li>
+                    <li>
+                        <img src="images/banner1_03.gif" width="735" height="361" alt="" title="" />
+                    </li>
+                    <li>
+                        <img src="images/banner1_03.gif" width="735" height="361" alt="" title="" />
+                    </li>
+                </ul>
+                <ul class="roll_index">
+                    <li class="roll_index_hover"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li style="margin-right: 0;"></li>
+                </ul>
+
+            </div>
+
+            <div class="newsright">
+                <img src="images/chuxiao_03.png" alt="" title="" width="256" height="83">
+                <div class="newstitle">
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                    <span>全城生活快乐购直播</span>
+
+                </div>
+                <ul class="newslist">
+                    <li><span>NEW</span><a href="#">10月会员狂欢节正在启动！</a></li>
+                    <li><span>NEW</span><a href="#">秋季美白补水5折起！</a></li>
+                    <li><span>HOT</span><a href="#">每日精彩不断的5折区</a></li>
+                    <li><span>HOT</span><a href="#">快乐购积分兑换区！</a></li>
+                    <li><span>HOT</span><a href="#">快乐购每天送货时间标准表！</a></li>
+                    <li><span>HOT</span><a href="#">快乐购关于退货声明！</a></li>
+                    <li><span>HOT</span><a href="#">快乐购员工一览表！</a></li>
+                </ul>
+
+            </div>
+
+            <div class="hot">
+                <div class="hottitle">
+                    <p>
+                        <a href="#">金龙鱼</a>
+                        <a href="#">海天</a>
+                        <a href="#">思念水饺</a>
+                        <a href="#">福临门</a>
+                        <span>共<em>45</em>件商品</span>
+                    </p>
+                    <img src="images/hot_03.png" title="" alt="" width="93" height="31">
+                </div>
+
+                <dl class="hotlist">
+                    <dt><a href="productcontent.html">
+                        <img src="images/shopimg/shopimg66_03.gif" width="194" height="180" alt="" title=""></a></dt>
+                    <dd class="hotlistbg"></dd>
+                    <dd class="hotlistcontent"><a href="productcontent.html">糯米团子</a><span>18</span>元/份</dd>
+                </dl>
+
+
+                <dl class="hotlist">
+                    <dt><a href="productcontent.html">
+                        <img src="images/shopimg/shopimg67_03.gif" width="194" height="180" alt="" title=""></a></dt>
+                    <dd class="hotlistbg"></dd>
+                    <dd class="hotlistcontent"><a href="productcontent.html">糯米团子</a><span>18</span>元/份</dd>
+                </dl>
+
+
+
+                <dl class="hotlist">
+                    <dt><a href="productcontent.html">
+                        <img src="images/shopimg/shopimg66_03.gif" width="194" height="180" alt="" title=""></a></dt>
+                    <dd class="hotlistbg"></dd>
+                    <dd class="hotlistcontent"><a href="productcontent.html">糯米团子</a><span>18</span>元/份</dd>
+                </dl>
+
+
+
+                <dl class="hotlist">
+                    <dt><a href="productcontent.html">
+                        <img src="images/shopimg/shopimg66_03.gif" width="194" height="180" alt="" title=""></a></dt>
+                    <dd class="hotlistbg"></dd>
+                    <dd class="hotlistcontent"><a href="productcontent.html">糯米团子</a><span>18</span>元/份</dd>
+                </dl>
+
+                <dl class="hotlist hotlistlast">
+                    <dt><a href="productcontent.html">
+                        <img src="images/shopimg/shopimg66_03.gif" width="194" height="180" alt="" title=""></a></dt>
+                    <dd class="hotlistbg"></dd>
+                    <dd class="hotlistcontent"><a href="productcontent.html">糯米团子</a><span>18</span>元/份</dd>
+                </dl>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!--nav的end-->
+
+    <div class="main">
+
+        <div class="first">
+            <img src="images/banner4_07.gif" title="" alt="" width="1190" height="158">
+            <div class="firsttitle" id="first">
+                <p class="firstright">
+                    <a href="#">金龙鱼</a>
+                    <a href="#">海天</a>
+                    <a href="#">思念水饺</a>
+                    <a href="#">福临门</a>
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                </p>
+                <p class="firstleft">
+                    <span class="lou">1F</span>
+                    <span class="shopfenlei">全部商品</span>
+                    <span class="count">共10456件商品</span>
+                </p>
+            </div>
+
+            <div class="firstlist">
+                <dl>
+                    <dt>
+                        <img src="images/shopimg/shopimg71_03.gif" alt="" title="" width="284" height="383"></dt>
+                    <dd class="firstlistbg"></dd>
+                    <dd class="firstmenu">
+                        <a href="#">水饺</a>|
+                    <a href="#">水果</a>|
+                    <a href="#">大米</a>|
+                    <a href="#">酸奶</a>|
+                    <a href="#">鲜奶</a>|
+                    <a href="#">梨类</a>
+                        <a href="#">叶菜</a>|
+                    <a href="#">猪肉</a>|
+                    <a href="#">牛肉</a>|
+                    <a href="#">禽类</a>|
+                     <a href="#">鲜蛋</a>|
+                   <span><a href="#">更多</a></span>
+                    </dd>
+                </dl>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg72_06.png" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>3229.00</span>
+                            <span class="yuanjia">￥1179.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" />
+                                <input type="button" class="nums" value="2" />
+                                <input type="button" class="jian" />
+                            </span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg73_06.png" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg74_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg75_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg76_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg77_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg78_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------F1-end------------------>
+
+        <!----------------F2-start------------------>
+        <div class="first">
+            <img src="images/banner5_03.gif" title="" alt="" width="1190" height="158">
+            <div class="firsttitle" id="second">
+                <p class="firstright">
+                    <a href="#">金龙鱼</a>
+                    <a href="#">海天</a>
+                    <a href="#">思念水饺</a>
+                    <a href="#">福临门</a>
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                </p>
+                <p class="firstleft">
+                    <span class="lou">2F</span>
+                    <span class="shopfenlei">每日限量商品</span>
+                    <span class="count">共10456件商品</span>
+                </p>
+            </div>
+
+            <div class="firstlist">
+                <dl>
+                    <dt>
+                        <img src="images/shopimg/shopimg107_03.gif" alt="" title="" width="284" height="383"></dt>
+                    <dd class="firstlistbg"></dd>
+                    <dd class="firstmenu">
+                        <a href="#">水饺</a>|
+                    <a href="#">水果</a>|
+                    <a href="#">大米</a>|
+                    <a href="#">酸奶</a>|
+                    <a href="#">鲜奶</a>|
+                    <a href="#">梨类</a>
+                        <a href="#">叶菜</a>|
+                    <a href="#">猪肉</a>|
+                    <a href="#">牛肉</a>|
+                    <a href="#">禽类</a>|
+                     <a href="#">鲜蛋</a>|
+                   <span><a href="#">更多</a></span>
+                    </dd>
+                </dl>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg78_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg79_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg80_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg81_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg82_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg83_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg84_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------F2-end------------>
+
+
+        <!-----------F3-start------------>
+
+
+        <div class="first">
+            <img src="images/banner6_03.gif" title="" alt="" width="1190" height="158">
+            <div class="firsttitle" id="three">
+                <p class="firstright">
+                    <a href="#">金龙鱼</a>
+                    <a href="#">海天</a>
+                    <a href="#">思念水饺</a>
+                    <a href="#">福临门</a>
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                </p>
+                <p class="firstleft">
+                    <span class="lou">3F</span>
+                    <span class="shopfenlei">新品上市</span>
+                    <span class="count">共10456件商品</span>
+                </p>
+            </div>
+
+            <div class="firstlist">
+                <dl>
+                    <dt>
+                        <img src="images/shopimg/shopimg108_03.gif" alt="" title="" width="284" height="383"></dt>
+                    <dd class="firstlistbg"></dd>
+                    <dd class="firstmenu">
+                        <a href="#">水饺</a>|
+                    <a href="#">水果</a>|
+                    <a href="#">大米</a>|
+                    <a href="#">酸奶</a>|
+                    <a href="#">鲜奶</a>|
+                    <a href="#">梨类</a>
+                        <a href="#">叶菜</a>|
+                    <a href="#">猪肉</a>|
+                    <a href="#">牛肉</a>|
+                    <a href="#">禽类</a>|
+                     <a href="#">鲜蛋</a>|
+                   <span><a href="#">更多</a></span>
+                    </dd>
+                </dl>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg85_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg86_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg87_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg88_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg89_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg90_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg91_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------F3-end------------>
+
+        <!-----------F4-start------------>
+
+        <div class="first">
+            <img src="images/banner7_03.gif" title="" alt="" width="1190" height="158">
+            <div class="firsttitle" id="four">
+                <p class="firstright">
+                    <a href="#">金龙鱼</a>
+                    <a href="#">海天</a>
+                    <a href="#">思念水饺</a>
+                    <a href="#">福临门</a>
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                </p>
+                <p class="firstleft">
+                    <span class="lou">4F</span>
+                    <span class="shopfenlei">特卖商品</span>
+                    <span class="count">共10456件商品</span>
+                </p>
+            </div>
+
+            <div class="firstlist">
+                <dl>
+                    <dt>
+                        <img src="images/shopimg/shopimg109_03.gif" alt="" title="" width="284" height="383"></dt>
+                    <dd class="firstlistbg"></dd>
+                    <dd class="firstmenu">
+                        <a href="#">水饺</a>|
+                    <a href="#">水果</a>|
+                    <a href="#">大米</a>|
+                    <a href="#">酸奶</a>|
+                    <a href="#">鲜奶</a>|
+                    <a href="#">梨类</a>
+                        <a href="#">叶菜</a>|
+                    <a href="#">猪肉</a>|
+                    <a href="#">牛肉</a>|
+                    <a href="#">禽类</a>|
+                     <a href="#">鲜蛋</a>|
+                   <span><a href="#">更多</a></span>
+                    </dd>
+                </dl>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg92_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg93_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg94_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg95_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg96_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg97_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg98_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-----------F4-end------------>
+
+        <!-----------F5-start------------>
+        <div class="first">
+            <img src="images/banner8_03.gif" title="" alt="" width="1190" height="158">
+            <div class="firsttitle" id="five">
+                <p class="firstright">
+                    <a href="#">金龙鱼</a>
+                    <a href="#">海天</a>
+                    <a href="#">思念水饺</a>
+                    <a href="#">福临门</a>
+                    <a href="#">
+                        <img src="images/more4_03.png" alt="" title="" width="37" height="12"></a>
+                </p>
+                <p class="firstleft">
+                    <span class="lou">5F</span>
+                    <span class="shopfenlei">特卖商品</span>
+                    <span class="count">共10456件商品</span>
+                </p>
+            </div>
+
+            <div class="firstlist">
+                <dl>
+                    <dt>
+                        <img src="images/shopimg/shopimg110_03.gif" alt="" title="" width="284" height="383"></dt>
+                    <dd class="firstlistbg"></dd>
+                    <dd class="firstmenu">
+                        <a href="#">水饺</a>|
+                    <a href="#">水果</a>|
+                    <a href="#">大米</a>|
+                    <a href="#">酸奶</a>|
+                    <a href="#">鲜奶</a>|
+                    <a href="#">梨类</a>
+                        <a href="#">叶菜</a>|
+                    <a href="#">猪肉</a>|
+                    <a href="#">牛肉</a>|
+                    <a href="#">禽类</a>|
+                     <a href="#">鲜蛋</a>|
+                   <span><a href="#">更多</a></span>
+                    </dd>
+                </dl>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg99_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg100_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg101_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg102_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg103_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg104_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+
+                <div class="alllist">
+                    <div class="listcontent">
+                        <a href="productcontent.html">
+                            <img src="images/shopimg/shopimg106_03.gif" tite="" width="280" height="210" alt=""></a>
+                        <p class="producttitle">
+                            <img src="images/1_03.gif"><span><a href="productcontent.html">新鲜出炉的岛曲奇饼干500g装</a></span>
+                        </p>
+                        <p class="productdescript"><span>肉质鲜嫩，营养丰富</span></p>
+                        <p class="productprices">
+                            <span class="maijia"><em>￥</em>69.00</span>
+                            <span class="yuanjia">￥79.00</span>
+                        </p>
+                        <p class="button2">
+                            <input type="button" class="goumai">
+                            <input type="button" class="carts">
+                            <span class="numbutton">
+                                <input type="button" class="jia" /><input type="button" class="nums" value="2" /><input type="button" class="jian" /></span>
+                        </p>
+                        <p class="bottom"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----------F5-end------------>
+
+        <div class="fenye">
+            <a href="#" class="prev1">上一页</a>
+            <a href="#" class="yema">1</a>
+            <a href="#" class="yema">2</a>
+            <a href="#" class="yema">3</a>
+
+            <a href="#" class="next1">下一页</a>
+        </div>
+    </div>
+
+
+
+    <!--footer-start-->
+    <div class="footer">
+        <div class="footerall">
+            <div class="footermenu">
+                <div class="logo2">
+                    <img src="images/logo_1_06.gif" title="" alt="" width="216" height="83">
+                </div>
+                <ul class="newfingerpost">
+                    <li class="menutitle1"></li>
+                    <li><a href="#">会籍介绍</a></li>
+                    <li><a href="#">购物流程</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">使用优惠券</a></li>
+                    <li><a href="#">商品评论指南</a></li>
+                </ul>
+                <ul class="peisong">
+                    <li class="menutitle2"></li>
+                    <li><a href="#">运费政策</a></li>
+                    <li><a href="#">配送范围和时间</a></li>
+                    <li><a href="#">特殊订单配送</a></li>
+                    <li><a href="#">验货和签收</a></li>
+                </ul>
+                <ul class="zhifufangshi">
+                    <li class="menutitle3"></li>
+                    <li><a href="#">在线支付</a></li>
+                    <li><a href="#">货到付款</a></li>
+                    <li><a href="#">其他支付方式</a></li>
+                    <li><a href="#">发票制度</a></li>
+                </ul>
+                <ul class="shouhoufuwu">
+                    <li class="menutitle4"></li>
+                    <li><a href="#">退换货服务</a></li>
+                    <li><a href="#">安装及维修</a></li>
+                    <li><a href="#">延保服务</a></li>
+                    <li><a href="#">召回商品</a></li>
+                </ul>
+                <ul class="teisefuwu">
+                    <li class="menutitle5"></li>
+                    <li><a href="#">增值服务</a></li>
+                    <li><a href="#">订阅促销信息</a></li>
+                </ul>
+                <ul class="help">
+                    <li class="menutitle6"></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">订单查询</a></li>
+                    <li><a href="#">忘记密码</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+
+            <ul class="footerlist">
+                <li class="footerlist1"></li>
+                <li class="footerlist2"></li>
+                <li class="footerlist3"></li>
+                <li class="footerlist4"></li>
+            </ul>
+            <div class="Copyright">
+                <p><a href="#">关于我们</a>|<a href="#">联系我们</a>|<a href="#">人才招聘</a>|<a href="#">广告服务</a>|<a href="#">手机APP</a>|<a href="#">友情链接</a>|<a href="#">销售联盟</a>|<a href="#">快乐购社区</a>|<a href="#">快乐购公益</a>|<a href="#">English Site</a></p>
+                <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+                <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+                <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-end-->
+
+</body>
+</html>

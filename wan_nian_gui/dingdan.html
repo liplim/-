@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<script type="text/javascript" src="js/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	//选项卡
+	$("#title a").click(function(){
+		$("#title a").css("color","#AAABAC");
+		$("#title a").css("background","url(./images/borders5_03.gif) no-repeat right 0");
+		$(this).css("color","#F99900");
+		$(this).css("background","url(./images/borders3_03.gif) no-repeat 0 0px");
+		$(this).prev().first().css("background","url(../");
+		
+		$("#title a").children("p").removeClass("blocks");
+		$(this).children("p").addClass("blocks");
+	})
+	
+	//单选按钮样式 
+	$(".box label").click(function(){
+		$(".box label").parent().parent().removeClass("check");
+		$(this).parent().parent().addClass("check");
+		$(".box label").children("img").attr("src","images/checked2_06.gif");
+		$(this).children("img").attr("src","images/checked1_06.gif");
+		
+		
+	})
+	
+})
+</script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<!--header的start-->
+
+    <!--top的start-->
+    <div class="top">
+        <div class="top_item">
+            <div class="top_item_con">
+                <ul class="topleft">
+                    <li class="msg"><a href="javascript:void(0)">您好，欢迎你第100次光临!</a></li>
+                    <li class="user"><a href="../hui_yuan/ge_ren_zu_ye.html">klg12345</a></li>
+                    <li class="message"><a href="../hui_yuan/xiao_fei_ji_lu">消息</a></li>
+                    <!-- <li class="telshop"><a href="#">手机全城快乐购</a></li>-->
+                </ul>
+                <ul class="topright">
+                    <li class="myshop"><a href="../hui_yuan/ge_ren_zu_ye.html">我的全城快乐购</a></li>
+                    <li class="cart"><a href="../hui_yuan/gou_wu_ce.html">购物车<span>&nbsp;(&nbsp;3&nbsp;)&nbsp;</span></a></li>
+                    <li><a href="#">创建桌面快捷方式</a></li>
+                    <li><a href="#">快购工具</a></li>
+                    <li><a href="#">网站导航</a></li>
+                    <li><a href="../hui_yuan/help_center.html">帮助中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--top的end-->
+
+    <div class="header">
+        <!--banner的start-->
+        <div class="banner">
+            <a href="#" style="background: url(images/banner_06.gif) no-repeat center center;"></a>
+        </div>
+        <!--banner的end-->
+
+        <!--headermsg的start-->
+        <div class="headermsg">
+            <a href="#" class="logo1"></a>
+            <div class="myjifen"><span><b>我的积分</b>100分</span></div>
+            <ul class="search">
+                <form action="" method="post">
+                    <li class="searchpic">
+                        <input type="text" class="searchtext"></li>
+                    <!--<li><input type="submit" value="产品搜索" class="serachbutton"></li>-->
+                    <li><a href="#" class="serachbutton">产品搜索</a></li>
+                    <li><a href="#" class="serachbutton2">城市</a></li>
+                    <!--<li><input type="button" value="城市" class="serachbutton2"></li>-->
+                    <li class="jifen">
+                        <p><a href="#">积分的好处</a></p>
+                        <p><a href="#">我&nbsp;要&nbsp;充&nbsp;值</a></p>
+                    </li>
+                    <li class="tree">
+                        <img src="images/tree_06.gif" alt="" title="" width="120" height="94"></li>
+                    <li class="hotsearch">热门搜索：<a href="#">油</a>、<a href="#">盐</a>、<a href="#">酱</a>、<a href="#">醋</a></li>
+                </form>
+            </ul>
+            <div class="erweima">
+                <a href="#">
+                    <img src="images/erweima_06.gif" alt="" title="" height="90" width="88"></a>
+                <p>扫描二维码 下载手机App</p>
+                <p>在线客服：400-028-2380</p>
+            </div>
+
+        </div>
+        <!--headermsg的end-->
+    </div>
+    <!--header的end-->
+ 
+ <!--nav的start-->
+ <div class="nav">
+  <img src="images/img12_05.gif" class="button" alt="" title="" width="673" height="49">
+  </div>
+   <!--start的end-->
+   
+   
+  <!--main的start-->
+    <div class="main" >
+    <!--订单信息的start-->
+    <div class="dingdanmessage">
+    	<img src="images/dui_06.gif" class="dui">
+        <ul>
+        	<li class="successmsg" >订单提交成功,<span class="wenxin3">11:00</span>点前完成付款，预计（4月18日）<span class="wenxin3">14:00</span>前送达</li>
+            <li>订单号：<span class="wenxin2">6167481910014</span> 应付金额： <span class="wenxin2">¥346.0</span> </li>
+            <li><span class="wenxin">温馨提示：</span><span class="wenxin2">亲，为了不影响你的需求，请在1小时内完成订单支付，不然系统将会自动取消订单哦！</span></li>
+        </ul>
+    </div>
+    
+    
+    
+   
+    
+     <!--订单信息的end-->
+     <div class="zaixianzhifu">
+     	<img src="images/zaixianzhifu1_03.gif" title="" alt="" width="171" height="48">
+     </div>
+     <div class="zhifu">
+     	<h2 id="title"><a href="javascript:void(0);" class="active">快捷支付<p class="blocks"></p></a>
+        <a href="javascript:void(0);">银行卡<p ></p></a>
+         <a href="javascript:void(0);">支付平台<p ></p></a>
+         	
+       </h2>
+         <div class="zhifu1" >
+         	<ul>
+            	<li class="zhifu1msg"><img src="images/kuaijie_03.gif" title="" alt="" width="623" height="39"></li>
+                <li id="zhaoshang" class="check">
+                	<span class="box" ><label><img src="images/checked1_06.gif" title="" alt="" width="17" height="17"/><input type="radio" name="bank"  class="radio" checked="checked"></label></span>
+                    <span><a><img src="images/zhaoshang_06.gif" alt="" title="" width="140" height="40"></a></span>
+                    <span class="zhanghao">*1640</span>
+                    <span><img class="xinyongka" src="images/img10_06.gif" title="" alt="" width="50" height="20"></span>
+                    <span ><a href="" class="chaken">查看支付限额</a></span>                </li>
+                <li class="jianshe">
+                	<span class="box"><label><img src="images/checked2_06.gif" title="" alt="" width="17" height="17"/><input type="radio" name="bank" class="radio"></label></span>
+                    <span><a><img src="images/jianshe_06.gif" width="140" height="40" title="" alt=""></a></span>
+                    <span class="zhanghao">*8255</span>
+                    <span><img class="xinyongka" src="images/img10_06.gif" title="50" alt="20"  width="50" height="20"></span>
+                    <span><a href="" class="chaken">查看支付限额</a></span>                 </li>
+                <li class="but"><a href=""><img src="images/next_1_06.gif"  alt="" title="" width="150" height="39"></a><a class="other" href="">使用其它银行卡支付</a></li>
+            </ul>
+         </div>
+         <div class="zhifu2"></div>
+         <div class="zhifu3"></div>
+     </div>
+     
+     <div class="tishi">
+     <p><img src="images/tel_06.gif" title="" alt="" width="192" height="14"></p>
+     	<span>完成支付后，您可以：<a href="">查看订单状态</a>   <a href="">继续购物</a></span>
+        
+     </div>
+     
+    </div>
+<!--main的start-->
+
+
+<!--footer-start-->
+<div class="footer">
+	<div class="footerall">
+    	<div class="footermenu">
+        	<div class="logo2"><img   src="images/logo_1_06.gif" title="" alt="" width="216" height="83"></div>
+            <ul class="newfingerpost">
+            	<li class="menutitle1"></li>
+                <li><a href="">会籍介绍</a></li>
+                <li><a href="">购物流程</a></li>
+                <li><a href="">快购工具</a></li>
+                <li><a href="">使用优惠券</a></li>
+                <li><a href="">商品评论指南</a></li>
+            </ul>
+            <ul class="peisong">
+            	<li class="menutitle2"></li>
+                <li><a href="">运费政策</a></li>
+                <li><a href="">配送范围和时间</a></li>
+                <li><a href="">特殊订单配送</a></li>
+                <li><a href="">验货和签收</a></li>
+            </ul >
+            <ul class="zhifufangshi">
+           		<li class="menutitle3"></li>
+            	<li><a href="">在线支付</a></li>
+                <li><a href="">货到付款</a></li>
+                <li><a href="">其他支付方式</a></li>
+                <li><a href="">发票制度</a></li>
+            </ul >
+             <ul class="shouhoufuwu">
+            	<li class="menutitle4"></li>
+                <li><a href="">退换货服务</a></li>
+                <li><a href="">安装及维修</a></li>
+                <li><a href="">延保服务</a></li>
+                <li><a href="">召回商品</a></li>
+            </ul >
+            <ul class="teisefuwu">
+            <li class="menutitle5"></li>
+            	<li><a href="">增值服务</a></li>
+                <li><a href="">订阅促销信息</a></li>
+            </ul >
+             <ul class="help">
+            	<li class="menutitle6"></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">订单查询</a></li>
+                <li><a href="">忘记密码</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul >
+        </div>
+        
+        <ul class="footerlist">
+        	<li class="footerlist1"></li>
+            <li class="footerlist2"></li>
+            <li class="footerlist3"></li>
+            <li class="footerlist4"></li>
+        </ul>
+        <div class="Copyright">
+        	<p><a href="">关于我们</a>|<a href="">联系我们</a>|<a href="">人才招聘</a>|<a href="">广告服务</a>|<a href="">手机APP</a>|<a href="">友情链接</a>|<a href="">销售联盟</a>|<a href="">快乐购社区</a>|<a href="">快乐购公益</a>|<a href="">English Site</a></p>
+            <p>绵阳市公安局涪城区分局备案编号110105014669  |  蜀ICP证070359号  |  互联网药品信息服务资格证编号(蜀)-非经营性-2011-0034</p>
+            <p>音像制品经营许可证苏宿批005号  |  出版物经营许可证编号新出发(蜀)批字第N-012号  |  互联网出版许可证编号新出网证(蜀)字150号</p>
+            <p>网络文化经营许可证京网文[2011]0168-061号  Copyright © 2004-2014  快乐购klg.com 版权所有</p>
+        </div>
+    </div>
+
+</div>
+<!--footer-end-->
+</body>
+</html>

@@ -1,0 +1,350 @@
+@CHARSET "UTF-8";
+div{
+font-size:12px;
+font-family:宋体;
+color:#474747;
+}
+.head_7 {
+	width: 678px;
+	height: 200px;
+	margin-left: 382px;
+}
+.head_8 {
+	width: 550px;
+	height: 44px;
+	background-image: url(../images/lky-shou-suo.png);
+	margin-top: 53px;
+	display: inline;
+	float: left;
+}
+.shou_suo_kuang_9 {
+	margin-left: 37px;
+	height: 20px;
+	line-height: 120%;
+	width: 479px;
+	margin-top: 14px;
+	border: 0;
+	_display: block;
+}
+.shou_suo_an_nv_10 {
+	height: 43px;
+	width: 120px;
+	margin-top: 54px;
+	border: none;
+	margin-left: -3px;
+	background: url(../images/lky-shou-suo-an-niu.png);
+}
+.qu_zhu_ce_3_img_11 {
+	margin-left: 14px;
+	margin-top: 7px;
+	margin-right: 5px;
+}
+.frist {
+	height: 50px;
+	width: 1190px;
+	border-bottom: 5px solid #F25011;
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+.qu_zhu_ce_3 {
+	width: 152px;
+	height: 29px;
+	margin-right: 14px;
+	float: right;
+	margin-top: 9px;
+	background-image: url(../images/lky-gou-wu.png)
+}
+.qu_zhu_ce_4 {
+	width: 444px;
+	height: 42px;
+	float: right;
+	margin-top: 8px;
+	background-image: url(../images/lky-zhang-hu-001.png)
+}
+.ge_ren_zu_yie_you_5 {
+	height: 16px;
+	margin-left: 28px;
+	margin-top: 16px;
+	float: left;
+	display: inline;
+	background-image: url();
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+.my_1 {
+	float: left;
+	display: inline;
+	font-family: 微软雅黑;
+	font-size: 20px;
+	color: #F25011;
+	margin-top: 20px;
+}
+.font_2 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+.ge_ren_zhu_yie_2 {
+	font-size: 14px;
+	float: left;
+	height: 22px;
+	color: #474747;
+	margin-top: 30px;
+	margin-left: 5px;
+	display: inline;
+	font-family: 微软雅黑;
+	background-image: url();
+}
+.left {
+	width: 190px;
+	border: 1px solid #e5e5e5;
+	float: left;
+	display: inline;
+}
+.tou_xiang_13 {
+	margin-left: 15px;
+	margin-top: 14px;
+}
+.hui_yuan_deng_ji_14 {
+	color: #f15010;
+	margin-left: 3px;
+}
+
+.chong_zhi_15 {
+	float: right;
+	width: 45px;
+	margin-top: -2px;
+	height: 21px;
+	background-image: url(../images/lky-chong-zhi.png);
+}
+.chong_zhi_16 {
+	width: 44px;
+	height: 22px;
+	display: block;
+}
+.wo_de_yu_e_17 {
+	height: 16px;
+	float: left;
+	margin-top: 2px;
+}
+.zhang_hu_an_quan_19 {
+	margin-top: 2px;
+	float: left;
+}
+.yan_zhen_tu_pian_20 {
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+}
+.hui_yuan_xin_xi_21 {
+	margin-left: 67px;
+	height: 22px;
+	width: 100px;
+	margin-top: 1px;
+}
+.font_1 {
+	color: #ffffff;
+	font-family: 微软雅黑;
+	font-size: 12px;
+}
+.left_elment {
+	border: 1px solid #e5e5e5;
+	height: 36px;
+	width: 188px;
+	background-color: #d4d4d4;
+	color: #ffffff;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+.zhang_hu_an_quan_19 {
+	margin-top: 2px;
+	float: left;
+}
+.yan_zhen_tu_pian_20 {
+	margin-top: 3px;
+	margin-left: 3px;
+	float: left;
+}
+.hui_yuan_deng_ji_14 {
+	color: #f15010;
+	margin-left: 3px;
+}
+.elment_1 {
+	border: 1px solid #e5e5e5;
+	height: 36px;
+	width: 188px;
+	background-color: #f6f6f6;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+.hui_yuan_xin_xi {
+	margin-left: 15px;
+	height: 22px;
+	width: 170px;
+	margin-top: 1px;
+}
+.log_image_small {
+	margin-top: 10px;
+	margin-left: 18px;
+	margin-right: 7px;
+}
+.main{
+width:1190px;
+margin: 0 auto;
+}
+.font_2 {
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+/****************************以上是模板******************************************/
+.shou_huo_main{
+width:944px;
+margin-left:10px;
+float:right;
+padding-left:39px;
+padding-top:24px;
+border:1px solid #e3e3e3;
+}
+.shou_huo_span{
+display:block;
+font-family:微软雅黑;
+font-size:16px;
+color:#606060;
+}
+.font_14_red{
+	color:#F3773A;
+	font-size:14px;
+	font-family:宋体;
+	display:block;
+	margin-top:10px;
+	}	
+
+.red{
+color:#e2562b;
+}
+
+.select{
+height:20px;
+width:156px;
+border:1px solid #7f9db9;
+margin-left:10px;
+}
+.input{
+width:403px;
+height:59px;
+border:1px solid #d4d4d4;
+margin-left:10px;
+line-height:12px;
+}
+
+.shou_huo_xing_ming{
+width:170px;
+height:23px;
+border:1px solid #d4d4d4;
+margin-left:10px;
+margin-right:5px;
+}
+.phone{
+width:168px;
+height:22px;
+border:1px solid #d4d4d4;
+margin-left:10px;
+margin-right:5px;
+}
+.mail{
+width:211px;
+height:22px;
+border:1px solid #d4d4d4;
+margin-left:5px;
+margin-right:5px;
+}
+.check{
+margin-left:55px;
+margin-right:10px;
+}
+.sub{
+margin-top:50px;
+width:182px;
+height:32px;
+margin-left:30px;
+display:block;
+background:url(../images/lky-address-save.png);
+border:0;
+}
+.address{
+width:905px;
+
+border:2px solid #FCD8C6;
+margin-top:10px;
+}
+.address_element{
+ width:905px;
+ height:59px;
+ background:#ffffff;
+ line-height:59px;
+ vertical-align:middle;
+}
+.shou_hou_ren{
+width:92px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.di_qv{
+width:173px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.jie_dao{
+width:214px;
+height:52px;
+line-height:22px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.dian_hua{
+width:111px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.you_bian{
+width:75px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.mo_ren{
+width:80px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+}
+.chao_zhuo{
+width:150px;
+height:52px;
+line-height:52px;
+vertical-align:middle;
+text-align:center;
+float:left;
+
+}
+.green{
+color:#84c011;
+}
+.last{
+display:block;
+margin-top:10px;
+color:#474747;
+}

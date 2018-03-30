@@ -1,0 +1,350 @@
+@CHARSET "UTF-8";
+
+.title {
+	border: 1px solid #ffffff;
+	width: 1192px;
+	height: 249px;
+	margin: 0 auto;
+	background-image: url(../images/lky-yhkbd-title.png);
+}
+
+.title div {
+	font-size: 14px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 115px;
+}
+
+.title div span {
+	color: #f2602d;
+}
+
+.title .first {
+	font-family: 微软雅黑;
+	font-size: 18px;
+	margin-top: 122px;
+}
+
+.title .first span {
+	color: #f2602d;
+	font-family: 微软雅黑;
+	font-size: 18px;
+}
+
+.title .ti_shi {
+	color: #9a330b;
+}
+
+.menu {
+	z-index: 40;
+	position: relative;
+	margin-top: 30px;
+	width: 1188px;
+	height: 34px;
+	_height: 30px;
+	background-color: #f8f7f6;
+	border: 1px solid #e5e4e4
+}
+
+.menu div {
+	position: relative;
+	z-index: 40;
+	_top: 4px;
+	left: -3px;
+	border-right: 1px solid #d4d3d2;
+	cursor: pointer;
+	float: left;
+	text-align: center;
+	width: 127px;
+	height: 38px;
+	_height: 42px;
+	line-height: 38px;
+	font-family: 微软雅黑;
+	font-size: 18px;
+}
+
+.ka {
+	border: 3px solid #fdd226;
+	margin: 0 auto;
+	width: 1153px;
+	padding-left: 35px;
+	height: 278px;
+	padding-top: 37px;
+	border: 3px solid #fdd329;
+}
+
+.ka div {
+	position: relative;
+	float: left;
+	width: 214px;
+	height: 40px;
+	border: 1px solid #dddddd;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.ka image {
+	border: 0;
+}
+
+.ka div input {
+	position: absolute;
+	left: 11px;
+	top: 14px;
+}
+
+.ka a {
+	display: block;
+	width: 151px;
+	height: 40px;
+	margin-top: 180px;
+	background-image: url(../images/lky-yhkbd-xia-yi-bu.png);
+}
+
+.wan_cheng {
+	width: 1190px;
+	margin: 0 auto;
+	border: 0;
+	height: 25px;
+	line-height: 25px;
+}
+
+.wan_cheng a {
+	color: #f15010
+}
+
+.wan_cheng span {
+	font-weight: bold;
+	line-height: 25px;
+	float:right;
+}
+
+.kjzf_main {
+	border: 1px solid #ffffff;
+	margin: 0 auto;
+	margin-top: 28px;
+	width: 1190px;
+	height: 575px;
+	background-image: url(../images/lky-kjzf-main.png)
+}
+
+.kjzf_main div {
+	height: 53px;
+	line-height: 53px;
+	color: #919191;
+}
+
+.kjzf_fu_kuan_yin_huang {
+	margin-left: 121px;
+	margin-top: 80px;
+}
+
+.kjzf_fu_kuan_yin_huang div {
+	margin-right: 5px;
+	float: left;
+	display: block;
+	border: 1px solid #dddddd;
+	width: 198px;
+	height: 40px;
+	margin-top: 5px;
+}
+
+.kjzf_main .kjzf_fu_kuan_yin_huang span {
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjzf_main .kjzf_fu_kuan_yin_huang a {
+	color: #0090ff;
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjzf_ka_hao {
+	margin-left: 121px;
+}
+
+.kjzf_ka_hao span {
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjzf_main div input {
+	margin-top: 10px;
+	width: 234px;
+	height: 31px;
+	border: 1px solid #d4d4d4
+}
+
+.kjxf_zhen_jian {
+	margin-left: 144px;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjxf_zhen_jian select {
+	margin-right: 9px;
+	margin-top: 10px;
+	display: block;
+	float: left;
+	width: 82px;
+	height: 31px;
+	border: 1px solid #d4d4d4
+}
+
+.kjxf_zhen_jian span {
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjxf_sou_ji_hao {
+	margin-left: 85px;
+}
+
+.kjxf_sou_ji_hao span {
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjxf_yan_zhen_ma {
+	margin-left: 106px;
+}
+
+.kjxf_yan_zhen_ma span {
+	display: block;
+	float: left;
+	height: 53px;
+	line-height: 53px;
+}
+
+.kjxf_yan_zhen_ma .su_ru {
+	display: block;
+	float: left;
+	width: 89px;
+	height: 31px;
+	border: 1px solid #dcdcdc
+}
+
+.kjxf_yan_zhen_ma a {
+	margin-top: 10px;
+	margin-left: 14px;
+	dispaly: block;
+	float: left;
+	width: 129px;
+	height: 31px;
+	border: 1px solid #dcdcdc;
+	background-image: url(../images/lky-kjzf-yan-zhen-ma.png)
+}
+
+.kjzf_main p {
+	margin-left: 185px;
+	line-height: 16px;
+}
+
+.kjzf_main .kjzf_zi_fu {
+	margin-bottom: 29px;
+	display: block;
+	margin-left: 182px;
+	margin-top: 23px;
+	width: 181px;
+	height: 42px;
+	background-image: url(../images/lky-kjzf-zi-fu.png)
+}
+
+.kjzf_main .foot {
+	margin-left: 101px;
+}
+
+.kjzf_main p a {
+	color: #0090ff
+}
+
+.wyzf_main {
+	border: 1px solid #ffffff;
+	width: 1190px;
+	height: 373px;
+	background-image: url(../images/wyzf-m.png);
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.wyzf_main div {
+	height: 50px;
+}
+
+.wyzf_main .first {
+	color: #919191;
+	margin-left: 125px;
+	margin-top: 36px;
+}
+
+.wyzf_main .fu_kuan_yin_hang {margin-left: 127px;}
+
+.wyzf_main .fu_kuan_yin_hang span {
+	display: block;
+	float: left;
+	color: #919191;
+	height: 50px;
+	line-height: 50px;
+}
+
+.wyzf_main .fu_kuan_yin_hang div {
+	margin-right: 2px;
+	position: relative;
+	float: left;
+	margin-top: 2px;
+	width: 198px;
+	height: 43px;
+	border: 1px solid #dddddd
+}
+
+.fu_kuan_yin_hang div .small_log {
+	position: absolute;
+	top: 12px;
+	left: 141px;
+}
+
+.wyzf_main .fu_kuan_yin_hang  a {
+	height: 50px;
+	line-height: 50px;
+	color: #0090ff
+}
+
+.wyzf_main .ti_shi {
+	margin-top: 5px;
+	height: 40px;
+	margin-left: 187px;
+	line-height: 18px;
+	margin-top:10px;
+}
+.ti_shi p input{vertical-align:middle; margin-top:-2px; margin-bottom:1px;white-space: nowrap;}
+.wyzf_main .ti_shi a {
+	line-height: 20px;
+	color: #0090ff;
+	color: #0090ff
+}
+.wyzf_main .que_din {margin-top:19px; display:block;width:197px;height:40px;background-image: url(../images/lky-wyzf-que-ren.png);margin-left:185px;display: block;}
+.wyzf_main .last {margin-left: 98px;line-height: 50px;}
+.wyzf_main .last a {color: #0090ff}
+.body{TEXT-ALIGN: center;}
+.lky_tan_cu{position:absolute;width:100%;height:100%;z-index:200; alpha(opacity=70); opacity: 0.7;}
+.lky_tan_cu_1{position:absolute;background-image:url(../images/lky-zfxz-main.png);left:20%;width:773px;height:587px;z-index:300;border:5px solid #a3a3a3}
+.lky_tan_cu_1 div{height:45px;line-height:45px;margin-left:175px;}
+.lky_tan_cu_1 .first{margin-top:130px;}
+.lky_tan_cu_1 .first div{padding-top:5px;margin-left:0;width:131px;height:38px;line-height:38px;border:1px solid #dddddd;float:left;margin-right:10px;}
+.lky_tan_cu_1 .first div input{display:block;float:left;margin-top:12px;margin-right:5px;margin-left:5px}
+.lky_tan_cu_1 .last{margin-top:58px;}
+.lky_tan_cu_1 .last div{padding-top:5px;margin-left:0;width:131px;height:38px;line-height:38px;border:1px solid #dddddd;float:left;margin-right:10px;}
+.lky_tan_cu_1 .last div input{display:block;float:left;margin-top:12px;margin-right:5px;margin-left:5px}
+.lky_tan_cu_1 .guan_bi{margin-left:738px;display:block;position:absolute;width:21px;height:21px;top:10px;}
+
